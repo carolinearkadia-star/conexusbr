@@ -54,7 +54,7 @@ const GestoresPage = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.15, duration: 0.6 }}
-              className="bg-card rounded-2xl border border-border shadow-sm p-8 text-center">
+              className="rounded-2xl border border-border shadow-sm p-8 text-center bg-primary">
 
                 <img
                 src={gestor.photo}
@@ -63,7 +63,7 @@ const GestoresPage = () => {
 
                 <h3 className="mt-6 text-xl font-bold text-foreground">{gestor.name}</h3>
                 <p className="mt-1 text-sm text-secondary font-semibold">{gestor.experience}</p>
-                <p className="mt-4 text-sm leading-relaxed text-primary-foreground">
+                <p className="mt-4 text-muted-foreground text-sm leading-relaxed">
                   {gestor.description}
                 </p>
                 <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
