@@ -102,11 +102,11 @@ const NetworkBackground = () => {
           const dy = nodes[i].y - nodes[j].y;
           const dist = Math.sqrt(dx * dx + dy * dy);
           if (dist < maxDist) {
-            const alpha = (1 - dist / maxDist) * 0.08;
+            const alpha = (1 - dist / maxDist) * 0.07;
             ctx.beginPath();
             ctx.moveTo(nodes[i].x, nodes[i].y);
             ctx.lineTo(nodes[j].x, nodes[j].y);
-            ctx.strokeStyle = `rgba(5, 29, 64, ${alpha})`;
+      ctx.strokeStyle = `rgba(190, 26, 135, ${alpha * 0.6})`;
             ctx.lineWidth = 0.6;
             ctx.stroke();
           }
@@ -161,7 +161,7 @@ const NetworkBackground = () => {
       nodes.forEach((n) => {
         ctx.beginPath();
         ctx.arc(n.x, n.y, 1.5, 0, Math.PI * 2);
-        ctx.fillStyle = "rgba(5, 29, 64, 0.15)";
+        ctx.fillStyle = "rgba(140, 160, 200, 0.25)";
         ctx.fill();
       });
 

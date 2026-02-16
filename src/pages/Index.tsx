@@ -3,6 +3,7 @@ import { ArrowRight, Mail, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import NetworkBackground from "@/components/NetworkBackground";
+import heroBg from "@/assets/hero-bg.jpg";
 import globeConnections from "@/assets/globe-connections.png";
 import fotoCilene from "@/assets/foto-cilene.png";
 import fotoHudson from "@/assets/foto-hudson.png";
@@ -50,6 +51,17 @@ const Index = () => {
     <div>
       {/* Hero */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+        {/* Layer 1: Background image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `url(${heroBg})`,
+            filter: "blur(2px) saturate(0.7) contrast(0.9)",
+          }}
+        />
+        {/* Layer 2: Dark overlay */}
+        <div className="absolute inset-0 bg-[#051D40]/80" />
+        {/* Layer 3: Canvas animation */}
         <NetworkBackground />
         <div className="container-narrow relative z-10 px-6 pt-24">
           <motion.div
@@ -60,7 +72,7 @@ const Index = () => {
             <motion.h1
               custom={0}
               variants={fadeUp}
-              className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight text-foreground">
+               className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight text-white">
 
               Conectando empresas.{" "}
               <span className="text-gradient">Entregando soluções técnicas.</span>
@@ -68,7 +80,7 @@ const Index = () => {
             <motion.p
               custom={1}
               variants={fadeUp}
-              className="mt-6 text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed">
+              className="mt-6 text-lg md:text-xl text-white/70 max-w-xl leading-relaxed">
 
               Consultoria técnica e estratégica em produtos eletrônicos.
             </motion.p>
