@@ -5,25 +5,25 @@ import fotoCilene from "@/assets/foto-cilene.png";
 import fotoHudson from "@/assets/foto-hudson.png";
 
 const gestores = [
-  {
-    name: "Cilene Paleari Faria",
-    photo: fotoCilene,
-    experience: "+28 anos de experiência",
-    description:
-      "Gestão comercial, processos, qualidade, MRP, Lean e Kaizen. Responsável por diagnóstico e estruturação estratégica.",
-    whatsapp: "https://wa.me/5500000000000",
-    email: "cilene@conexus.com.br",
-  },
-  {
-    name: "Hudson Benedicto",
-    photo: fotoHudson,
-    experience: "+30 anos de experiência",
-    description:
-      "Engenharia de processos e manufatura de placas eletrônicas. Avaliação técnica e industrialização.",
-    whatsapp: "https://wa.me/5500000000000",
-    email: "hudson@conexus.com.br",
-  },
-];
+{
+  name: "Cilene Paleari Faria",
+  photo: fotoCilene,
+  experience: "+28 anos de experiência",
+  description:
+  "Gestão comercial, processos, qualidade, MRP, Lean e Kaizen. Responsável por diagnóstico e estruturação estratégica.",
+  whatsapp: "https://wa.me/5500000000000",
+  email: "cilene@conexus.com.br"
+},
+{
+  name: "Hudson Benedicto",
+  photo: fotoHudson,
+  experience: "+30 anos de experiência",
+  description:
+  "Engenharia de processos e manufatura de placas eletrônicas. Avaliação técnica e industrialização.",
+  whatsapp: "https://wa.me/5500000000000",
+  email: "hudson@conexus.com.br"
+}];
+
 
 const GestoresPage = () => {
   return (
@@ -34,8 +34,8 @@ const GestoresPage = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+            className="text-center mb-16">
+
             <span className="text-secondary text-sm font-semibold uppercase tracking-widest">
               Liderança
             </span>
@@ -48,20 +48,20 @@ const GestoresPage = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
-            {gestores.map((gestor, i) => (
-              <motion.div
-                key={gestor.name}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.15, duration: 0.6 }}
-                className="bg-card rounded-2xl border border-border shadow-sm p-8 text-center"
-              >
+            {gestores.map((gestor, i) =>
+            <motion.div
+              key={gestor.name}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.15, duration: 0.6 }}
+              className="rounded-2xl border border-border shadow-sm p-8 text-center bg-primary">
+
                 <img
-                  src={gestor.photo}
-                  alt={gestor.name}
-                  className="w-36 h-36 rounded-full mx-auto object-cover border-4 border-muted"
-                />
-                <h3 className="mt-6 text-xl font-bold text-foreground">{gestor.name}</h3>
+                src={gestor.photo}
+                alt={gestor.name}
+                className="w-36 h-36 rounded-full mx-auto object-cover border-4 border-muted" />
+
+                <h3 className="mt-6 text-xl font-bold text-primary-foreground">{gestor.name}</h3>
                 <p className="mt-1 text-sm text-secondary font-semibold">{gestor.experience}</p>
                 <p className="mt-4 text-muted-foreground text-sm leading-relaxed">
                   {gestor.description}
@@ -81,12 +81,12 @@ const GestoresPage = () => {
                   </Button>
                 </div>
               </motion.div>
-            ))}
+            )}
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>);
+
 };
 
 export default GestoresPage;
