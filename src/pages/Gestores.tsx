@@ -10,7 +10,7 @@ const gestores = [
   photo: fotoCilene,
   experience: "+28 anos de experiência",
   description:
-  "Gestão comercial, processos, qualidade, MRP, Lean e Kaizen. Responsável por diagnóstico e estruturação estratégica.",
+  "Gestão Comercial e Estratégica\n\nProfissional com mais de 28 anos de experiência na indústria eletrônica. Especialista em gestão comercial, processos, qualidade e desenvolvimento de negócios. Expertise em implantação de sistemas de gestão, MRP, Lean Manufacturing e Kaizen.\n\nAtuação na Conexus: Responsável pelo diagnóstico inicial, condução estratégica dos projetos e interface direta entre engenharia, produção e cliente.",
   whatsapp: "https://wa.me/5500000000000",
   email: "cilene@conexus.com.br"
 },
