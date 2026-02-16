@@ -10,7 +10,7 @@ const gestores = [
   photo: fotoCilene,
   experience: "+28 anos de experiência",
   description:
-  "Gestão comercial, processos, qualidade, MRP, Lean e Kaizen. Responsável por diagnóstico e estruturação estratégica.",
+  "Gestão Comercial e Estratégica\n\nProfissional com mais de 28 anos de experiência na indústria eletrônica. Especialista em gestão comercial, processos, qualidade e desenvolvimento de negócios. Expertise em implantação de sistemas de gestão, MRP, Lean Manufacturing e Kaizen.\n\nAtuação na Conexus: Responsável pelo diagnóstico inicial, condução estratégica dos projetos e interface direta entre engenharia, produção e cliente.",
   whatsapp: "https://wa.me/5500000000000",
   email: "cilene@conexus.com.br"
 },
@@ -63,9 +63,9 @@ const GestoresPage = () => {
 
                 <h3 className="mt-6 text-xl font-bold text-primary-foreground">{gestor.name}</h3>
                 <p className="mt-1 text-sm text-secondary font-semibold">{gestor.experience}</p>
-                <p className="mt-4 text-muted-foreground text-sm leading-relaxed">
+                <div className="mt-4 text-muted-foreground text-sm leading-relaxed whitespace-pre-line">
                   {gestor.description}
-                </p>
+                </div>
                 <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
                   <Button variant="whatsapp" size="sm" asChild>
                     <a href={gestor.whatsapp} target="_blank" rel="noopener noreferrer">
