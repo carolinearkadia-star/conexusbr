@@ -112,7 +112,7 @@ const Index = () => {
               Modelo de Consultoria
             </span>
             <h2 className="mt-4 text-3xl md:text-4xl font-bold text-foreground">
-              Do diagnóstico à entrega
+              Etapas da nossa atuação:
             </h2>
           </motion.div>
 
