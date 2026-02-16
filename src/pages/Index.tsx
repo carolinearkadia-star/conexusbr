@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import NetworkBackground from "@/components/NetworkBackground";
+import globeNetwork from "@/assets/globe-network.png";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -90,38 +91,8 @@ const Index = () => {
                 preciso e acompanhamento contínuo para projetos eletrônicos de alta complexidade.
               </p>
             </div>
-            <div className="relative">
-              {/* Abstract connection visual */}
-              <div className="aspect-square rounded-2xl bg-accent/50 flex items-center justify-center relative overflow-hidden">
-                <svg viewBox="0 0 400 400" className="w-full h-full opacity-30" fill="none">
-                  {/* Circuit-like pattern */}
-                  <circle cx="200" cy="200" r="80" stroke="hsl(216, 86%, 14%)" strokeWidth="0.5" />
-                  <circle cx="200" cy="200" r="140" stroke="hsl(216, 86%, 14%)" strokeWidth="0.5" />
-                  <circle cx="200" cy="200" r="190" stroke="hsl(216, 86%, 14%)" strokeWidth="0.3" />
-                  {/* Nodes */}
-                  <circle cx="200" cy="120" r="4" fill="hsl(322, 76%, 42%)" />
-                  <circle cx="280" cy="200" r="4" fill="hsl(322, 76%, 42%)" />
-                  <circle cx="200" cy="280" r="4" fill="hsl(216, 86%, 14%)" />
-                  <circle cx="120" cy="200" r="4" fill="hsl(216, 86%, 14%)" />
-                  <circle cx="260" cy="140" r="3" fill="hsl(322, 76%, 42%)" opacity="0.6" />
-                  <circle cx="140" cy="260" r="3" fill="hsl(216, 86%, 14%)" opacity="0.6" />
-                  <circle cx="260" cy="260" r="3" fill="hsl(216, 86%, 14%)" opacity="0.4" />
-                  <circle cx="140" cy="140" r="3" fill="hsl(322, 76%, 42%)" opacity="0.4" />
-                  {/* Lines */}
-                  <line x1="200" y1="120" x2="280" y2="200" stroke="hsl(216, 86%, 14%)" strokeWidth="0.5" />
-                  <line x1="280" y1="200" x2="200" y2="280" stroke="hsl(216, 86%, 14%)" strokeWidth="0.5" />
-                  <line x1="200" y1="280" x2="120" y2="200" stroke="hsl(216, 86%, 14%)" strokeWidth="0.5" />
-                  <line x1="120" y1="200" x2="200" y2="120" stroke="hsl(216, 86%, 14%)" strokeWidth="0.5" />
-                  <line x1="200" y1="120" x2="260" y2="140" stroke="hsl(322, 76%, 42%)" strokeWidth="0.3" />
-                  <line x1="260" y1="140" x2="280" y2="200" stroke="hsl(322, 76%, 42%)" strokeWidth="0.3" />
-                  <line x1="120" y1="200" x2="140" y2="260" stroke="hsl(216, 86%, 14%)" strokeWidth="0.3" />
-                  <line x1="200" y1="200" x2="200" y2="120" stroke="hsl(322, 76%, 42%)" strokeWidth="0.3" strokeDasharray="4 4" />
-                  <line x1="200" y1="200" x2="280" y2="200" stroke="hsl(322, 76%, 42%)" strokeWidth="0.3" strokeDasharray="4 4" />
-                </svg>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-5xl font-bold text-gradient opacity-20">CX</span>
-                </div>
-              </div>
+            <div className="relative flex items-center justify-center">
+              <img src={globeNetwork} alt="Rede global de conexões" className="w-full max-w-md" />
             </div>
           </motion.div>
         </div>
