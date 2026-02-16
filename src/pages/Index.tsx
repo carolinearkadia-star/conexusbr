@@ -123,7 +123,7 @@ const Index = () => {
       </section>
 
       {/* Modelo de Consultoria */}
-      <section className="section-padding bg-muted/30 text-primary-foreground">
+      <section className="section-padding text-primary-foreground bg-secondary">
         <div className="container-narrow">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
