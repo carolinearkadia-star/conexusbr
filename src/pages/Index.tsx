@@ -135,7 +135,7 @@ const Index = () => {
             <span className="text-sm font-semibold uppercase tracking-widest text-primary-foreground">
               Modelo de Consultoria
             </span>
-            <h2 className="mt-4 text-3xl md:text-4xl font-bold text-foreground">
+            <h2 className="mt-4 text-3xl md:text-4xl font-bold text-primary-foreground">
               Do diagnóstico à entrega
             </h2>
           </motion.div>
