@@ -10,7 +10,7 @@ const gestores = [
   photo: fotoCilene,
   experience: "+28 anos de experiência",
   description:
-  "Gestão Comercial e Estratégica\n\nProfissional com mais de 28 anos de experiência na indústria eletrônica. Especialista em gestão comercial, processos, qualidade e desenvolvimento de negócios. Expertise em implantação de sistemas de gestão, MRP, Lean Manufacturing e Kaizen.\n\nAtuação na Conexus: Responsável pelo diagnóstico inicial, condução estratégica dos projetos e interface direta entre engenharia, produção e cliente.",
+  "Gestão comercial, processos, qualidade, MRP, Lean e Kaizen. Responsável por diagnóstico e estruturação estratégica.",
   whatsapp: "https://wa.me/5500000000000",
   email: "cilene@conexus.com.br"
 },
@@ -54,18 +54,18 @@ const GestoresPage = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.15, duration: 0.6 }}
-              className="rounded-2xl border border-border shadow-sm p-8 text-center bg-primary">
+              className="bg-card rounded-2xl border border-border shadow-sm p-8 text-center">
 
                 <img
                 src={gestor.photo}
                 alt={gestor.name}
                 className="w-36 h-36 rounded-full mx-auto object-cover border-4 border-muted" />
 
-                <h3 className="mt-6 text-xl font-bold text-primary-foreground">{gestor.name}</h3>
+                <h3 className="mt-6 text-xl font-bold text-foreground">{gestor.name}</h3>
                 <p className="mt-1 text-sm text-secondary font-semibold">{gestor.experience}</p>
-                <div className="mt-4 text-muted-foreground text-sm leading-relaxed whitespace-pre-line">
+                <p className="mt-4 text-sm leading-relaxed text-primary-foreground">
                   {gestor.description}
-                </div>
+                </p>
                 <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
                   <Button variant="whatsapp" size="sm" asChild>
                     <a href={gestor.whatsapp} target="_blank" rel="noopener noreferrer">
