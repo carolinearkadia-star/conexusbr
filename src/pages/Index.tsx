@@ -3,6 +3,7 @@ import { ArrowRight, Mail, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import NetworkBackground from "@/components/NetworkBackground";
+import InteractiveSteps from "@/components/InteractiveSteps";
 import heroBg from "@/assets/hero-bg.jpg";
 import globeConnections from "@/assets/globe-connections.png";
 import fotoCilene from "@/assets/foto-cilene.png";
@@ -152,30 +153,7 @@ const Index = () => {
             </h2>
           </motion.div>
 
-          <div className="relative">
-            {/* Connecting line */}
-            <div className="hidden md:block absolute top-1/2 left-0 right-0 h-px bg-border -translate-y-1/2" />
-
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
-              {steps.map((step, i) =>
-              <motion.div
-                key={step.num}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1, duration: 0.5 }}
-                className="relative text-center">
-
-                  <div className="relative z-10 w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center mx-auto text-sm font-bold">
-                    {step.num}
-                  </div>
-                  <p className="mt-4 text-sm font-medium text-foreground leading-snug">
-                    {step.title}
-                  </p>
-                </motion.div>
-              )}
-            </div>
-          </div>
+          <InteractiveSteps steps={steps} />
         </div>
       </section>
 
