@@ -10,7 +10,7 @@ const gestores = [
   photo: fotoCilene,
   experience: "+28 anos de experiência",
   description:
-  "Gestão Comercial e Estratégica\n\nProfissional com mais de 28 anos de experiência na indústria eletrônica. Especialista em gestão comercial, processos, qualidade e desenvolvimento de negócios. Expertise em implantação de sistemas de gestão, MRP, Lean Manufacturing e Kaizen.\n\nAtuação na Conexus: Responsável pelo diagnóstico inicial, condução estratégica dos projetos e interface direta entre engenharia, produção e cliente.",
+  "Gestão comercial, processos, qualidade, MRP, Lean e Kaizen. Responsável por diagnóstico e estruturação estratégica.",
   whatsapp: "https://wa.me/5500000000000",
   email: "cilene@conexus.com.br"
 },
@@ -19,7 +19,7 @@ const gestores = [
   photo: fotoHudson,
   experience: "+30 anos de experiência",
   description:
-  "Gestor de Engenharia e Processos\n\nProfissional com mais de 30 anos de vivência prática em engenharia de processos e manufatura de placas eletrônicas. Especialista em layout de PCB, suporte técnico à industrialização e análise de viabilidade produtiva (DFM/DFT).\n\nAtuação na Conexus: Focado no suporte técnico especializado, garantindo que o design do produto esteja alinhado com a eficiência industrial e as melhores práticas de fabricação global.",
+  "Engenharia de processos e manufatura de placas eletrônicas. Avaliação técnica e industrialização.",
   whatsapp: "https://wa.me/5500000000000",
   email: "hudson@conexus.com.br"
 }];
@@ -59,11 +59,11 @@ const GestoresPage = () => {
                 <img
                 src={gestor.photo}
                 alt={gestor.name}
-                className="w-36 h-36 rounded-full mx-auto object-cover border-4 border-muted" />
+                className="w-36 h-36 rounded-full mx-auto object-cover border-muted border-0" />
 
                 <h3 className="mt-6 text-xl font-bold text-foreground">{gestor.name}</h3>
                 <p className="mt-1 text-sm text-secondary font-semibold">{gestor.experience}</p>
-                <p className="mt-4 text-sm leading-relaxed text-primary-foreground">
+                <p className="mt-4 text-muted-foreground text-sm leading-relaxed">
                   {gestor.description}
                 </p>
                 <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
