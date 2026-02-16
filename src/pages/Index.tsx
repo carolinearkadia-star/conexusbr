@@ -61,8 +61,6 @@ const Index = () => {
         />
         {/* Layer 2: Dark overlay */}
         <div className="absolute inset-0 bg-[#051D40]/80" />
-        {/* Layer 2.5: White opacity layer */}
-        <div className="absolute inset-0 bg-white/15" />
         {/* Layer 3: Canvas animation */}
         <NetworkBackground />
         <div className="container-narrow relative z-10 px-6 pt-24">
