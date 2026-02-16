@@ -3,24 +3,23 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import NetworkBackground from "@/components/NetworkBackground";
-import globeNetwork from "@/assets/globe-network.png";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: i * 0.15, duration: 0.6, ease: "easeOut" as const },
-  }),
+    transition: { delay: i * 0.15, duration: 0.6, ease: "easeOut" as const }
+  })
 };
 
 const steps = [
-  { num: "01", title: "Diagnóstico técnico e produtivo" },
-  { num: "02", title: "Análise de viabilidade técnica e industrial" },
-  { num: "03", title: "Definição de estratégia (layout, PCB e manufatura)" },
-  { num: "04", title: "Conexão com parceiros especialistas" },
-  { num: "05", title: "Acompanhamento técnico contínuo" },
-];
+{ num: "01", title: "Diagnóstico técnico e produtivo" },
+{ num: "02", title: "Análise de viabilidade técnica e industrial" },
+{ num: "03", title: "Definição de estratégia (layout, PCB e manufatura)" },
+{ num: "04", title: "Conexão com parceiros especialistas" },
+{ num: "05", title: "Acompanhamento técnico contínuo" }];
+
 
 const Index = () => {
   return (
@@ -32,21 +31,21 @@ const Index = () => {
           <motion.div
             className="max-w-3xl"
             initial="hidden"
-            animate="visible"
-          >
+            animate="visible">
+
             <motion.h1
               custom={0}
               variants={fadeUp}
-              className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight text-foreground"
-            >
+              className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight text-foreground">
+
               Conectando empresas.{" "}
               <span className="text-gradient">Entregando soluções técnicas.</span>
             </motion.h1>
             <motion.p
               custom={1}
               variants={fadeUp}
-              className="mt-6 text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed"
-            >
+              className="mt-6 text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed">
+
               Consultoria técnica e estratégica em produtos eletrônicos.
             </motion.p>
             <motion.div custom={2} variants={fadeUp} className="mt-10 flex flex-wrap gap-4">
@@ -72,14 +71,14 @@ const Index = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
-            className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center"
-          >
+            className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+
             <div>
               <span className="text-secondary text-sm font-semibold uppercase tracking-widest">
                 Quem Somos
               </span>
               <h2 className="mt-4 text-3xl md:text-4xl font-bold text-foreground leading-tight">
-                Um hub técnico que conecta o mercado eletrônico
+                Um hub técnico que conecta o mercado
               </h2>
               <p className="mt-6 text-muted-foreground leading-relaxed">
                 A Conexus atua como um hub técnico estratégico. Não vendemos soluções prontas — conectamos
@@ -91,8 +90,38 @@ const Index = () => {
                 preciso e acompanhamento contínuo para projetos eletrônicos de alta complexidade.
               </p>
             </div>
-            <div className="relative flex items-center justify-center">
-              <img src={globeNetwork} alt="Rede global de conexões" className="w-full max-w-md" />
+            <div className="relative">
+              {/* Abstract connection visual */}
+              <div className="aspect-square rounded-2xl bg-accent/50 flex items-center justify-center relative overflow-hidden">
+                <svg viewBox="0 0 400 400" className="w-full h-full opacity-30" fill="none">
+                  {/* Circuit-like pattern */}
+                  <circle cx="200" cy="200" r="80" stroke="hsl(216, 86%, 14%)" strokeWidth="0.5" />
+                  <circle cx="200" cy="200" r="140" stroke="hsl(216, 86%, 14%)" strokeWidth="0.5" />
+                  <circle cx="200" cy="200" r="190" stroke="hsl(216, 86%, 14%)" strokeWidth="0.3" />
+                  {/* Nodes */}
+                  <circle cx="200" cy="120" r="4" fill="hsl(322, 76%, 42%)" className="bg-secondary" />
+                  <circle cx="280" cy="200" r="4" fill="hsl(322, 76%, 42%)" />
+                  <circle cx="200" cy="280" r="4" fill="hsl(216, 86%, 14%)" />
+                  <circle cx="120" cy="200" r="4" fill="hsl(216, 86%, 14%)" />
+                  <circle cx="260" cy="140" r="3" fill="hsl(322, 76%, 42%)" opacity="0.6" />
+                  <circle cx="140" cy="260" r="3" fill="hsl(216, 86%, 14%)" opacity="0.6" />
+                  <circle cx="260" cy="260" r="3" fill="hsl(216, 86%, 14%)" opacity="0.4" />
+                  <circle cx="140" cy="140" r="3" fill="hsl(322, 76%, 42%)" opacity="0.4" />
+                  {/* Lines */}
+                  <line x1="200" y1="120" x2="280" y2="200" stroke="hsl(216, 86%, 14%)" strokeWidth="0.5" />
+                  <line x1="280" y1="200" x2="200" y2="280" stroke="hsl(216, 86%, 14%)" strokeWidth="0.5" />
+                  <line x1="200" y1="280" x2="120" y2="200" stroke="hsl(216, 86%, 14%)" strokeWidth="0.5" />
+                  <line x1="120" y1="200" x2="200" y2="120" stroke="hsl(216, 86%, 14%)" strokeWidth="0.5" className="text-primary-foreground" />
+                  <line x1="200" y1="120" x2="260" y2="140" stroke="hsl(322, 76%, 42%)" strokeWidth="0.3" />
+                  <line x1="260" y1="140" x2="280" y2="200" stroke="hsl(322, 76%, 42%)" strokeWidth="0.3" />
+                  <line x1="120" y1="200" x2="140" y2="260" stroke="hsl(216, 86%, 14%)" strokeWidth="0.3" />
+                  <line x1="200" y1="200" x2="200" y2="120" stroke="hsl(322, 76%, 42%)" strokeWidth="0.3" strokeDasharray="4 4" />
+                  <line x1="200" y1="200" x2="280" y2="200" stroke="hsl(322, 76%, 42%)" strokeWidth="0.3" strokeDasharray="4 4" />
+                </svg>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <span className="text-5xl font-bold text-gradient opacity-20">CX</span>
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>
@@ -106,13 +135,13 @@ const Index = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+            className="text-center mb-16">
+
             <span className="text-secondary text-sm font-semibold uppercase tracking-widest">
               Modelo de Consultoria
             </span>
             <h2 className="mt-4 text-3xl md:text-4xl font-bold text-foreground">
-              Etapas da nossa atuação:
+              Do diagnóstico à entrega
             </h2>
           </motion.div>
 
@@ -121,15 +150,15 @@ const Index = () => {
             <div className="hidden md:block absolute top-1/2 left-0 right-0 h-px bg-border -translate-y-1/2" />
 
             <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
-              {steps.map((step, i) => (
-                <motion.div
-                  key={step.num}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1, duration: 0.5 }}
-                  className="relative text-center"
-                >
+              {steps.map((step, i) =>
+              <motion.div
+                key={step.num}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1, duration: 0.5 }}
+                className="relative text-center">
+
                   <div className="relative z-10 w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center mx-auto text-sm font-bold">
                     {step.num}
                   </div>
@@ -137,7 +166,7 @@ const Index = () => {
                     {step.title}
                   </p>
                 </motion.div>
-              ))}
+              )}
             </div>
           </div>
         </div>
@@ -150,8 +179,8 @@ const Index = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
+            transition={{ duration: 0.6 }}>
+
             <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground">
               Pronto para conectar seu projeto?
             </h2>
@@ -167,8 +196,8 @@ const Index = () => {
           </motion.div>
         </div>
       </section>
-    </div>
-  );
+    </div>);
+
 };
 
 export default Index;
