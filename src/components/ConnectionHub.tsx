@@ -63,20 +63,25 @@ const getOrbitalPosition = (index: number, total: number) => {
 // Tooltip position relative to each node
 const getTooltipPosition = (index: number, total: number): React.CSSProperties => {
   const angle = (index / total) * 2 * Math.PI - Math.PI / 2;
-  const deg = (angle * 180) / Math.PI;
-  // Place tooltip on the outer side of each node
-  if (deg >= -45 && deg < 45) {
-    // top node → show above
+  const pos = getOrbitalPosition(index, total);
+  // Use actual x/y position to determine tooltip placement
+  if (Math.abs(pos.y) < 80) {
+    // Nodes near the horizontal axis → place left or right based on x
+    if (pos.x > 0) {
+      return { left: "calc(100% + 8px)", top: "50%", transform: "translateY(-50%)" };
+    } else {
+      return { right: "calc(100% + 8px)", top: "50%", transform: "translateY(-50%)" };
+    }
+  } else if (pos.y < 0) {
+    // Upper nodes → show above
     return { bottom: "calc(100% + 8px)", left: "50%", transform: "translateX(-50%)" };
-  } else if (deg >= 45 && deg < 135) {
-    // right nodes → show to the right
-    return { left: "calc(100% + 8px)", top: "50%", transform: "translateY(-50%)" };
-  } else if (deg >= -135 && deg < -45) {
-    // left nodes → show to the left
-    return { right: "calc(100% + 8px)", top: "50%", transform: "translateY(-50%)" };
   } else {
-    // bottom nodes → show below
-    return { top: "calc(100% + 8px)", left: "50%", transform: "translateX(-50%)" };
+    // Lower nodes (indices 2, 3) → place outward based on x
+    if (pos.x > 0) {
+      return { left: "calc(100% + 8px)", top: "50%", transform: "translateY(-50%)" };
+    } else {
+      return { right: "calc(100% + 8px)", top: "50%", transform: "translateY(-50%)" };
+    }
   }
 };
 
