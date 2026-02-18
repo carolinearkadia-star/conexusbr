@@ -158,7 +158,7 @@ const Index = () => {
       </section>
 
       {/* Gestores Técnicos */}
-      <section className="section-padding bg-background">
+      <section id="gestores-tecnicos" className="section-padding bg-background">
         <div className="container-narrow">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
