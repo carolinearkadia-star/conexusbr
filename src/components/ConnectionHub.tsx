@@ -68,8 +68,38 @@ const ConnectionHub = () => {
     return <MobileHub activeNode={activeNode} setActiveNode={setActiveNode} />;
   }
 
+  const activeData = activeNode !== null ? nodes[activeNode] : null;
+  const ActiveIcon = activeData?.icon;
+
   return (
-    <div className="relative flex items-center justify-center" style={{ minHeight: 560 }}>
+    <div className="relative" style={{ minHeight: 560 }}>
+      {/* Fixed info panel — top right */}
+      <AnimatePresence mode="wait">
+        {activeData && ActiveIcon && (
+          <motion.div
+            key={activeData.id}
+            className="absolute z-30 top-0 right-0 w-72 p-5 rounded-xl border text-sm leading-relaxed"
+            style={{
+              background: "hsl(216, 86%, 12%)",
+              borderColor: "hsl(322, 76%, 42%, 0.4)",
+              color: "hsl(0, 0%, 85%)",
+              boxShadow: "0 8px 30px rgba(0,0,0,0.4)",
+            }}
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.25 }}
+          >
+            <div className="flex items-center gap-2 mb-2">
+              <ActiveIcon size={18} style={{ color: "hsl(322, 76%, 55%)" }} />
+              <p className="font-bold text-white text-xs">{activeData.title}</p>
+            </div>
+            <p>{activeData.tooltip}</p>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      <div className="flex items-center justify-center" style={{ minHeight: 560 }}>
       {/* SVG animated lines */}
       <svg
         className="absolute inset-0 w-full h-full pointer-events-none"
@@ -228,37 +258,10 @@ const ConnectionHub = () => {
               </span>
             </motion.div>
 
-            {/* Tooltip */}
-            <AnimatePresence>
-              {isActive && (
-                <motion.div
-                  className="absolute z-30 w-64 p-4 rounded-xl border text-sm leading-relaxed pointer-events-none"
-                  style={{
-                    background: "hsl(216, 86%, 12%)",
-                    borderColor: "hsl(322, 76%, 42%, 0.4)",
-                    color: "hsl(0, 0%, 85%)",
-                    boxShadow: "0 8px 30px rgba(0,0,0,0.4)",
-                    ...(pos.y < -100
-                      ? { left: "50%", transform: "translateX(-50%)", top: "100%", marginTop: "14px" }
-                      : pos.x > 100
-                        ? { left: "100%", top: "0%", marginLeft: "14px" }
-                        : pos.x < -100
-                          ? { right: "100%", top: "0%", marginRight: "14px" }
-                          : { left: "50%", transform: "translateX(-50%)", top: "100%", marginTop: "14px" }),
-                  }}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.9 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <p className="font-bold text-white mb-1 text-xs">{node.title}</p>
-                  <p>{node.tooltip}</p>
-                </motion.div>
-              )}
-            </AnimatePresence>
           </motion.div>
         );
       })}
+    </div>
     </div>
   );
 };
