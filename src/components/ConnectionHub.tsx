@@ -220,7 +220,7 @@ const ConnectionHub = () => {
         return (
           <motion.div
             key={node.id}
-            className="absolute z-10 group cursor-pointer"
+            className={`absolute z-10 group cursor-pointer orbital-node-${i}`}
             style={{
               left: `calc(50% + ${pos.x}px - 56px)`,
               top: `calc(50% + ${pos.y}px - 56px)`,

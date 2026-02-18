@@ -78,6 +78,19 @@
   }
 }
 
+@keyframes orbital-float {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  25% { transform: translateY(-6px) translateX(3px); }
+  50% { transform: translateY(0) translateX(0); }
+  75% { transform: translateY(6px) translateX(-3px); }
+}
+
+.orbital-node-0 { animation: orbital-float 5s ease-in-out infinite; }
+.orbital-node-1 { animation: orbital-float 5.5s ease-in-out 0.3s infinite; }
+.orbital-node-2 { animation: orbital-float 6s ease-in-out 0.6s infinite; }
+.orbital-node-3 { animation: orbital-float 6.5s ease-in-out 0.9s infinite; }
+.orbital-node-4 { animation: orbital-float 5.8s ease-in-out 1.2s infinite; }
+
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
