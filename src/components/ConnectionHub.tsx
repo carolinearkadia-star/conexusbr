@@ -78,23 +78,31 @@ const ConnectionHub = () => {
         {activeData && ActiveIcon && (
           <motion.div
             key={activeData.id}
-            className="absolute z-30 top-0 right-0 w-72 p-5 rounded-xl border text-sm leading-relaxed"
+            className="absolute z-30 top-0 right-0 w-80 p-6 rounded-2xl text-sm leading-relaxed backdrop-blur-sm"
             style={{
-              background: "hsl(216, 86%, 12%)",
-              borderColor: "hsl(322, 76%, 42%, 0.4)",
-              color: "hsl(0, 0%, 85%)",
-              boxShadow: "0 8px 30px rgba(0,0,0,0.4)",
+              background: "linear-gradient(135deg, hsl(216, 86%, 14%, 0.95), hsl(216, 60%, 10%, 0.95))",
+              border: "1px solid hsl(322, 76%, 42%, 0.3)",
+              color: "hsl(0, 0%, 88%)",
+              boxShadow: "0 0 30px hsl(322, 76%, 42%, 0.08), 0 12px 40px rgba(0,0,0,0.5), inset 0 1px 0 hsl(216, 40%, 30%, 0.3)",
             }}
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.25 }}
           >
-            <div className="flex items-center gap-2 mb-2">
-              <ActiveIcon size={18} style={{ color: "hsl(322, 76%, 55%)" }} />
-              <p className="font-bold text-white text-xs">{activeData.title}</p>
+            <div className="flex items-center gap-3 mb-3">
+              <div
+                className="w-9 h-9 rounded-lg flex items-center justify-center shrink-0"
+                style={{
+                  background: "linear-gradient(135deg, hsl(322, 76%, 42%, 0.2), hsl(322, 76%, 42%, 0.05))",
+                  border: "1px solid hsl(322, 76%, 42%, 0.3)",
+                }}
+              >
+                <ActiveIcon size={18} style={{ color: "hsl(322, 76%, 55%)" }} />
+              </div>
+              <p className="font-bold text-white text-sm leading-snug">{activeData.title}</p>
             </div>
-            <p>{activeData.tooltip}</p>
+            <p className="text-[13px] leading-relaxed" style={{ color: "hsl(216, 20%, 75%)" }}>{activeData.tooltip}</p>
           </motion.div>
         )}
       </AnimatePresence>
