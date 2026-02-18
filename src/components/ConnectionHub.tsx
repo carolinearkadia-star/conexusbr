@@ -167,7 +167,7 @@ const ConnectionHub = () => {
         viewport={{ once: true }}
         transition={{ type: "spring", stiffness: 200, damping: 20 }}
       >
-        <img src={logoConexus} alt="Conexus" className="w-16 h-auto mb-1 brightness-0 invert" />
+        <img src={logoConexus} alt="Conexus" className="w-22 h-auto mb-1 brightness-0 invert" />
         <span className="text-[9px] font-semibold text-white/60 leading-tight px-2">
           Consultoria Integradora
         </span>
