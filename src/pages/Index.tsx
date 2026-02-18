@@ -61,7 +61,7 @@ const Index = () => {
           }} />
 
         {/* Layer 2: Dark overlay */}
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-[#051D40]/80" />
         {/* Layer 3: Canvas animation */}
         <NetworkBackground />
         <div className="container-narrow relative z-10 px-6 pt-24">
@@ -117,12 +117,12 @@ const Index = () => {
               <h2 className="mt-4 text-3xl md:text-4xl font-bold text-foreground leading-tight">
                 Um hub técnico que conecta o mercado eletrônico 
               </h2>
-              <p className="mt-6 text-muted-foreground leading-relaxed">
+              <p className="mt-6 text-muted-foreground leading-relaxed text-justify">
                 A Conexus atua como um hub técnico estratégico. Não vendemos soluções prontas — conectamos
                 empresas especialistas conforme a necessidade de cada projeto. Nossa análise técnica real e
                 viabilidade industrial garantem que cada conexão gere valor e resultado.
               </p>
-              <p className="mt-4 text-muted-foreground leading-relaxed">
+              <p className="mt-4 text-muted-foreground leading-relaxed text-justify">
                 Atuamos na interseção entre engenharia, manufatura e mercado, oferecendo diagnóstico
                 preciso e acompanhamento contínuo para projetos eletrônicos de alta complexidade.
               </p>
@@ -158,7 +158,7 @@ const Index = () => {
       </section>
 
       {/* Gestores Técnicos */}
-      <section id="gestores-tecnicos" className="section-padding bg-background">
+      <section className="section-padding bg-background">
         <div className="container-narrow">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
