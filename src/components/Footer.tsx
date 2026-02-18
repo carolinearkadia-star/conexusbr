@@ -7,10 +7,10 @@ const Footer = () => {
       <div className="container-narrow px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
-            <img src={logo} alt="Conexus" className="h-48 w-auto brightness-0 invert mb-4" />
-            <p className="text-primary-foreground/60 text-sm leading-relaxed">
-              Consultoria Técnica em Produtos Eletrônicos. Conectando empresas, entregando soluções.
-            </p>
+            <img src={logo} alt="Conexus" className="h-24 w-auto brightness-0 invert mb-4" />
+            
+
+
           </div>
 
           <div>
@@ -42,7 +42,7 @@ const Footer = () => {
             </h4>
             <div className="flex flex-col gap-2 text-sm text-primary-foreground/50">
               <p>contato@conexus.com.br</p>
-              <p>Campinas, São Paulo</p>
+              <p>São Paulo, Brasil</p>
             </div>
           </div>
         </div>
