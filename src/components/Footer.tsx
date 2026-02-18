@@ -41,9 +41,7 @@ const Footer = () => {
               Contato
             </h4>
             <div className="flex flex-col gap-2 text-sm text-primary-foreground/50">
-              <p>cilene@conexusbr.com
-              
-              </p>
+              <a href="mailto:cilene@conexusbr.com" className="hover:text-primary-foreground transition-colors">cilene@conexusbr.com</a>
               <p>São Paulo, Brasil</p>
             </div>
           </div>
