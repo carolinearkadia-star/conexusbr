@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import NetworkBackground from "@/components/NetworkBackground";
 import ConnectionHub from "@/components/ConnectionHub";
-import heroBg from "@/assets/hero-bg.jpg";
+
 import globeConnections from "@/assets/globe-connections.png";
 import fotoCilene from "@/assets/foto-cilene.png";
 import fotoHudson from "@/assets/foto-hudson.png";
@@ -46,13 +46,17 @@ const Index = () => {
     <div>
       {/* Hero */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-        {/* Layer 1: Background image */}
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url(${heroBg})`,
-            filter: "blur(2px) saturate(0.7) contrast(0.9)"
-          }} />
+        {/* Layer 1: Background video */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ filter: "blur(2px) saturate(0.7) contrast(0.9)" }}
+        >
+          <source src="/videos/hero-bg.mp4" type="video/mp4" />
+        </video>
 
         {/* Layer 2: Dark overlay */}
         <div className="absolute inset-0 bg-[#051D40]/80" />
