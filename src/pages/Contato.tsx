@@ -77,17 +77,17 @@ const ContatoPage = () => {
                   <div className="flex items-start gap-3">
                     <Phone size={18} className="text-secondary mt-1 shrink-0" />
                     <div>
-                      <p className="font-medium text-foreground text-sm">Hudson Benedicto</p>
-                      <p className="text-muted-foreground text-sm">(19) 99794-2136</p>
-                      <a href="mailto:hudson@conexusbr.com" className="text-muted-foreground text-sm hover:text-foreground transition-colors">hudson@conexusbr.com</a>
+                      <p className="font-medium text-foreground text-sm">Cilene Paleari Faria</p>
+                      <a href="tel:+5519992320961" className="text-muted-foreground text-sm hover:text-foreground transition-colors block">(19) 99232-0961</a>
+                      <a href="mailto:cilene@conexusbr.com" className="text-muted-foreground text-sm hover:text-foreground transition-colors block">cilene@conexusbr.com</a>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <Phone size={18} className="text-secondary mt-1 shrink-0" />
                     <div>
-                      <p className="font-medium text-foreground text-sm">Cilene Paleari Faria</p>
-                      <p className="text-muted-foreground text-sm">(19) 99232-0961</p>
-                      <a href="mailto:cilene@conexusbr.com" className="text-muted-foreground text-sm hover:text-foreground transition-colors">cilene@conexusbr.com</a>
+                      <p className="font-medium text-foreground text-sm">Hudson Benedicto</p>
+                      <a href="tel:+5519997942136" className="text-muted-foreground text-sm hover:text-foreground transition-colors block">(19) 99794-2136</a>
+                      <a href="mailto:hudson@conexusbr.com" className="text-muted-foreground text-sm hover:text-foreground transition-colors block">hudson@conexusbr.com</a>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
