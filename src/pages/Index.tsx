@@ -57,9 +57,9 @@ const Index = () => {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: `url(${heroBg})`,
-            filter: "blur(2px) saturate(0.7) contrast(0.9)",
-          }}
-        />
+            filter: "blur(2px) saturate(0.7) contrast(0.9)"
+          }} />
+
         {/* Layer 2: Dark overlay */}
         <div className="absolute inset-0 bg-[#051D40]/80" />
         {/* Layer 3: Canvas animation */}
@@ -73,10 +73,10 @@ const Index = () => {
             <motion.h1
               custom={0}
               variants={fadeUp}
-               className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight text-white">
+              className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight text-white">
 
               Conectando empresas.{" "}
-              <span className="text-gradient">Entregando soluções técnicas.</span>
+              <span className="text-gradient text-primary">Entregando soluções técnicas.</span>
             </motion.h1>
             <motion.p
               custom={1}
