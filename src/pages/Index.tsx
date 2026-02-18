@@ -223,8 +223,18 @@ const Index = () => {
       </section>
 
       {/* CTA */}
-      <section className="section-padding bg-primary">
-        <div className="container-narrow text-center">
+      <section className="relative section-padding overflow-hidden">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ filter: "saturate(0.7) contrast(0.9)" }}>
+          <source src="/videos/hero-bg.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-[#051D40]/80" />
+        <div className="container-narrow text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
