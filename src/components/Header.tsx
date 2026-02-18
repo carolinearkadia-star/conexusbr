@@ -18,9 +18,9 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
-      <div className="container-narrow flex items-center justify-between h-20 md:h-24 px-6">
+      <div className="container-narrow flex items-center justify-between h-28 md:h-32 px-6">
         <Link to="/" className="flex items-center gap-2">
-          <img src={logo} alt="Conexus" className="h-16 md:h-24 w-auto max-w-[200px] md:max-w-[280px]" />
+          <img src={logo} alt="Conexus" className="h-48 md:h-72 w-auto max-w-[500px] md:max-w-[700px]" />
         </Link>
 
         {/* Desktop nav */}
