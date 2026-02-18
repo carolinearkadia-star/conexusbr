@@ -197,7 +197,7 @@ const Index = () => {
                 alt={gestor.name}
                 className="w-36 h-36 rounded-full mx-auto object-cover border-muted border-0" />
 
-                <h3 className="mt-6 text-xl font-bold text-foreground">{gestor.name}</h3>
+                <h3 className="mt-6 text-xl font-bold text-primary-foreground">{gestor.name}</h3>
                 <p className="mt-1 text-sm text-secondary font-semibold">{gestor.experience}</p>
                 <p className="mt-4 text-muted-foreground text-sm leading-relaxed">
                   {gestor.description}
