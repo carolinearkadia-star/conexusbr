@@ -60,6 +60,26 @@ const getOrbitalPosition = (index: number, total: number) => {
   };
 };
 
+// Tooltip position relative to each node
+const getTooltipPosition = (index: number, total: number): React.CSSProperties => {
+  const angle = (index / total) * 2 * Math.PI - Math.PI / 2;
+  const deg = (angle * 180) / Math.PI;
+  // Place tooltip on the outer side of each node
+  if (deg >= -45 && deg < 45) {
+    // top node → show above
+    return { bottom: "calc(100% + 8px)", left: "50%", transform: "translateX(-50%)" };
+  } else if (deg >= 45 && deg < 135) {
+    // right nodes → show to the right
+    return { left: "calc(100% + 8px)", top: "50%", transform: "translateY(-50%)" };
+  } else if (deg >= -135 && deg < -45) {
+    // left nodes → show to the left
+    return { right: "calc(100% + 8px)", top: "50%", transform: "translateY(-50%)" };
+  } else {
+    // bottom nodes → show below
+    return { top: "calc(100% + 8px)", left: "50%", transform: "translateX(-50%)" };
+  }
+};
+
 const ConnectionHub = () => {
   const [activeNode, setActiveNode] = useState<number | null>(null);
   const isMobile = useIsMobile();
@@ -68,8 +88,7 @@ const ConnectionHub = () => {
     return <MobileHub activeNode={activeNode} setActiveNode={setActiveNode} />;
   }
 
-  const activeData = activeNode !== null ? nodes[activeNode] : null;
-  const ActiveIcon = activeData?.icon;
+
 
   return (
     <div className="flex flex-col items-center">
@@ -215,64 +234,41 @@ const ConnectionHub = () => {
                   {node.title.length > 30 ? node.title.slice(0, 30) + "…" : node.title}
                 </span>
               </motion.div>
+
+              {/* Tooltip popup */}
+              <AnimatePresence>
+                {isActive && (
+                  <motion.div
+                    className="absolute z-50 w-64 pointer-events-none"
+                    style={{
+                      ...(getTooltipPosition(i, nodes.length)),
+                    }}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.9 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <div
+                      className="p-3.5 rounded-xl backdrop-blur-md"
+                      style={{
+                        background: "linear-gradient(135deg, hsl(216, 86%, 14%, 0.95), hsl(216, 60%, 10%, 0.95))",
+                        border: "1px solid hsl(322, 76%, 42%, 0.35)",
+                        boxShadow: "0 0 15px hsl(322, 76%, 42%, 0.1), 0 8px 24px rgba(0,0,0,0.4)",
+                      }}
+                    >
+                      <p className="font-bold text-white text-xs mb-1 leading-tight">{node.title}</p>
+                      <p className="text-[11px] leading-relaxed" style={{ color: "hsl(216, 20%, 75%)" }}>
+                        {node.tooltip}
+                      </p>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </motion.div>
           );
         })}
       </div>
 
-      {/* Info panel — centered below diagram */}
-      <div className="w-full max-w-2xl mt-4" style={{ minHeight: 88 }}>
-        <AnimatePresence mode="wait">
-          {activeData && ActiveIcon ? (
-            <motion.div
-              key={activeData.id}
-              className="flex items-start gap-4 px-6 py-5 rounded-2xl backdrop-blur-sm"
-              style={{
-                background: "linear-gradient(135deg, hsl(216, 86%, 14%, 0.9), hsl(216, 60%, 10%, 0.9))",
-                border: "1px solid hsl(322, 76%, 42%, 0.25)",
-                boxShadow: "0 0 20px hsl(322, 76%, 42%, 0.06), 0 8px 30px rgba(0,0,0,0.35), inset 0 1px 0 hsl(216, 40%, 30%, 0.2)",
-              }}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 10 }}
-              transition={{ duration: 0.25 }}
-            >
-              <div
-                className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 mt-0.5"
-                style={{
-                  background: "linear-gradient(135deg, hsl(322, 76%, 42%, 0.2), hsl(322, 76%, 42%, 0.05))",
-                  border: "1px solid hsl(322, 76%, 42%, 0.3)",
-                }}
-              >
-                <ActiveIcon size={20} style={{ color: "hsl(322, 76%, 55%)" }} />
-              </div>
-              <div>
-                <p className="font-bold text-white text-sm mb-1">{activeData.title}</p>
-                <p className="text-[13px] leading-relaxed" style={{ color: "hsl(216, 20%, 75%)" }}>
-                  {activeData.tooltip}
-                </p>
-              </div>
-            </motion.div>
-          ) : (
-            <motion.div
-              key="placeholder"
-              className="flex items-center justify-center px-6 py-5 rounded-2xl"
-              style={{
-                background: "hsl(216, 86%, 12%, 0.4)",
-                border: "1px dashed hsl(216, 30%, 30%)",
-              }}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.2 }}
-            >
-              <p className="text-[13px]" style={{ color: "hsl(216, 20%, 50%)" }}>
-                Passe o mouse sobre uma etapa para ver os detalhes
-              </p>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
     </div>
   );
 };
