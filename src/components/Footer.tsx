@@ -19,20 +19,20 @@ const Footer = () => {
             </h4>
             <div className="flex flex-col gap-2">
               {[
-                { label: "Home", path: "/" },
-                { label: "Gestores Técnicos", path: "/#gestores-tecnicos" },
-                { label: "Parceiros", path: "/parceiros" },
-                { label: "Blog", path: "/blog" },
-                { label: "Fale Conosco", path: "/contato" },
-              ].map((item) => (
-                <Link
-                  key={item.path}
-                  to={item.path}
-                  className="text-sm text-primary-foreground/50 hover:text-primary-foreground transition-colors"
-                >
+              { label: "Home", path: "/" },
+              { label: "Gestores Técnicos", path: "/#gestores-tecnicos" },
+              { label: "Parceiros", path: "/parceiros" },
+              { label: "Blog", path: "/blog" },
+              { label: "Fale Conosco", path: "/contato" }].
+              map((item) =>
+              <Link
+                key={item.path}
+                to={item.path}
+                className="text-sm text-primary-foreground/50 hover:text-primary-foreground transition-colors">
+
                   {item.label}
                 </Link>
-              ))}
+              )}
             </div>
           </div>
 
@@ -41,7 +41,9 @@ const Footer = () => {
               Contato
             </h4>
             <div className="flex flex-col gap-2 text-sm text-primary-foreground/50">
-              <p>contato@conexus.com.br</p>
+              <p>cilene@conexusbr.com
+              
+              </p>
               <p>São Paulo, Brasil</p>
             </div>
           </div>
@@ -53,8 +55,6 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>
-  );
-};
+    </footer>);};
 
 export default Footer;
