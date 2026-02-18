@@ -3,7 +3,7 @@ import { ArrowRight, Mail, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import NetworkBackground from "@/components/NetworkBackground";
-import InteractiveSteps from "@/components/InteractiveSteps";
+import ConnectionHub from "@/components/ConnectionHub";
 import heroBg from "@/assets/hero-bg.jpg";
 import globeConnections from "@/assets/globe-connections.png";
 import fotoCilene from "@/assets/foto-cilene.png";
@@ -39,12 +39,6 @@ const fadeUp = {
   })
 };
 
-const steps = [
-{ num: "01", title: "Diagnóstico técnico e produtivo" },
-{ num: "02", title: "Análise de viabilidade técnica e industrial" },
-{ num: "03", title: "Definição de estratégia (layout, PCB e manufatura)" },
-{ num: "04", title: "Conexão com parceiros especialistas" },
-{ num: "05", title: "Acompanhamento técnico contínuo" }];
 
 
 const Index = () => {
@@ -136,24 +130,30 @@ const Index = () => {
       </section>
 
       {/* Modelo de Consultoria */}
-      <section className="section-padding text-primary-foreground bg-secondary">
+      <section
+        className="section-padding overflow-hidden"
+        style={{ background: "linear-gradient(180deg, hsl(216, 86%, 10%) 0%, hsl(216, 86%, 14%) 100%)" }}
+      >
         <div className="container-narrow">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16">
+            className="text-center mb-12">
 
-            <span className="text-sm font-semibold uppercase tracking-widest text-primary-foreground">
+            <span className="text-sm font-semibold uppercase tracking-widest" style={{ color: "hsl(322, 76%, 55%)" }}>
               Modelo de Consultoria
             </span>
-            <h2 className="mt-4 text-3xl md:text-4xl font-bold text-primary-foreground">
+            <h2 className="mt-4 text-3xl md:text-4xl font-bold text-white">
               Do diagnóstico à entrega
             </h2>
+            <p className="mt-3 text-white/50 text-lg max-w-xl mx-auto">
+              Passe o mouse sobre cada etapa para entender como reduzimos riscos e garantimos resultados.
+            </p>
           </motion.div>
 
-          <InteractiveSteps steps={steps} />
+          <ConnectionHub />
         </div>
       </section>
 
