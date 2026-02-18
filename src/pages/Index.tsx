@@ -241,8 +241,8 @@ const Index = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}>
 
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground">
-              Pronto para conectar seu projeto?
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground">Pronto para se conectar?
+
             </h2>
             <p className="mt-4 text-primary-foreground/60 text-lg max-w-lg mx-auto">
               Entre em contato e descubra como a Conexus pode impulsionar seu produto eletrônico.
