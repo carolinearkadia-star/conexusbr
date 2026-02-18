@@ -41,8 +41,8 @@ const Footer = () => {
               Contato
             </h4>
             <div className="flex flex-col gap-2 text-sm text-primary-foreground/50">
-              <a href="mailto:cilene@conexusbr.com" className="hover:text-primary-foreground transition-colors">cilene@conexusbr.com</a>
-              <p>São Paulo, Brasil</p>
+              <p>contato@conexus.com.br</p>
+              <p>Campinas, São Paulo</p>
             </div>
           </div>
         </div>
@@ -53,6 +53,8 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>);};
+    </footer>);
+
+};
 
 export default Footer;
