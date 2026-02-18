@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, BarChart3, Network, Ruler, Radar, BrainCog } from "lucide-react";
+import { Search, BarChart3, Network, Ruler, Radar } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import logoConexus from "@/assets/logo-conexus.png";
 
@@ -226,7 +226,7 @@ const ConnectionHub = () => {
                 animate={isActive ? { scale: 1.08 } : { scale: 1 }}
                 transition={{ duration: 0.2 }}>
 
-                <BrainCog
+                <Icon
                   size={24}
                   className="mb-1.5 transition-colors duration-300"
                   style={{ color: isActive ? "hsl(322, 76%, 55%)" : "hsl(216, 30%, 60%)" }} />
