@@ -53,8 +53,8 @@ const Index = () => {
           muted
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
-          style={{ filter: "saturate(0.7) contrast(0.9)" }}
-        >
+          style={{ filter: "saturate(0.7) contrast(0.9)" }}>
+
           <source src="/videos/hero-bg.mp4" type="video/mp4" />
         </video>
 
@@ -136,8 +136,8 @@ const Index = () => {
       {/* Modelo de Consultoria */}
       <section
         className="section-padding overflow-hidden"
-        style={{ background: "linear-gradient(180deg, hsl(216, 86%, 10%) 0%, hsl(216, 86%, 14%) 100%)" }}
-      >
+        style={{ background: "linear-gradient(180deg, hsl(216, 86%, 10%) 0%, hsl(216, 86%, 14%) 100%)" }}>
+
         <div className="container-narrow">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -190,7 +190,7 @@ const Index = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.15, duration: 0.6 }}
-              className="bg-card rounded-2xl border border-border shadow-sm p-8 text-center">
+              className="rounded-2xl border border-border shadow-sm p-8 text-center bg-primary">
 
                 <img
                 src={gestor.photo}
