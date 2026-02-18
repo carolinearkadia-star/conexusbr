@@ -24,7 +24,7 @@ const gestores = [
   photo: fotoHudson,
   experience: "+30 anos de experiência",
   description:
-  "Engenharia de processos e manufatura de placas eletrônicas. Avaliação técnica e industrialização.",
+  "Profissional com mais de 30 anos de experiência em engenharia de\nprocessos e manufatura de placas eletrônicas. Possui profundo\nconhecimento na relação entre processo, componentes e layout de PCB, com forte atuação em industrialização, confiabilidade e otimização produtiva. Liderou equipes de engenharia e participou de projetos de alta complexidade, incluindo o desenvolvimento da leitora de cartão do telefone público.\nNa Conexus, atua na avaliação técnica dos projetos, análise de riscos produtivos, definição de processos e suporte técnico avançado à industrialização.",
   whatsapp: "https://wa.me/5500000000000",
   email: "hudson@conexus.com.br"
 }];
