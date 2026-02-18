@@ -40,11 +40,17 @@ const Footer = () => {
             <h4 className="text-sm font-semibold uppercase tracking-wider mb-4 text-primary-foreground/80">
               Contato
             </h4>
-            <div className="flex flex-col gap-2 text-sm text-primary-foreground/50">
-              <p>Cilene: <a href="tel:+5519992320961" className="hover:text-primary-foreground transition-colors">(19) 99232-0961</a></p>
-              <a href="mailto:cilene@conexusbr.com" className="hover:text-primary-foreground transition-colors">cilene@conexusbr.com</a>
-              <p>Hudson: <a href="tel:+5519997942136" className="hover:text-primary-foreground transition-colors">(19) 99794-2136</a></p>
-              <a href="mailto:hudson@conexusbr.com" className="hover:text-primary-foreground transition-colors">hudson@conexusbr.com</a>
+            <div className="flex flex-col gap-4 text-sm text-primary-foreground/50">
+              <div>
+                <p className="font-bold text-primary-foreground/80">Cilene</p>
+                <a href="tel:+5519992320961" className="hover:text-primary-foreground transition-colors block">(19) 99232-0961</a>
+                <a href="mailto:cilene@conexusbr.com" className="hover:text-primary-foreground transition-colors block">cilene@conexusbr.com</a>
+              </div>
+              <div>
+                <p className="font-bold text-primary-foreground/80">Hudson</p>
+                <a href="tel:+5519997942136" className="hover:text-primary-foreground transition-colors block">(19) 99794-2136</a>
+                <a href="mailto:hudson@conexusbr.com" className="hover:text-primary-foreground transition-colors block">hudson@conexusbr.com</a>
+              </div>
               <a href="https://www.conexusbr.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary-foreground transition-colors">www.conexusbr.com</a>
             </div>
           </div>
