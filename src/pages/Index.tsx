@@ -53,7 +53,7 @@ const Index = () => {
           muted
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
-          style={{ filter: "blur(2px) saturate(0.7) contrast(0.9)" }}
+          style={{ filter: "saturate(0.7) contrast(0.9)" }}
         >
           <source src="/videos/hero-bg.mp4" type="video/mp4" />
         </video>
