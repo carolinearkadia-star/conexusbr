@@ -238,12 +238,23 @@ const ConnectionHub = () => {
                     borderColor: "hsl(322, 76%, 42%, 0.4)",
                     color: "hsl(0, 0%, 85%)",
                     boxShadow: "0 8px 30px rgba(0,0,0,0.4)",
-                    left: pos.x > 0 ? "100%" : "auto",
-                    right: pos.x <= 0 ? "100%" : "auto",
-                    top: "50%",
-                    transform: "translateY(-50%)",
-                    marginLeft: pos.x > 0 ? "12px" : 0,
-                    marginRight: pos.x <= 0 ? "12px" : 0,
+                    ...(Math.abs(pos.x) < 50
+                      ? {
+                          left: "50%",
+                          transform: "translateX(-50%)",
+                          ...(pos.y < 0
+                            ? { bottom: "100%", marginBottom: "12px" }
+                            : { top: "100%", marginTop: "12px" }),
+                        }
+                      : {
+                          left: pos.x > 0 ? "100%" : "auto",
+                          right: pos.x <= 0 ? "100%" : "auto",
+                          top: pos.y < -100 ? "0%" : pos.y > 100 ? "auto" : "50%",
+                          bottom: pos.y > 100 ? "0%" : "auto",
+                          transform: pos.y >= -100 && pos.y <= 100 ? "translateY(-50%)" : "none",
+                          marginLeft: pos.x > 0 ? "12px" : 0,
+                          marginRight: pos.x <= 0 ? "12px" : 0,
+                        }),
                   }}
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
