@@ -72,48 +72,15 @@ const ConnectionHub = () => {
   const ActiveIcon = activeData?.icon;
 
   return (
-    <div className="relative" style={{ minHeight: 560 }}>
-      {/* Fixed info panel — top right */}
-      <AnimatePresence mode="wait">
-        {activeData && ActiveIcon && (
-          <motion.div
-            key={activeData.id}
-            className="absolute z-30 top-0 right-0 w-80 p-6 rounded-2xl text-sm leading-relaxed backdrop-blur-sm"
-            style={{
-              background: "linear-gradient(135deg, hsl(216, 86%, 14%, 0.95), hsl(216, 60%, 10%, 0.95))",
-              border: "1px solid hsl(322, 76%, 42%, 0.3)",
-              color: "hsl(0, 0%, 88%)",
-              boxShadow: "0 0 30px hsl(322, 76%, 42%, 0.08), 0 12px 40px rgba(0,0,0,0.5), inset 0 1px 0 hsl(216, 40%, 30%, 0.3)",
-            }}
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.25 }}
-          >
-            <div className="flex items-center gap-3 mb-3">
-              <div
-                className="w-9 h-9 rounded-lg flex items-center justify-center shrink-0"
-                style={{
-                  background: "linear-gradient(135deg, hsl(322, 76%, 42%, 0.2), hsl(322, 76%, 42%, 0.05))",
-                  border: "1px solid hsl(322, 76%, 42%, 0.3)",
-                }}
-              >
-                <ActiveIcon size={18} style={{ color: "hsl(322, 76%, 55%)" }} />
-              </div>
-              <p className="font-bold text-white text-sm leading-snug">{activeData.title}</p>
-            </div>
-            <p className="text-[13px] leading-relaxed" style={{ color: "hsl(216, 20%, 75%)" }}>{activeData.tooltip}</p>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      <div className="flex items-center justify-center" style={{ minHeight: 560 }}>
-      {/* SVG animated lines */}
-      <svg
-        className="absolute inset-0 w-full h-full pointer-events-none"
-        viewBox="-380 -300 760 600"
-        preserveAspectRatio="xMidYMid meet"
-      >
+    <div className="flex flex-col items-center">
+      {/* Orbital diagram */}
+      <div className="relative w-full flex items-center justify-center" style={{ minHeight: 540 }}>
+        {/* SVG animated lines */}
+        <svg
+          className="absolute inset-0 w-full h-full pointer-events-none"
+          viewBox="-380 -300 760 600"
+          preserveAspectRatio="xMidYMid meet"
+        >
         <defs>
           <linearGradient id="hubLineGrad" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stopColor="hsl(216, 86%, 14%)" stopOpacity="0.6" />
@@ -130,28 +97,20 @@ const ConnectionHub = () => {
 
         {nodes.map((node, i) => {
           const pos = getOrbitalPosition(i, nodes.length);
-          const isActive = activeNode === i;
+          const isLineActive = activeNode === i;
           return (
             <g key={node.id}>
-              {/* Dashed track line */}
               <line
-                x1={0}
-                y1={0}
-                x2={pos.x}
-                y2={pos.y}
+                x1={0} y1={0} x2={pos.x} y2={pos.y}
                 stroke="hsl(216, 30%, 30%)"
                 strokeWidth="1"
                 strokeDasharray="6 4"
                 opacity="0.35"
               />
-              {/* Active glow line */}
               <AnimatePresence>
-                {isActive && (
+                {isLineActive && (
                   <motion.line
-                    x1={0}
-                    y1={0}
-                    x2={pos.x}
-                    y2={pos.y}
+                    x1={0} y1={0} x2={pos.x} y2={pos.y}
                     stroke="url(#hubLineGrad)"
                     strokeWidth="2"
                     filter="url(#glow)"
@@ -164,9 +123,8 @@ const ConnectionHub = () => {
                   />
                 )}
               </AnimatePresence>
-              {/* Traveling pulse */}
               <AnimatePresence>
-                {isActive && (
+                {isLineActive && (
                   <motion.circle
                     r="3"
                     fill="hsl(322, 76%, 42%)"
@@ -189,87 +147,132 @@ const ConnectionHub = () => {
             </g>
           );
         })}
-      </svg>
+        </svg>
 
-      {/* Central Hub */}
-      <motion.div
-        className="absolute z-20 w-36 h-36 rounded-full flex flex-col items-center justify-center text-center border-2 shadow-2xl"
-        style={{
-          background:
-            "radial-gradient(circle, hsl(216, 86%, 18%) 0%, hsl(216, 86%, 10%) 100%)",
-          borderColor: "hsl(216, 30%, 40%)",
-          boxShadow: "0 0 40px hsl(322, 76%, 42%, 0.15), 0 0 80px hsl(216, 86%, 14%, 0.3)",
-        }}
-        initial={{ scale: 0 }}
-        whileInView={{ scale: 1 }}
-        viewport={{ once: true }}
-        transition={{ type: "spring", stiffness: 200, damping: 20 }}
-      >
-        <img src={logoConexus} alt="Conexus" className="w-22 h-auto mb-1 brightness-0 invert" />
-        <span className="text-[9px] font-semibold text-white/60 leading-tight px-2">
-          Consultoria Integradora
-        </span>
-      </motion.div>
+        {/* Central Hub */}
+        <motion.div
+          className="absolute z-20 w-36 h-36 rounded-full flex flex-col items-center justify-center text-center border-2 shadow-2xl"
+          style={{
+            background: "radial-gradient(circle, hsl(216, 86%, 18%) 0%, hsl(216, 86%, 10%) 100%)",
+            borderColor: "hsl(216, 30%, 40%)",
+            boxShadow: "0 0 40px hsl(322, 76%, 42%, 0.15), 0 0 80px hsl(216, 86%, 14%, 0.3)",
+          }}
+          initial={{ scale: 0 }}
+          whileInView={{ scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ type: "spring", stiffness: 200, damping: 20 }}
+        >
+          <img src={logoConexus} alt="Conexus" className="w-22 h-auto mb-1 brightness-0 invert" />
+          <span className="text-[9px] font-semibold text-white/60 leading-tight px-2">
+            Consultoria Integradora
+          </span>
+        </motion.div>
 
-      {/* Orbital Nodes */}
-      {nodes.map((node, i) => {
-        const pos = getOrbitalPosition(i, nodes.length);
-        const Icon = node.icon;
-        const isActive = activeNode === i;
+        {/* Orbital Nodes */}
+        {nodes.map((node, i) => {
+          const pos = getOrbitalPosition(i, nodes.length);
+          const Icon = node.icon;
+          const isActive = activeNode === i;
 
-        return (
-          <motion.div
-            key={node.id}
-            className={`absolute z-10 group cursor-pointer orbital-node-${i}`}
-            style={{
-              left: `calc(50% + ${pos.x}px - 56px)`,
-              top: `calc(50% + ${pos.y}px - 56px)`,
-            }}
-            initial={{ opacity: 0, scale: 0 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 + i * 0.1, type: "spring", stiffness: 200, damping: 20 }}
-            onMouseEnter={() => setActiveNode(i)}
-            onMouseLeave={() => setActiveNode(null)}
-          >
-            {/* Node circle */}
+          return (
             <motion.div
-              className="w-28 h-28 rounded-full flex flex-col items-center justify-center text-center border transition-all duration-300"
+              key={node.id}
+              className={`absolute z-10 group cursor-pointer orbital-node-${i}`}
               style={{
-                background: isActive
-                  ? "linear-gradient(135deg, hsl(216, 60%, 20%), hsl(216, 86%, 14%))"
-                  : "linear-gradient(135deg, hsl(216, 40%, 22%), hsl(216, 50%, 16%))",
-                borderColor: isActive
-                  ? "hsl(322, 76%, 42%)"
-                  : "hsl(216, 30%, 35%)",
-                boxShadow: isActive
-                  ? "0 0 20px hsl(322, 76%, 42%, 0.3), 0 4px 20px rgba(0,0,0,0.3)"
-                  : "0 4px 15px rgba(0,0,0,0.2)",
+                left: `calc(50% + ${pos.x}px - 56px)`,
+                top: `calc(50% + ${pos.y}px - 56px)`,
               }}
-              animate={isActive ? { scale: 1.08 } : { scale: 1 }}
-              transition={{ duration: 0.2 }}
+              initial={{ opacity: 0, scale: 0 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 + i * 0.1, type: "spring", stiffness: 200, damping: 20 }}
+              onMouseEnter={() => setActiveNode(i)}
+              onMouseLeave={() => setActiveNode(null)}
             >
-              <Icon
-                size={24}
-                className="mb-1.5 transition-colors duration-300"
+              <motion.div
+                className="w-28 h-28 rounded-full flex flex-col items-center justify-center text-center border transition-all duration-300"
                 style={{
-                  color: isActive ? "hsl(322, 76%, 55%)" : "hsl(216, 30%, 60%)",
+                  background: isActive
+                    ? "linear-gradient(135deg, hsl(216, 60%, 20%), hsl(216, 86%, 14%))"
+                    : "linear-gradient(135deg, hsl(216, 40%, 22%), hsl(216, 50%, 16%))",
+                  borderColor: isActive ? "hsl(322, 76%, 42%)" : "hsl(216, 30%, 35%)",
+                  boxShadow: isActive
+                    ? "0 0 20px hsl(322, 76%, 42%, 0.3), 0 4px 20px rgba(0,0,0,0.3)"
+                    : "0 4px 15px rgba(0,0,0,0.2)",
                 }}
-              />
-              <span
-                className="text-[10px] font-semibold leading-tight px-2 transition-colors duration-300"
+                animate={isActive ? { scale: 1.08 } : { scale: 1 }}
+                transition={{ duration: 0.2 }}
+              >
+                <Icon
+                  size={24}
+                  className="mb-1.5 transition-colors duration-300"
+                  style={{ color: isActive ? "hsl(322, 76%, 55%)" : "hsl(216, 30%, 60%)" }}
+                />
+                <span
+                  className="text-[10px] font-semibold leading-tight px-2 transition-colors duration-300"
+                  style={{ color: isActive ? "hsl(0, 0%, 100%)" : "hsl(216, 20%, 70%)" }}
+                >
+                  {node.title.length > 30 ? node.title.slice(0, 30) + "…" : node.title}
+                </span>
+              </motion.div>
+            </motion.div>
+          );
+        })}
+      </div>
+
+      {/* Info panel — centered below diagram */}
+      <div className="w-full max-w-2xl mt-4" style={{ minHeight: 88 }}>
+        <AnimatePresence mode="wait">
+          {activeData && ActiveIcon ? (
+            <motion.div
+              key={activeData.id}
+              className="flex items-start gap-4 px-6 py-5 rounded-2xl backdrop-blur-sm"
+              style={{
+                background: "linear-gradient(135deg, hsl(216, 86%, 14%, 0.9), hsl(216, 60%, 10%, 0.9))",
+                border: "1px solid hsl(322, 76%, 42%, 0.25)",
+                boxShadow: "0 0 20px hsl(322, 76%, 42%, 0.06), 0 8px 30px rgba(0,0,0,0.35), inset 0 1px 0 hsl(216, 40%, 30%, 0.2)",
+              }}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 10 }}
+              transition={{ duration: 0.25 }}
+            >
+              <div
+                className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 mt-0.5"
                 style={{
-                  color: isActive ? "hsl(0, 0%, 100%)" : "hsl(216, 20%, 70%)",
+                  background: "linear-gradient(135deg, hsl(322, 76%, 42%, 0.2), hsl(322, 76%, 42%, 0.05))",
+                  border: "1px solid hsl(322, 76%, 42%, 0.3)",
                 }}
               >
-                {node.title.length > 30 ? node.title.slice(0, 30) + "…" : node.title}
-              </span>
+                <ActiveIcon size={20} style={{ color: "hsl(322, 76%, 55%)" }} />
+              </div>
+              <div>
+                <p className="font-bold text-white text-sm mb-1">{activeData.title}</p>
+                <p className="text-[13px] leading-relaxed" style={{ color: "hsl(216, 20%, 75%)" }}>
+                  {activeData.tooltip}
+                </p>
+              </div>
             </motion.div>
-
-          </motion.div>
-        );
-      })}
-    </div>
+          ) : (
+            <motion.div
+              key="placeholder"
+              className="flex items-center justify-center px-6 py-5 rounded-2xl"
+              style={{
+                background: "hsl(216, 86%, 12%, 0.4)",
+                border: "1px dashed hsl(216, 30%, 30%)",
+              }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+            >
+              <p className="text-[13px]" style={{ color: "hsl(216, 20%, 50%)" }}>
+                Passe o mouse sobre uma etapa para ver os detalhes
+              </p>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
     </div>
   );
 };
