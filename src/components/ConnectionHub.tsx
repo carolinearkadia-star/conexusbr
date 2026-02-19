@@ -202,8 +202,8 @@ const ConnectionHub = () => {
               key={node.id}
               className={`absolute z-10 group cursor-pointer orbital-node-${i}`}
               style={{
-                left: `calc(50% + ${pos.x}px - 32px)`,
-                top: `calc(50% + ${pos.y}px - 32px)`
+                left: `calc(50% + ${pos.x}px - 40px)`,
+                top: `calc(50% + ${pos.y}px - 40px)`
               }}
               initial={{ opacity: 0, scale: 0 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -213,7 +213,7 @@ const ConnectionHub = () => {
               onMouseLeave={() => setActiveNode(null)}>
 
               <motion.div
-                className="w-16 h-16 rounded-full flex items-center justify-center border transition-all duration-300"
+                className="w-20 h-20 rounded-full flex items-center justify-center border transition-all duration-300"
                 style={{
                   background: isActive ?
                   "linear-gradient(135deg, hsl(216, 60%, 20%), hsl(216, 86%, 14%))" :
@@ -227,7 +227,7 @@ const ConnectionHub = () => {
                 transition={{ duration: 0.2 }}>
 
                 <Icon
-                  size={28}
+                  size={32}
                   className="transition-colors duration-300"
                   style={{ color: isActive ? "hsl(322, 76%, 55%)" : "hsl(216, 30%, 60%)" }} />
               </motion.div>
@@ -236,7 +236,7 @@ const ConnectionHub = () => {
               <AnimatePresence>
                 {isActive &&
                 <motion.div
-                  className="absolute z-50 w-64 pointer-events-none"
+                  className="absolute z-50 w-80 pointer-events-none"
                   style={{
                     ...getTooltipPosition(i, nodes.length)
                   }}
@@ -246,15 +246,15 @@ const ConnectionHub = () => {
                   transition={{ duration: 0.2 }}>
 
                     <div
-                    className="p-3.5 rounded-xl backdrop-blur-md"
+                    className="p-5 rounded-xl backdrop-blur-md"
                     style={{
                       background: "linear-gradient(135deg, hsl(216, 86%, 14%, 0.95), hsl(216, 60%, 10%, 0.95))",
                       border: "1px solid hsl(322, 76%, 42%, 0.35)",
                       boxShadow: "0 0 15px hsl(322, 76%, 42%, 0.1), 0 8px 24px rgba(0,0,0,0.4)"
                     }}>
 
-                      <p className="font-bold text-white text-xs mb-1 leading-tight">{node.title}</p>
-                      <p className="text-[11px] leading-relaxed" style={{ color: "hsl(216, 20%, 75%)" }}>
+                      <p className="font-bold text-white text-sm mb-1.5 leading-tight">{node.title}</p>
+                      <p className="text-[13px] leading-relaxed" style={{ color: "hsl(216, 20%, 75%)" }}>
                         {node.tooltip}
                       </p>
                     </div>
