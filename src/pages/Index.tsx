@@ -79,9 +79,9 @@ const Index = () => {
             <motion.p
               custom={1}
               variants={fadeUp}
-              className="mt-6 text-lg md:text-xl text-white/70 max-w-xl leading-relaxed">
+              className="mt-6 text-lg md:text-xl text-white/70 max-w-xl leading-relaxed">Consultoria estratégica em produtos eletrônicos.
 
-              Consultoria técnica e estratégica em produtos eletrônicos.
+
             </motion.p>
             <motion.div custom={2} variants={fadeUp} className="mt-10 flex flex-wrap gap-4">
               <Button variant="hero" size="xl" asChild>
