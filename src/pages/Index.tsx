@@ -151,7 +151,7 @@ const Index = () => {
         {/* Overlay */}
         <div
           className="absolute inset-0 pointer-events-none"
-          style={{ background: "hsla(216, 86%, 14%, 0.80)", zIndex: 1 }}
+          style={{ background: "hsla(216, 86%, 14%, 0.90)", zIndex: 1 }}
         />
 
         <div className="container-narrow relative z-[2]">
