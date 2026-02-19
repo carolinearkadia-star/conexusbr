@@ -202,8 +202,8 @@ const ConnectionHub = () => {
               key={node.id}
               className={`absolute z-10 group cursor-pointer orbital-node-${i}`}
               style={{
-                left: `calc(50% + ${pos.x}px - 56px)`,
-                top: `calc(50% + ${pos.y}px - 56px)`
+                left: `calc(50% + ${pos.x}px - 32px)`,
+                top: `calc(50% + ${pos.y}px - 32px)`
               }}
               initial={{ opacity: 0, scale: 0 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -213,7 +213,7 @@ const ConnectionHub = () => {
               onMouseLeave={() => setActiveNode(null)}>
 
               <motion.div
-                className="w-28 h-28 rounded-full flex flex-col items-center justify-center text-center border transition-all duration-300"
+                className="w-16 h-16 rounded-full flex items-center justify-center border transition-all duration-300"
                 style={{
                   background: isActive ?
                   "linear-gradient(135deg, hsl(216, 60%, 20%), hsl(216, 86%, 14%))" :
@@ -227,16 +227,9 @@ const ConnectionHub = () => {
                 transition={{ duration: 0.2 }}>
 
                 <Icon
-                  size={24}
-                  className="mb-1.5 transition-colors duration-300"
+                  size={28}
+                  className="transition-colors duration-300"
                   style={{ color: isActive ? "hsl(322, 76%, 55%)" : "hsl(216, 30%, 60%)" }} />
-
-                <span
-                  className="text-[10px] font-semibold leading-tight px-2 transition-colors duration-300"
-                  style={{ color: isActive ? "hsl(0, 0%, 100%)" : "hsl(216, 20%, 70%)" }}>
-
-                  {node.title.length > 30 ? node.title.slice(0, 30) + "…" : node.title}
-                </span>
               </motion.div>
 
               {/* Tooltip popup */}
