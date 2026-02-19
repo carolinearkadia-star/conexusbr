@@ -135,10 +135,26 @@ const Index = () => {
 
       {/* Modelo de Consultoria */}
       <section
-        className="section-padding overflow-hidden"
+        className="section-padding overflow-hidden relative"
         style={{ background: "linear-gradient(180deg, hsl(216, 86%, 10%) 0%, hsl(216, 86%, 14%) 100%)" }}>
+        {/* Video background */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+          style={{ zIndex: 0 }}
+        >
+          <source src="/videos/hub-bg.mp4" type="video/mp4" />
+        </video>
+        {/* Overlay */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{ background: "hsla(216, 86%, 14%, 0.80)", zIndex: 1 }}
+        />
 
-        <div className="container-narrow">
+        <div className="container-narrow relative z-[2]">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
