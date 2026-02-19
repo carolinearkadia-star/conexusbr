@@ -67,7 +67,7 @@ const getTooltipPosition = (index: number, total: number): React.CSSProperties =
   // Use actual x/y position to determine tooltip placement
   // Node 0 (Diagnóstico) → force left
   if (index === 0) {
-    return { right: "calc(100% + 8px)", top: "30%", transform: "translateY(-50%)" };
+    return { right: "calc(100% + 8px)", top: "15%", transform: "translateY(-50%)" };
   }
   if (Math.abs(pos.y) < 80) {
     if (pos.x > 0) {
