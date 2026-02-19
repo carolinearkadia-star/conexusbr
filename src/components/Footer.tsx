@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container-narrow px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
-            <img src={logo} alt="Conexus" className="h-24 w-auto brightness-0 invert mb-4" />
+            <img src={logo} alt="Conexus" className="h-48 w-auto brightness-0 invert mb-4" />
             
 
 
