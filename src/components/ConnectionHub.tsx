@@ -98,9 +98,25 @@ const ConnectionHub = () => {
 
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center relative overflow-hidden rounded-2xl">
+      {/* Video background */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+        style={{ zIndex: 0 }}
+      >
+        <source src="/videos/hub-bg.mp4" type="video/mp4" />
+      </video>
+      {/* Overlay */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{ background: "hsla(216, 86%, 14%, 0.80)", zIndex: 1 }}
+      />
       {/* Orbital diagram */}
-      <div className="relative w-full flex items-center justify-center" style={{ minHeight: 540 }}>
+      <div className="relative w-full flex items-center justify-center" style={{ minHeight: 540, zIndex: 2 }}>
         {/* SVG animated lines */}
         <svg
           className="absolute inset-0 w-full h-full pointer-events-none"
