@@ -55,12 +55,18 @@ const PartnerModal = ({ partner, open, onClose }: PartnerModalProps) => {
             className="relative z-10 w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-[20px] bg-primary border border-border/20 shadow-2xl"
           >
             {/* Header */}
-            <div className="flex items-center justify-between p-6 pb-4 border-b border-border/10">
-              <div className="flex items-center gap-4">
+            <div className="flex items-start justify-between p-8 pb-6 border-b border-border/10">
+              <div className="flex flex-col gap-3">
                 {partner.logo && (
-                  <img src={partner.logo} alt={partner.name} className={`object-contain ${partner.name === "CADService" ? "h-12 scale-[3] ml-8" : "h-12 max-w-[160px]"}`} />
+                  <div className="h-10 flex items-center overflow-visible">
+                    <img
+                      src={partner.logo}
+                      alt={partner.name}
+                      className={`object-contain object-left ${partner.name === "CADService" ? "h-full scale-[2.5] origin-left" : "h-full max-w-[160px]"}`}
+                    />
+                  </div>
                 )}
-                <div>
+                <div className={partner.name === "CADService" ? "mt-2" : ""}>
                   <h2 className="text-xl md:text-2xl font-bold text-primary-foreground">
                     {partner.name}
                   </h2>
