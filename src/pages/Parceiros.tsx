@@ -7,22 +7,22 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 
 const parceiros = [
-  {
-    name: "CADService",
-    description: "Manufatura de placas eletrônicas (SMT e PTH).",
-    url: "#",
-  },
-  {
-    name: "ICAPE",
-    description: "Fabricação global de PCBs.",
-    url: "#",
-  },
-  {
-    name: "FITec",
-    description: "Fundação para Inovações Tecnológicas.",
-    url: "#",
-  },
-];
+{
+  name: "CADService",
+  description: "Manufatura de placas eletrônicas (SMT e PTH).",
+  url: "#"
+},
+{
+  name: "ICAPE",
+  description: "Fabricação global de PCBs.",
+  url: "#"
+},
+{
+  name: "FITec",
+  description: "Fundação para Inovações Tecnológicas.",
+  url: "#"
+}];
+
 
 const ParceirosPage = () => {
   const { toast } = useToast();
@@ -34,7 +34,7 @@ const ParceirosPage = () => {
     areaAtuacao: "",
     tipoParceria: "",
     interesse: "",
-    mensagem: "",
+    mensagem: ""
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -52,8 +52,8 @@ const ParceirosPage = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+            className="text-center mb-16">
+
             <span className="text-secondary text-sm font-semibold uppercase tracking-widest">
               Rede
             </span>
@@ -63,23 +63,23 @@ const ParceirosPage = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {parceiros.map((p, i) => (
-              <motion.div
-                key={p.name}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1, duration: 0.5 }}
-                className="bg-card rounded-2xl border border-border p-8 flex flex-col"
-              >
-                <h3 className="text-lg font-bold text-foreground">{p.name}</h3>
-                <p className="mt-2 text-muted-foreground text-sm flex-1">{p.description}</p>
+            {parceiros.map((p, i) =>
+            <motion.div
+              key={p.name}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.1, duration: 0.5 }}
+              className="rounded-2xl border border-border p-8 flex flex-col bg-primary">
+
+                <h3 className="text-lg font-bold text-secondary">{p.name}</h3>
+                <p className="mt-2 text-sm flex-1 text-primary-foreground">{p.description}</p>
                 <Button variant="outline" size="sm" className="mt-6 w-fit" asChild>
                   <a href={p.url}>
                     Saiba mais <ExternalLink size={14} />
                   </a>
                 </Button>
               </motion.div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -91,8 +91,8 @@ const ParceirosPage = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
+            transition={{ duration: 0.6 }}>
+
             <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center">
               Quer se conectar como parceiro?
             </h2>
@@ -118,8 +118,8 @@ const ParceirosPage = () => {
           </motion.div>
         </div>
       </section>
-    </div>
-  );
+    </div>);
+
 };
 
 export default ParceirosPage;
