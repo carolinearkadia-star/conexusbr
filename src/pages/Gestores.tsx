@@ -11,7 +11,7 @@ const gestores = [
   experience: "+28 anos de experiência",
   description:
   "Profissional com mais de 28 anos de experiência na indústria eletrônica, com atuação sólida na gestão comercial, processos, qualidade e desenvolvimento de negócios. Ao longo de sua carreira, atuou de forma direta na interface entre engenharia, produção, qualidade e cliente, liderando equipes, implantando sistemas de gestão, MRP, Lean Manufacturing e Kaizen.\n\nNa Conexus, é responsável pelo diagnóstico das necessidades do cliente, estruturação das conexões técnicas, alinhamento entre expectativa e viabilidade e condução estratégica dos projetos.",
-  whatsapp: "https://wa.me/5500000000000",
+  whatsapp: "https://wa.me/5519992427962",
   email: "cilene@conexus.com.br"
 },
 {
@@ -20,7 +20,7 @@ const gestores = [
   experience: "+30 anos de experiência",
   description:
   "Profissional com mais de 30 anos de experiência em engenharia de\nprocessos e manufatura de placas eletrônicas. Possui profundo\nconhecimento na relação entre processo, componentes e layout de PCB, com forte atuação em industrialização, confiabilidade e otimização produtiva. Liderou equipes de engenharia e participou de projetos de alta complexidade, incluindo o desenvolvimento da leitora de cartão do telefone público.\nNa Conexus, atua na avaliação técnica dos projetos, análise de riscos produtivos, definição de processos e suporte técnico avançado à industrialização.",
-  whatsapp: "https://wa.me/5500000000000",
+  whatsapp: "https://wa.me/5519999531659",
   email: "hudson@conexus.com.br"
 }];
 
@@ -54,19 +54,19 @@ const GestoresPage = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.15, duration: 0.6 }}
-              className="bg-card rounded-2xl border border-border shadow-sm p-8 text-center">
+              className="bg-primary rounded-2xl border border-border shadow-sm p-8 text-center flex flex-col">
 
                 <img
                 src={gestor.photo}
                 alt={gestor.name}
                 className="w-36 h-36 rounded-full mx-auto object-cover border-muted border-0" />
 
-                <h3 className="mt-6 text-xl font-bold text-foreground">{gestor.name}</h3>
+                <h3 className="mt-6 text-xl font-bold text-primary-foreground">{gestor.name}</h3>
                 <p className="mt-1 text-sm text-secondary font-semibold">{gestor.experience}</p>
-                <p className="mt-4 text-muted-foreground text-sm leading-relaxed">
+                <p className="mt-4 text-primary-foreground text-sm leading-relaxed">
                   {gestor.description}
                 </p>
-                <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
+                <div className="mt-auto pt-6 flex flex-col sm:flex-row gap-3 justify-center">
                   <Button variant="whatsapp" size="sm" asChild>
                     <a href={gestor.whatsapp} target="_blank" rel="noopener noreferrer">
                       <MessageCircle size={16} />
