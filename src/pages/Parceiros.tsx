@@ -7,6 +7,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import PartnerModal, { type PartnerData } from "@/components/PartnerModal";
 import logoCadservice from "@/assets/logo-cadservice.png";
+import cadserviceSmt from "@/assets/cadservice-smt.jpg";
+import cadserviceFabrica from "@/assets/cadservice-fabrica.jpg";
 import icapeOffice from "@/assets/icape-office.webp";
 import icapeQuality from "@/assets/icape-quality.webp";
 import logoIcape from "@/assets/logo-icape.svg";
@@ -27,8 +29,8 @@ const parceiros: PartnerData[] = [
       "A CADService é especializada na manufatura de placas eletrônicas, oferecendo serviços completos de montagem SMT (Surface Mount Technology) e PTH (Pin Through Hole).\n\nCom infraestrutura moderna e processos certificados, a empresa garante qualidade e agilidade na produção de protótipos e lotes de produção.",
     url: "https://www.cadservice.com.br/",
     media: [
-      { type: "image", src: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800", alt: "Placa eletrônica" },
-      { type: "image", src: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800", alt: "Tecnologia" },
+      { type: "image", src: cadserviceSmt, alt: "Linha de montagem SMT CADService" },
+      { type: "image", src: cadserviceFabrica, alt: "Fábrica CADService" },
     ],
   },
   {
