@@ -54,8 +54,8 @@ const ParceirosPage = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-16">
 
-            <span className="text-secondary text-sm font-semibold uppercase tracking-widest">
-              Rede
+            <span className="text-secondary text-sm font-semibold uppercase tracking-widest">REDE DE NEGÓCIOS
+
             </span>
             <h1 className="mt-4 text-3xl md:text-5xl font-bold text-foreground">
               Nossos Parceiros
