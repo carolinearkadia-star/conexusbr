@@ -14,6 +14,7 @@ import fitecSolar from "@/assets/fitec-solar.png";
 import fitecLab from "@/assets/fitec-lab.jpg";
 import jtcpcbLayout from "@/assets/jtcpcb-layout.webp";
 import jtcpcbPcb from "@/assets/jtcpcb-pcb.webp";
+import logoJtcpcb from "@/assets/logo-jtcpcb.png";
 
 const parceiros: PartnerData[] = [
   {
@@ -55,7 +56,8 @@ const parceiros: PartnerData[] = [
     ],
   },
   {
-    name: "JTCPBC",
+    name: "JTCPCB",
+    logo: logoJtcpcb,
     subtitle: "Parceiro Estratégico",
     description: "Layout e Design de Placas Eletrônicas.",
     fullDescription:
