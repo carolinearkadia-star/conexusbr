@@ -16,7 +16,7 @@ const gestores = [
   experience: "+28 anos de experiência",
   description:
   "Profissional com mais de 28 anos de experiência na indústria eletrônica, com atuação sólida na gestão comercial, processos, qualidade e desenvolvimento de negócios. Ao longo de sua carreira, atuou de forma direta na interface entre engenharia, produção, qualidade e cliente, liderando equipes, implantando sistemas de gestão, MRP, Lean Manufacturing e Kaizen.\n\nNa Conexus, é responsável pelo diagnóstico das necessidades do cliente, estruturação das conexões técnicas, alinhamento entre expectativa e viabilidade e condução estratégica dos projetos.",
-  whatsapp: "https://wa.me/5500000000000",
+  whatsapp: "https://wa.me/5519992427962",
   email: "cilene@conexus.com.br"
 },
 {
