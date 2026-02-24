@@ -7,6 +7,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import PartnerModal, { type PartnerData } from "@/components/PartnerModal";
 import logoCadservice from "@/assets/logo-cadservice.png";
+import icapeOffice from "@/assets/icape-office.webp";
+import icapeQuality from "@/assets/icape-quality.webp";
 
 const parceiros: PartnerData[] = [
   {
@@ -28,9 +30,10 @@ const parceiros: PartnerData[] = [
     description: "Fabricação global de PCBs.",
     fullDescription:
       "A ICAPE é referência mundial na fabricação de PCBs (Printed Circuit Boards), atendendo clientes em diversos setores da indústria eletrônica.\n\nCom presença global e parcerias com as melhores fábricas, garante qualidade, rastreabilidade e prazos competitivos.",
-    url: "#",
+    url: "https://www.icape-group.com/pt-pt/",
     media: [
-      { type: "image", src: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800", alt: "PCB" },
+      { type: "image", src: icapeOffice, alt: "Escritório ICAPE" },
+      { type: "image", src: icapeQuality, alt: "Controle de qualidade ICAPE" },
     ],
   },
   {
