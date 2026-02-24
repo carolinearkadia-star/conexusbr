@@ -48,7 +48,7 @@ const Footer = () => {
               </div>
               <div>
                 <p className="font-bold text-primary-foreground/80">Hudson</p>
-                <a href="tel:+5519997942136" className="hover:text-primary-foreground transition-colors block">(19) 99794-2136</a>
+                <a className="hover:text-primary-foreground transition-colors block" href="wa.me/5519999531659">(19) 99953-1659</a>
                 <a href="mailto:hudson@conexusbr.com" className="hover:text-primary-foreground transition-colors block">hudson@conexusbr.com</a>
               </div>
               <a href="https://www.conexusbr.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary-foreground transition-colors">www.conexusbr.com</a>
