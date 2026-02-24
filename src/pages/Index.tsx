@@ -206,7 +206,7 @@ const Index = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.15, duration: 0.6 }}
-              className="rounded-2xl border border-border shadow-sm p-8 text-center bg-primary">
+              className="rounded-2xl border border-border shadow-sm p-8 text-center bg-primary flex flex-col">
 
                 <img
                 src={gestor.photo}
@@ -218,7 +218,7 @@ const Index = () => {
                 <p className="mt-4 text-sm leading-relaxed text-primary-foreground">
                   {gestor.description}
                 </p>
-                <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
+                <div className="mt-auto pt-6 flex flex-col sm:flex-row gap-3 justify-center">
                   <Button variant="whatsapp" size="sm" asChild>
                     <a href={gestor.whatsapp} target="_blank" rel="noopener noreferrer">
                       <MessageCircle size={16} />
