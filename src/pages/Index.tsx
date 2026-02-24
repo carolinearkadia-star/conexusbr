@@ -215,7 +215,7 @@ const Index = () => {
 
                 <h3 className="mt-6 text-xl font-bold text-primary-foreground">{gestor.name}</h3>
                 <p className="mt-1 text-sm text-secondary font-semibold">{gestor.experience}</p>
-                <p className="mt-4 text-sm leading-relaxed text-primary-foreground">
+                <p className="mt-4 text-sm leading-relaxed text-primary-foreground text-justify">
                   {gestor.description}
                 </p>
                 <div className="mt-auto pt-6 flex flex-col sm:flex-row gap-3 justify-center">
