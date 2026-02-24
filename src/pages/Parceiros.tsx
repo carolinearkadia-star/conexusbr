@@ -21,6 +21,11 @@ const parceiros = [
   name: "FITec",
   description: "Fundação para Inovações Tecnológicas.",
   url: "#"
+},
+{
+  name: "JTCPBC",
+  description: "Layout e Design de Placas Eletrônicas.",
+  url: "#"
 }];
 
 
