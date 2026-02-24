@@ -14,7 +14,7 @@ const ContatoPage = () => {
     email: "",
     telefone: "",
     tipoProjeto: "",
-    descricao: "",
+    descricao: ""
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -31,8 +31,8 @@ const ContatoPage = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+            className="text-center mb-16">
+
             <span className="text-secondary text-sm font-semibold uppercase tracking-widest">
               Contato
             </span>
@@ -51,8 +51,8 @@ const ContatoPage = () => {
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="space-y-5"
-            >
+              className="space-y-5">
+
               <Input placeholder="Nome" value={form.nome} onChange={(e) => setForm({ ...form, nome: e.target.value })} required />
               <Input placeholder="Empresa" value={form.empresa} onChange={(e) => setForm({ ...form, empresa: e.target.value })} />
               <Input type="email" placeholder="Email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} required />
@@ -69,8 +69,8 @@ const ContatoPage = () => {
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="space-y-8"
-            >
+              className="space-y-8">
+
               <div>
                 <h3 className="text-lg font-bold text-foreground mb-4">Informações de contato</h3>
                 <div className="space-y-4">
@@ -100,7 +100,7 @@ const ContatoPage = () => {
               </div>
 
               <Button variant="whatsapp" size="lg" className="w-full" asChild>
-                <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer">
+                <a target="_blank" rel="noopener noreferrer" href="https://wa.me/5519992320961">
                   <MessageCircle size={18} />
                   Chamar no WhatsApp
                 </a>
@@ -109,8 +109,8 @@ const ContatoPage = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>);
+
 };
 
 export default ContatoPage;
