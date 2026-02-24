@@ -121,7 +121,7 @@ const ParceirosPage = () => {
                 className="rounded-2xl border border-border p-8 flex flex-col bg-primary items-start"
               >
                 {p.logo && (
-                  <img src={p.logo} alt={p.name} className={`object-contain mb-4 ${p.name === "CADService" ? "h-20" : "h-12"}`} />
+                  <img src={p.logo} alt={p.name} className={`object-contain mb-4 ${p.name === "CADService" ? "h-28" : "h-12"}`} />
                 )}
                 <h3 className="text-lg font-bold text-secondary">{p.name}</h3>
                 <p className="mt-2 text-sm flex-1 text-primary-foreground">{p.description}</p>
