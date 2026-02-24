@@ -118,8 +118,11 @@ const ParceirosPage = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1, duration: 0.5 }}
-                className="rounded-2xl border border-border p-8 flex flex-col bg-primary"
+                className="rounded-2xl border border-border p-8 flex flex-col bg-primary items-start"
               >
+                {p.logo && (
+                  <img src={p.logo} alt={p.name} className="h-10 object-contain mb-4" />
+                )}
                 <h3 className="text-lg font-bold text-secondary">{p.name}</h3>
                 <p className="mt-2 text-sm flex-1 text-primary-foreground">{p.description}</p>
                 <Button
