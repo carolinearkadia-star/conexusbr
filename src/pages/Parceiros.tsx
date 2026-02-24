@@ -122,7 +122,7 @@ const ParceirosPage = () => {
               >
                 {p.logo && (
                   <div className="h-14 flex items-center mb-4">
-                    <img src={p.logo} alt={p.name} className={`object-contain h-full ${p.name === "CADService" ? "max-w-[240px] scale-[2.5]" : "max-w-[180px]"}`} />
+                    <img src={p.logo} alt={p.name} className={`object-contain h-full ${p.name === "CADService" ? "max-w-[240px] scale-[3]" : "max-w-[180px]"}`} />
                   </div>
                 )}
                 <h3 className="text-lg font-bold text-secondary">{p.name}</h3>
