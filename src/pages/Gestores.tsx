@@ -63,7 +63,7 @@ const GestoresPage = () => {
 
                 <h3 className="mt-6 text-xl font-bold text-primary-foreground">{gestor.name}</h3>
                 <p className="mt-1 text-sm text-secondary font-semibold">{gestor.experience}</p>
-                <p className="mt-4 text-primary-foreground text-sm leading-relaxed">
+                <p className="mt-4 text-primary-foreground text-sm leading-relaxed text-justify">
                   {gestor.description}
                 </p>
                 <div className="mt-auto pt-6 flex flex-col sm:flex-row gap-3 justify-center">
