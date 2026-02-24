@@ -10,6 +10,8 @@ import logoCadservice from "@/assets/logo-cadservice.png";
 import icapeOffice from "@/assets/icape-office.webp";
 import icapeQuality from "@/assets/icape-quality.webp";
 import logoIcape from "@/assets/logo-icape.svg";
+import fitecSolar from "@/assets/fitec-solar.png";
+import fitecLab from "@/assets/fitec-lab.jpg";
 
 const parceiros: PartnerData[] = [
   {
@@ -44,9 +46,10 @@ const parceiros: PartnerData[] = [
     description: "Fundação para Inovações Tecnológicas.",
     fullDescription:
       "A FITec – Fundação para Inovações Tecnológicas – atua no desenvolvimento de soluções inovadoras em parceria com a indústria e a academia.\n\nCom foco em pesquisa aplicada e transferência de tecnologia, a fundação contribui para o avanço tecnológico do setor produtivo brasileiro.",
-    url: "#",
+    url: "http://www.fitec.org.br/home",
     media: [
-      { type: "image", src: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800", alt: "Inovação" },
+      { type: "image", src: fitecSolar, alt: "Projeto de energia solar FITec" },
+      { type: "image", src: fitecLab, alt: "Laboratório de pesquisa FITec" },
     ],
   },
   {
