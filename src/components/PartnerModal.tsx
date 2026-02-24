@@ -58,7 +58,7 @@ const PartnerModal = ({ partner, open, onClose }: PartnerModalProps) => {
             <div className="flex items-center justify-between p-6 pb-4 border-b border-border/10">
               <div className="flex items-center gap-4">
                 {partner.logo && (
-                  <img src={partner.logo} alt={partner.name} className="object-contain h-12" />
+                  <img src={partner.logo} alt={partner.name} className={`object-contain ${partner.name === "CADService" ? "h-16" : "h-12"}`} />
                 )}
                 <div>
                   <h2 className="text-xl md:text-2xl font-bold text-primary-foreground">
