@@ -15,6 +15,7 @@ import fitecLab from "@/assets/fitec-lab.jpg";
 import jtcpcbLayout from "@/assets/jtcpcb-layout.webp";
 import jtcpcbPcb from "@/assets/jtcpcb-pcb.webp";
 import logoJtcpcb from "@/assets/logo-jtcpcb.png";
+import logoFitec from "@/assets/logo-fitec.png";
 
 const parceiros: PartnerData[] = [
   {
@@ -45,6 +46,7 @@ const parceiros: PartnerData[] = [
   },
   {
     name: "FITec",
+    logo: logoFitec,
     subtitle: "Parceiro Estratégico",
     description: "Fundação para Inovações Tecnológicas.",
     fullDescription:
