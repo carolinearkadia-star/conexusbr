@@ -90,7 +90,7 @@ const PartnerModal = ({ partner, open, onClose }: PartnerModalProps) => {
                 {partner.url && partner.url !== "#" && (
                   <Button variant="hero" size="lg" className="mt-6 w-fit" asChild>
                     <a href={partner.url} target="_blank" rel="noopener noreferrer">
-                      Visitar Site Oficial <ExternalLink size={16} />
+                      Ir para site principal <ExternalLink size={16} />
                     </a>
                   </Button>
                 )}

@@ -6,15 +6,17 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import PartnerModal, { type PartnerData } from "@/components/PartnerModal";
+import logoCadservice from "@/assets/logo-cadservice.png";
 
 const parceiros: PartnerData[] = [
   {
     name: "CADService",
     subtitle: "Parceiro Estratégico",
+    logo: logoCadservice,
     description: "Manufatura de placas eletrônicas (SMT e PTH).",
     fullDescription:
       "A CADService é especializada na manufatura de placas eletrônicas, oferecendo serviços completos de montagem SMT (Surface Mount Technology) e PTH (Pin Through Hole).\n\nCom infraestrutura moderna e processos certificados, a empresa garante qualidade e agilidade na produção de protótipos e lotes de produção.",
-    url: "#",
+    url: "https://www.cadservice.com.br/",
     media: [
       { type: "image", src: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800", alt: "Placa eletrônica" },
       { type: "image", src: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800", alt: "Tecnologia" },
