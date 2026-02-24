@@ -9,6 +9,7 @@ import PartnerModal, { type PartnerData } from "@/components/PartnerModal";
 import logoCadservice from "@/assets/logo-cadservice.png";
 import icapeOffice from "@/assets/icape-office.webp";
 import icapeQuality from "@/assets/icape-quality.webp";
+import logoIcape from "@/assets/logo-icape.svg";
 
 const parceiros: PartnerData[] = [
   {
@@ -27,6 +28,7 @@ const parceiros: PartnerData[] = [
   {
     name: "ICAPE",
     subtitle: "Parceiro Estratégico",
+    logo: logoIcape,
     description: "Fabricação global de PCBs.",
     fullDescription:
       "A ICAPE é referência mundial na fabricação de PCBs (Printed Circuit Boards), atendendo clientes em diversos setores da indústria eletrônica.\n\nCom presença global e parcerias com as melhores fábricas, garante qualidade, rastreabilidade e prazos competitivos.",
