@@ -58,9 +58,7 @@ const PartnerModal = ({ partner, open, onClose }: PartnerModalProps) => {
             <div className="flex items-center justify-between p-6 pb-4 border-b border-border/10">
               <div className="flex items-center gap-4">
                 {partner.logo && (
-                  <div className="w-12 h-12 rounded-xl bg-background/10 flex items-center justify-center overflow-hidden">
-                    <img src={partner.logo} alt={partner.name} className="w-10 h-10 object-contain" />
-                  </div>
+                  <img src={partner.logo} alt={partner.name} className="h-12 object-contain" />
                 )}
                 <div>
                   <h2 className="text-xl md:text-2xl font-bold text-primary-foreground">
