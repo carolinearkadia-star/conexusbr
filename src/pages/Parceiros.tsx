@@ -12,6 +12,8 @@ import icapeQuality from "@/assets/icape-quality.webp";
 import logoIcape from "@/assets/logo-icape.svg";
 import fitecSolar from "@/assets/fitec-solar.png";
 import fitecLab from "@/assets/fitec-lab.jpg";
+import jtcpcbLayout from "@/assets/jtcpcb-layout.webp";
+import jtcpcbPcb from "@/assets/jtcpcb-pcb.webp";
 
 const parceiros: PartnerData[] = [
   {
@@ -58,9 +60,10 @@ const parceiros: PartnerData[] = [
     description: "Layout e Design de Placas Eletrônicas.",
     fullDescription:
       "A JTCPBC é especializada em layout e design de placas eletrônicas, oferecendo soluções personalizadas para projetos de alta complexidade.\n\nCom engenheiros experientes e ferramentas de ponta, entrega projetos otimizados para manufaturabilidade e desempenho.",
-    url: "#",
+    url: "https://jtcpcb.com/",
     media: [
-      { type: "image", src: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800", alt: "Design eletrônico" },
+      { type: "image", src: jtcpcbLayout, alt: "Layout de PCB" },
+      { type: "image", src: jtcpcbPcb, alt: "Placa de circuito impresso" },
     ],
   },
 ];
