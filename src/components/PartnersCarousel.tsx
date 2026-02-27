@@ -56,6 +56,20 @@ const partners: CarouselPartner[] = [
     logoClass: "",
   },
   {
+    name: "OCTEA",
+    subtitle: "Parceiro Estratégico",
+    logo: logoOctea,
+    description: "Especialista em gestão inteligente para redução de custos e eficiência operacional.",
+    fullDescription:
+      "A OCTEA é especialista em gestão inteligente, oferecendo soluções para otimização de recursos e transformação de negócios.\n\nCom foco em redução de custos com contratos de TI e telecom e eficiência operacional, a empresa ajuda organizações a alcançarem resultados sustentáveis através de metodologias comprovadas e tecnologia de ponta.",
+    url: "https://octea.com.br/",
+    media: [
+      { type: "image", src: octeaGestao, alt: "Gestão de custos OCTEA" },
+      { type: "image", src: octeaDigital, alt: "Transformação digital OCTEA" },
+    ],
+    logoClass: "scale-[6.5]",
+  },
+  {
     name: "FITec Labs",
     subtitle: "Parceiro Estratégico",
     logo: logoFitec,
@@ -82,20 +96,6 @@ const partners: CarouselPartner[] = [
       { type: "image", src: jtcpcbPcb, alt: "Placa de circuito impresso" },
     ],
     logoClass: "scale-[2]",
-  },
-  {
-    name: "OCTEA",
-    subtitle: "Parceiro Estratégico",
-    logo: logoOctea,
-    description: "Especialista em gestão inteligente para redução de custos e eficiência operacional.",
-    fullDescription:
-      "A OCTEA é especialista em gestão inteligente, oferecendo soluções para otimização de recursos e transformação de negócios.\n\nCom foco em redução de custos com contratos de TI e telecom e eficiência operacional, a empresa ajuda organizações a alcançarem resultados sustentáveis através de metodologias comprovadas e tecnologia de ponta.",
-    url: "https://octea.com.br/",
-    media: [
-      { type: "image", src: octeaGestao, alt: "Gestão de custos OCTEA" },
-      { type: "image", src: octeaDigital, alt: "Transformação digital OCTEA" },
-    ],
-    logoClass: "scale-[6.5]",
   },
 ];
 
