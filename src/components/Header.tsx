@@ -20,7 +20,7 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
       <div className="container-narrow flex items-center justify-between h-20 md:h-24 px-6">
         <Link to="/" className="flex items-center gap-2">
-          <img src={logo} alt="Conexus" className="h-[7.5rem] md:h-[11.25rem] w-auto max-w-[375px] md:max-w-[525px]" />
+          <img src={logo} alt="Conexus" className="h-[9.375rem] md:h-[14.0625rem] w-auto max-w-[468px] md:max-w-[656px]" />
         </Link>
 
         {/* Desktop nav */}
