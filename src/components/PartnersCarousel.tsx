@@ -87,7 +87,7 @@ const partners: CarouselPartner[] = [
     logo: logoOctea,
     description: "Especialista em gestão inteligente para redução de custos e eficiência operacional.",
     fullDescription:
-      "A OCTEA é especialista em gestão inteligente, oferecendo soluções para otimização de recursos e transformação de negócios.\n\nCom foco em redução de custos e eficiência operacional, a empresa ajuda organizações a alcançarem resultados sustentáveis através de metodologias comprovadas e tecnologia de ponta.",
+      "A OCTEA é especialista em gestão inteligente, oferecendo soluções para otimização de recursos e transformação de negócios.\n\nCom foco em redução de custos com contratos de TI e telecom e eficiência operacional, a empresa ajuda organizações a alcançarem resultados sustentáveis através de metodologias comprovadas e tecnologia de ponta.",
     url: "https://octea.com.br/",
     media: [],
     logoClass: "scale-[1.3]",
