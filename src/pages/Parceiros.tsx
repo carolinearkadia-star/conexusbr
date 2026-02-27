@@ -5,9 +5,11 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import PartnersCarousel from "@/components/PartnersCarousel";
+import { supabase } from "@/integrations/supabase/client";
 
 const ParceirosPage = () => {
   const { toast } = useToast();
+  const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({
     empresa: "",
     responsavel: "",
@@ -19,10 +21,22 @@ const ParceirosPage = () => {
     mensagem: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({ title: "Mensagem enviada!", description: "Entraremos em contato em breve." });
-    setForm({ empresa: "", responsavel: "", email: "", telefone: "", areaAtuacao: "", tipoParceria: "", interesse: "", mensagem: "" });
+    setLoading(true);
+    try {
+      const { error } = await supabase.functions.invoke("send-partner-email", {
+        body: form,
+      });
+      if (error) throw error;
+      toast({ title: "Mensagem enviada!", description: "Entraremos em contato em breve." });
+      setForm({ empresa: "", responsavel: "", email: "", telefone: "", areaAtuacao: "", tipoParceria: "", interesse: "", mensagem: "" });
+    } catch (err) {
+      console.error("Error submitting form:", err);
+      toast({ title: "Erro ao enviar", description: "Tente novamente mais tarde.", variant: "destructive" });
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -57,8 +71,8 @@ const ParceirosPage = () => {
               </div>
               <Input placeholder="Interesse de parceria" value={form.interesse} onChange={(e) => setForm({ ...form, interesse: e.target.value })} />
               <Textarea placeholder="Mensagem" rows={4} value={form.mensagem} onChange={(e) => setForm({ ...form, mensagem: e.target.value })} />
-              <Button variant="hero" size="lg" type="submit" className="w-full">
-                Quero me conectar
+              <Button variant="hero" size="lg" type="submit" className="w-full" disabled={loading}>
+                {loading ? "Enviando..." : "Quero me conectar"}
               </Button>
             </form>
           </motion.div>
