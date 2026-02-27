@@ -159,9 +159,9 @@ const PartnersCarousel = () => {
             </button>
 
             <div className="overflow-hidden" ref={emblaRef}>
-              <div className="flex gap-6">
+              <div className="flex -ml-6">
                 {partners.map((partner) => (
-                  <div key={partner.name} className="flex-[0_0_100%] min-w-0 sm:flex-[0_0_calc(50%-12px)] lg:flex-[0_0_calc(33.333%-16px)]">
+                  <div key={partner.name} className="flex-[0_0_100%] min-w-0 pl-6 sm:flex-[0_0_50%] lg:flex-[0_0_33.333%]">
                     <div className="group rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm p-8 flex flex-col items-center text-center hover:bg-white/10 hover:-translate-y-1 hover:border-secondary/40 hover:shadow-[0_8px_30px_-12px_hsl(322,76%,55%,0.3)] transition-all duration-300 h-full">
                       <div className="h-16 flex items-center justify-center mb-6 w-full overflow-visible">
                         <img src={partner.logo} alt={partner.name} className={`object-contain max-h-full max-w-[180px] ${partner.logoClass}`} />
