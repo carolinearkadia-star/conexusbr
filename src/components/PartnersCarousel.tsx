@@ -19,6 +19,8 @@ import fitecLab from "@/assets/fitec-lab.jpg";
 import jtcpcbLayout from "@/assets/jtcpcb-layout.webp";
 import jtcpcbPcb from "@/assets/jtcpcb-pcb.webp";
 import logoOctea from "@/assets/logo-octea.png";
+import octeaGestao from "@/assets/octea-gestao.webp";
+import octeaDigital from "@/assets/octea-digital.webp";
 
 interface CarouselPartner extends PartnerData {
   logoClass: string;
@@ -89,7 +91,10 @@ const partners: CarouselPartner[] = [
     fullDescription:
       "A OCTEA é especialista em gestão inteligente, oferecendo soluções para otimização de recursos e transformação de negócios.\n\nCom foco em redução de custos com contratos de TI e telecom e eficiência operacional, a empresa ajuda organizações a alcançarem resultados sustentáveis através de metodologias comprovadas e tecnologia de ponta.",
     url: "https://octea.com.br/",
-    media: [],
+    media: [
+      { type: "image", src: octeaGestao, alt: "Gestão de custos OCTEA" },
+      { type: "image", src: octeaDigital, alt: "Transformação digital OCTEA" },
+    ],
     logoClass: "scale-[1.3]",
   },
 ];
