@@ -79,7 +79,7 @@ const Index = () => {
             <motion.p
               custom={1}
               variants={fadeUp}
-              className="mt-6 text-lg md:text-xl text-white/70 max-w-xl leading-relaxed">Consultoria estratégica em produtos eletrônicos.
+              className="mt-6 text-lg md:text-xl text-white/70 max-w-xl leading-relaxed">Consultoria estratégica em produtos eletrônicos e tecnologia
 
 
             </motion.p>
@@ -144,15 +144,15 @@ const Index = () => {
           muted
           playsInline
           className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-          style={{ zIndex: 0 }}
-        >
+          style={{ zIndex: 0 }}>
+
           <source src="/videos/hub-bg.mp4" type="video/mp4" />
         </video>
         {/* Overlay */}
         <div
           className="absolute inset-0 pointer-events-none"
-          style={{ background: "hsla(216, 86%, 14%, 0.90)", zIndex: 1 }}
-        />
+          style={{ background: "hsla(216, 86%, 14%, 0.90)", zIndex: 1 }} />
+
 
         <div className="container-narrow relative z-[2]">
           <motion.div
