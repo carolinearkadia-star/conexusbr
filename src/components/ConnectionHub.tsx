@@ -241,34 +241,26 @@ const ConnectionHub = () => {
               </motion.div>
 
               {/* Tooltip popup */}
-              <AnimatePresence>
-                {isActive &&
-                <motion.div
-                  className="absolute z-50 w-80 pointer-events-none"
-                  style={{
-                    ...getTooltipPosition(i, nodes.length)
-                  }}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.9 }}
-                  transition={{ duration: 0.2 }}>
-
-                    <div
+              <div
+                className="absolute z-50 w-80 pointer-events-none transition-all duration-200"
+                style={{
+                  ...getTooltipPosition(i, nodes.length),
+                  opacity: isActive ? 1 : 0,
+                  transform: `${getTooltipPosition(i, nodes.length).transform || ''} scale(${isActive ? 1 : 0.95})`,
+                }}>
+                  <div
                     className="p-5 rounded-xl backdrop-blur-md"
                     style={{
                       background: "linear-gradient(135deg, hsl(216, 86%, 14%, 0.95), hsl(216, 60%, 10%, 0.95))",
                       border: "1px solid hsl(322, 76%, 42%, 0.35)",
                       boxShadow: "0 0 15px hsl(322, 76%, 42%, 0.1), 0 8px 24px rgba(0,0,0,0.4)"
                     }}>
-
-                      <p className="font-bold text-white text-sm mb-1.5 leading-tight">{node.title}</p>
-                      <p className="text-[13px] leading-relaxed" style={{ color: "hsl(216, 20%, 75%)" }}>
-                        {node.tooltip}
-                      </p>
-                    </div>
-                  </motion.div>
-                }
-              </AnimatePresence>
+                    <p className="font-bold text-white text-sm mb-1.5 leading-tight">{node.title}</p>
+                    <p className="text-[13px] leading-relaxed" style={{ color: "hsl(216, 20%, 75%)" }}>
+                      {node.tooltip}
+                    </p>
+                  </div>
+              </div>
             </motion.div>);
 
         })}
