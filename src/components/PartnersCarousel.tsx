@@ -90,7 +90,7 @@ const partners: CarouselPartner[] = [
       "A OCTEA é especialista em gestão inteligente, oferecendo soluções para otimização de recursos e transformação de negócios.\n\nCom foco em redução de custos e eficiência operacional, a empresa ajuda organizações a alcançarem resultados sustentáveis através de metodologias comprovadas e tecnologia de ponta.",
     url: "https://octea.com.br/",
     media: [],
-    logoClass: "scale-[2]",
+    logoClass: "scale-[1.3]",
   },
 ];
 
