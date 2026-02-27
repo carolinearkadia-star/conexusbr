@@ -208,10 +208,11 @@ const ConnectionHub = () => {
           return (
             <motion.div
               key={node.id}
-              className={`absolute z-10 group cursor-pointer orbital-node-${i}`}
+              className={`absolute z-10 group cursor-pointer ${!isActive ? `orbital-node-${i}` : ''}`}
               style={{
                 left: `calc(50% + ${pos.x}px - 40px)`,
-                top: `calc(50% + ${pos.y}px - 40px)`
+                top: `calc(50% + ${pos.y}px - 40px)`,
+                animation: isActive ? 'none' : undefined,
               }}
               initial={{ opacity: 0, scale: 0 }}
               whileInView={{ opacity: 1, scale: 1 }}
