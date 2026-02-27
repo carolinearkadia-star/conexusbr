@@ -42,7 +42,7 @@ const partners: CarouselPartner[] = [
     name: "ICAPE",
     subtitle: "Parceiro Estratégico",
     logo: logoIcape,
-    description: "Fabricação global de PCBs.",
+    description: "Líder em fabricação global de placas e customização de componentes.",
     fullDescription:
       "A ICAPE é referência mundial na fabricação de PCBs (Printed Circuit Boards), atendendo clientes em diversos setores da indústria eletrônica.\n\nCom presença global e parcerias com as melhores fábricas, garante qualidade, rastreabilidade e prazos competitivos.",
     url: "https://www.icape-group.com/pt-pt/",
@@ -56,7 +56,7 @@ const partners: CarouselPartner[] = [
     name: "FITec Labs",
     subtitle: "Parceiro Estratégico",
     logo: logoFitec,
-    description: "Fundação para Inovações Tecnológicas.",
+    description: "ICT para desenvolvimento de projetos com incentivos governamentais.",
     fullDescription:
       "A FITec – Fundação para Inovações Tecnológicas – atua no desenvolvimento de soluções inovadoras em parceria com a indústria e a academia.\n\nCom foco em pesquisa aplicada e transferência de tecnologia, a fundação contribui para o avanço tecnológico do setor produtivo brasileiro.",
     url: "http://www.fitec.org.br/home",
