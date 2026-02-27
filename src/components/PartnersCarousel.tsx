@@ -36,7 +36,7 @@ const partners: CarouselPartner[] = [
       { type: "image", src: cadserviceSmt, alt: "Linha de montagem SMT CADService" },
       { type: "image", src: cadserviceFabrica, alt: "Fábrica CADService" },
     ],
-    logoClass: "scale-150",
+    logoClass: "scale-[2]",
   },
   {
     name: "ICAPE",
