@@ -18,6 +18,7 @@ import fitecSolar from "@/assets/fitec-solar.png";
 import fitecLab from "@/assets/fitec-lab.jpg";
 import jtcpcbLayout from "@/assets/jtcpcb-layout.webp";
 import jtcpcbPcb from "@/assets/jtcpcb-pcb.webp";
+import logoOctea from "@/assets/logo-octea.png";
 
 interface CarouselPartner extends PartnerData {
   logoClass: string;
@@ -78,6 +79,17 @@ const partners: CarouselPartner[] = [
       { type: "image", src: jtcpcbLayout, alt: "Layout de PCB" },
       { type: "image", src: jtcpcbPcb, alt: "Placa de circuito impresso" },
     ],
+    logoClass: "scale-[2]",
+  },
+  {
+    name: "OCTEA",
+    subtitle: "Parceiro Estratégico",
+    logo: logoOctea,
+    description: "Especialista em gestão inteligente para redução de custos e eficiência operacional.",
+    fullDescription:
+      "A OCTEA é especialista em gestão inteligente, oferecendo soluções para otimização de recursos e transformação de negócios.\n\nCom foco em redução de custos e eficiência operacional, a empresa ajuda organizações a alcançarem resultados sustentáveis através de metodologias comprovadas e tecnologia de ponta.",
+    url: "https://octea.com.br/",
+    media: [],
     logoClass: "scale-[2]",
   },
 ];
