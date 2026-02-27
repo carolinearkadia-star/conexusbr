@@ -43,7 +43,7 @@ const Footer = () => {
             <div className="flex flex-col gap-4 text-sm text-primary-foreground/50">
               <div>
                 <p className="font-bold text-primary-foreground/80">Cilene</p>
-                <a className="hover:text-primary-foreground transition-colors block" href="wa.me/5519992427962">(19) 99242-7962</a>
+                <a className="hover:text-primary-foreground transition-colors block" href="https://wa.me/5519990147479">(19) 99014-7479</a>
                 <a href="mailto:cilene@conexusbr.com" className="hover:text-primary-foreground transition-colors block">cilene@conexusbr.com</a>
               </div>
               <div>
