@@ -78,7 +78,7 @@ const partners: CarouselPartner[] = [
       { type: "image", src: jtcpcbLayout, alt: "Layout de PCB" },
       { type: "image", src: jtcpcbPcb, alt: "Placa de circuito impresso" },
     ],
-    logoClass: "",
+    logoClass: "scale-[2]",
   },
 ];
 
