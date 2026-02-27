@@ -59,8 +59,8 @@ const nodes: OrbitalNode[] = [
 // Positions for orbital nodes around center (desktop: circular, mobile: vertical list)
 const getOrbitalPosition = (index: number, total: number) => {
   const angle = index / total * 2 * Math.PI - Math.PI / 2; // start from top
-  const rx = 260;
-  const ry = 220;
+  const rx = 300;
+  const ry = 250;
   return {
     x: Math.cos(angle) * rx,
     y: Math.sin(angle) * ry
@@ -108,7 +108,7 @@ const ConnectionHub = () => {
   return (
     <div className="flex flex-col items-center">
       {/* Orbital diagram */}
-      <div className="relative w-full flex items-center justify-center" style={{ minHeight: 540 }}>
+      <div className="relative w-full flex items-center justify-center" style={{ minHeight: 620 }}>
         {/* SVG animated lines */}
         <svg
           className="absolute inset-0 w-full h-full pointer-events-none"
