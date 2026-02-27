@@ -18,7 +18,7 @@ import fitecSolar from "@/assets/fitec-solar.png";
 import fitecLab from "@/assets/fitec-lab.jpg";
 import jtcpcbLayout from "@/assets/jtcpcb-layout.webp";
 import jtcpcbPcb from "@/assets/jtcpcb-pcb.webp";
-import logoOctea from "@/assets/logo-octea.png";
+import logoOctea from "@/assets/logo-octea.svg";
 import octeaGestao from "@/assets/octea-gestao.webp";
 import octeaDigital from "@/assets/octea-digital.webp";
 
