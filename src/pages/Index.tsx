@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import NetworkBackground from "@/components/NetworkBackground";
 import ConnectionHub from "@/components/ConnectionHub";
+import PartnersCarousel from "@/components/PartnersCarousel";
 
 import globeConnections from "@/assets/globe-connections.png";
 import fotoCilene from "@/assets/foto-cilene.png";
@@ -237,6 +238,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Parceiros Carousel */}
+      <PartnersCarousel />
 
       {/* CTA */}
       <section className="relative section-padding overflow-hidden">
