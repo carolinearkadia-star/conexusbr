@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, BarChart3, Network, Ruler, Radar } from "lucide-react";
+import { Search, BarChart3, Network, Ruler, Radar, TrendingDown } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import logoConexus from "@/assets/logo-conexus.png";
 
@@ -46,6 +46,13 @@ const nodes: OrbitalNode[] = [
   title: "Acompanhamento Técnico Contínuo",
   tooltip:
   "Monitoramento constante para garantir que cada etapa siga o planejado, com ajustes rápidos e assertivos."
+},
+{
+  id: 5,
+  icon: TrendingDown,
+  title: "Diagnóstico Estratégico de Custos",
+  tooltip:
+  "Análise técnica especializada para redução inteligente de despesas. Engenharia de materiais, otimização de especificações e avaliação de contratos e gastos em TI — garantindo eficiência e economia sustentável."
 }];
 
 
@@ -62,12 +69,14 @@ const getOrbitalPosition = (index: number, total: number) => {
 
 // Tooltip position relative to each node
 const getTooltipPosition = (index: number, total: number): React.CSSProperties => {
-  const angle = index / total * 2 * Math.PI - Math.PI / 2;
   const pos = getOrbitalPosition(index, total);
-  // Use actual x/y position to determine tooltip placement
-  // Node 0 (Diagnóstico) → force left
+  // Node 0 (Diagnóstico Técnico) → force left with adjusted top
   if (index === 0) {
     return { right: "calc(100% + 8px)", top: "15%", transform: "translateY(-50%)" };
+  }
+  // Node 5 (Diagnóstico de Custos) → place based on position
+  if (index === 5) {
+    return { right: "calc(100% + 8px)", top: "50%", transform: "translateY(-50%)" };
   }
   if (Math.abs(pos.y) < 80) {
     if (pos.x > 0) {
@@ -78,7 +87,6 @@ const getTooltipPosition = (index: number, total: number): React.CSSProperties =
   } else if (pos.y < 0) {
     return { bottom: "calc(100% + 8px)", left: "50%", transform: "translateX(-50%)" };
   } else {
-    // Lower nodes (indices 2, 3) → place outward based on x
     if (pos.x > 0) {
       return { left: "calc(100% + 8px)", top: "50%", transform: "translateY(-50%)" };
     } else {
