@@ -95,7 +95,7 @@ const partners: CarouselPartner[] = [
       { type: "image", src: octeaGestao, alt: "Gestão de custos OCTEA" },
       { type: "image", src: octeaDigital, alt: "Transformação digital OCTEA" },
     ],
-    logoClass: "scale-[5]",
+    logoClass: "scale-[5.5]",
   },
 ];
 
