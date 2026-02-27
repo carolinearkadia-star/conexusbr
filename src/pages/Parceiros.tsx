@@ -123,11 +123,11 @@ const ParceirosPage = () => {
                 className="rounded-2xl border border-border p-8 flex flex-col bg-primary items-start"
               >
                 {p.logo && (
-                  <div className={`flex items-center mb-4 ${p.name === "CADService" ? "h-20 w-[70%] overflow-visible" : "h-14"}`}>
+                  <div className={`flex items-center mb-4 ${p.name === "CADService" ? "h-20 w-[70%] overflow-visible" : "h-14"} overflow-visible`}>
                     <img
                       src={p.logo}
                       alt={p.name}
-                      className={`object-contain object-left ${p.name === "CADService" ? "h-full w-full scale-[2.5] origin-left brightness-110" : "h-full max-w-[180px]"}`}
+                      className={`object-contain object-left ${p.name === "CADService" ? "h-full w-full scale-[5] origin-left brightness-110" : p.name === "JTCPCB" ? "h-full max-w-[180px] scale-[2]" : "h-full max-w-[180px]"}`}
                     />
                   </div>
                 )}
