@@ -28,7 +28,7 @@ const partners: CarouselPartner[] = [
     name: "CADService",
     subtitle: "Parceiro Estratégico",
     logo: logoCadservice,
-    description: "Manufatura de placas eletrônicas (SMT e PTH).",
+    description: "Líder em Manufatura de Placas Eletrônicas.",
     fullDescription:
       "A CADService é especializada na manufatura de placas eletrônicas, oferecendo serviços completos de montagem SMT (Surface Mount Technology) e PTH (Pin Through Hole).\n\nCom infraestrutura moderna e processos certificados, a empresa garante qualidade e agilidade na produção de protótipos e lotes de produção.",
     url: "https://www.cadservice.com.br/",
