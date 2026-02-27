@@ -66,7 +66,7 @@ const PartnerModal = ({ partner, open, onClose }: PartnerModalProps) => {
                         partner.name === "CADService"
                           ? "scale-[2.5] origin-left"
                           : partner.name === "OCTEA"
-                            ? "scale-[6.5] origin-left"
+                            ? "scale-[3] origin-left"
                             : "max-w-[160px]"
                       }`}
                     />
