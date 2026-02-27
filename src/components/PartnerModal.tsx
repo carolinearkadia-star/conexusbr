@@ -62,7 +62,13 @@ const PartnerModal = ({ partner, open, onClose }: PartnerModalProps) => {
                     <img
                       src={partner.logo}
                       alt={partner.name}
-                      className={`object-contain object-left ${partner.name === "CADService" ? "h-full scale-[2.5] origin-left" : "h-full max-w-[160px]"}`}
+                      className={`object-contain object-left h-full ${
+                        partner.name === "CADService"
+                          ? "scale-[2.5] origin-left"
+                          : partner.name === "OCTEA"
+                            ? "scale-[6.5] origin-left"
+                            : "max-w-[160px]"
+                      }`}
                     />
                   </div>
                 )}
