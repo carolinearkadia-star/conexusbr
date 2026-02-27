@@ -58,16 +58,16 @@ const PartnerModal = ({ partner, open, onClose }: PartnerModalProps) => {
             <div className="flex items-start justify-between p-8 pb-6 border-b border-border/10">
               <div className="flex flex-col gap-3">
                 {partner.logo && (
-                  <div className="h-10 flex items-center overflow-visible">
+                  <div className="h-12 flex items-center overflow-visible">
                     <img
                       src={partner.logo}
                       alt={partner.name}
-                      className={`object-contain object-left h-full ${
+                      className={`object-contain object-left ${
                         partner.name === "CADService"
-                          ? "scale-[2.5] origin-left"
+                          ? "h-full scale-[2.5] origin-left"
                           : partner.name === "OCTEA"
-                            ? "scale-[3] origin-left"
-                            : "max-w-[160px]"
+                            ? "h-full scale-[2.8] origin-left"
+                            : "h-full max-w-[160px]"
                       }`}
                     />
                   </div>
