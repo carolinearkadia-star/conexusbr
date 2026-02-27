@@ -113,8 +113,8 @@ const Index = () => {
               <span className="text-secondary text-sm font-semibold uppercase tracking-widest">
                 Quem Somos
               </span>
-              <h2 className="mt-4 text-3xl md:text-4xl font-bold text-foreground leading-tight">
-                Um hub técnico que conecta o mercado eletrônico 
+              <h2 className="mt-4 text-3xl md:text-4xl font-bold text-foreground leading-tight">Um hub técnico que conecta o mercado eletrônico 
+
               </h2>
               <p className="mt-6 text-muted-foreground leading-relaxed text-justify">
                 A Conexus atua como um hub técnico estratégico. Não vendemos soluções prontas — conectamos
