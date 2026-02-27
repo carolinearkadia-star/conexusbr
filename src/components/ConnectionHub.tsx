@@ -242,16 +242,16 @@ const ConnectionHub = () => {
 
               {/* Tooltip popup */}
               <div
-                className="absolute z-50 w-80 pointer-events-none transition-all duration-200"
+                className="absolute z-50 w-80 pointer-events-none"
                 style={{
                   ...getTooltipPosition(i, nodes.length),
                   opacity: isActive ? 1 : 0,
-                  transform: `${getTooltipPosition(i, nodes.length).transform || ''} scale(${isActive ? 1 : 0.95})`,
+                  transition: "opacity 0.2s ease",
                 }}>
                   <div
-                    className="p-5 rounded-xl backdrop-blur-md"
+                    className="p-5 rounded-xl"
                     style={{
-                      background: "linear-gradient(135deg, hsl(216, 86%, 14%, 0.95), hsl(216, 60%, 10%, 0.95))",
+                      background: "linear-gradient(135deg, hsl(216, 86%, 14%), hsl(216, 60%, 10%))",
                       border: "1px solid hsl(322, 76%, 42%, 0.35)",
                       boxShadow: "0 0 15px hsl(322, 76%, 42%, 0.1), 0 8px 24px rgba(0,0,0,0.4)"
                     }}>
