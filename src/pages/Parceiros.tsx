@@ -1,82 +1,13 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import PartnerModal, { type PartnerData } from "@/components/PartnerModal";
-import logoCadservice from "@/assets/logo-cadservice.png";
-import cadserviceSmt from "@/assets/cadservice-smt.jpg";
-import cadserviceFabrica from "@/assets/cadservice-fabrica.jpg";
-import icapeOffice from "@/assets/icape-office.webp";
-import icapeQuality from "@/assets/icape-quality.webp";
-import logoIcape from "@/assets/logo-icape.svg";
-import fitecSolar from "@/assets/fitec-solar.png";
-import fitecLab from "@/assets/fitec-lab.jpg";
-import jtcpcbLayout from "@/assets/jtcpcb-layout.webp";
-import jtcpcbPcb from "@/assets/jtcpcb-pcb.webp";
-import logoJtcpcb from "@/assets/logo-jtcpcb.png";
-import logoFitec from "@/assets/logo-fitec.png";
-
-const parceiros: PartnerData[] = [
-  {
-    name: "CADService",
-    subtitle: "Parceiro Estratégico",
-    logo: logoCadservice,
-    description: "Manufatura de placas eletrônicas (SMT e PTH).",
-    fullDescription:
-      "A CADService é especializada na manufatura de placas eletrônicas, oferecendo serviços completos de montagem SMT (Surface Mount Technology) e PTH (Pin Through Hole).\n\nCom infraestrutura moderna e processos certificados, a empresa garante qualidade e agilidade na produção de protótipos e lotes de produção.",
-    url: "https://www.cadservice.com.br/",
-    media: [
-      { type: "image", src: cadserviceSmt, alt: "Linha de montagem SMT CADService" },
-      { type: "image", src: cadserviceFabrica, alt: "Fábrica CADService" },
-    ],
-  },
-  {
-    name: "ICAPE",
-    subtitle: "Parceiro Estratégico",
-    logo: logoIcape,
-    description: "Fabricação global de PCBs.",
-    fullDescription:
-      "A ICAPE é referência mundial na fabricação de PCBs (Printed Circuit Boards), atendendo clientes em diversos setores da indústria eletrônica.\n\nCom presença global e parcerias com as melhores fábricas, garante qualidade, rastreabilidade e prazos competitivos.",
-    url: "https://www.icape-group.com/pt-pt/",
-    media: [
-      { type: "image", src: icapeOffice, alt: "Escritório ICAPE" },
-      { type: "image", src: icapeQuality, alt: "Controle de qualidade ICAPE" },
-    ],
-  },
-  {
-    name: "FITec",
-    logo: logoFitec,
-    subtitle: "Parceiro Estratégico",
-    description: "Fundação para Inovações Tecnológicas.",
-    fullDescription:
-      "A FITec – Fundação para Inovações Tecnológicas – atua no desenvolvimento de soluções inovadoras em parceria com a indústria e a academia.\n\nCom foco em pesquisa aplicada e transferência de tecnologia, a fundação contribui para o avanço tecnológico do setor produtivo brasileiro.",
-    url: "http://www.fitec.org.br/home",
-    media: [
-      { type: "image", src: fitecSolar, alt: "Projeto de energia solar FITec" },
-      { type: "image", src: fitecLab, alt: "Laboratório de pesquisa FITec" },
-    ],
-  },
-  {
-    name: "JTCPCB",
-    logo: logoJtcpcb,
-    subtitle: "Parceiro Estratégico",
-    description: "Layout e Design de Placas Eletrônicas.",
-    fullDescription:
-      "A JTCPBC é especializada em layout e design de placas eletrônicas, oferecendo soluções personalizadas para projetos de alta complexidade.\n\nCom engenheiros experientes e ferramentas de ponta, entrega projetos otimizados para manufaturabilidade e desempenho.",
-    url: "https://jtcpcb.com/",
-    media: [
-      { type: "image", src: jtcpcbLayout, alt: "Layout de PCB" },
-      { type: "image", src: jtcpcbPcb, alt: "Placa de circuito impresso" },
-    ],
-  },
-];
+import PartnersCarousel from "@/components/PartnersCarousel";
 
 const ParceirosPage = () => {
   const { toast } = useToast();
-  const [selectedPartner, setSelectedPartner] = useState<PartnerData | null>(null);
   const [form, setForm] = useState({
     empresa: "",
     responsavel: "",
@@ -96,56 +27,8 @@ const ParceirosPage = () => {
 
   return (
     <div className="pt-20">
-      {/* Parceiros atuais */}
-      <section className="section-padding">
-        <div className="container-narrow">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <span className="text-secondary text-sm font-semibold uppercase tracking-widest">
-              REDE DE NEGÓCIOS
-            </span>
-            <h1 className="mt-4 text-3xl md:text-5xl font-bold text-foreground">
-              Nossos Parceiros
-            </h1>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {parceiros.map((p, i) => (
-              <motion.div
-                key={p.name}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1, duration: 0.5 }}
-                className="rounded-2xl border border-border p-8 flex flex-col bg-primary items-start"
-              >
-                {p.logo && (
-                  <div className={`flex items-center mb-4 ${p.name === "CADService" ? "h-20 w-[70%] overflow-visible" : "h-14"} overflow-visible`}>
-                    <img
-                      src={p.logo}
-                      alt={p.name}
-                      className={`object-contain object-left ${p.name === "CADService" ? "h-full w-full scale-[5] origin-left brightness-110" : p.name === "JTCPCB" ? "h-full max-w-[180px] scale-[2]" : "h-full max-w-[180px]"}`}
-                    />
-                  </div>
-                )}
-                <h3 className="text-lg font-bold text-secondary">{p.name}</h3>
-                <p className="mt-2 text-sm flex-1 text-primary-foreground">{p.description}</p>
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="mt-6 w-fit"
-                  onClick={() => setSelectedPartner(p)}
-                >
-                  Saiba mais <ExternalLink size={14} />
-                </Button>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Carrossel de Parceiros - mesmo da Home */}
+      <PartnersCarousel />
 
       {/* Formulário novo parceiro */}
       <section className="section-padding bg-muted/30">
@@ -181,13 +64,6 @@ const ParceirosPage = () => {
           </motion.div>
         </div>
       </section>
-
-      {/* Partner Modal */}
-      <PartnerModal
-        partner={selectedPartner}
-        open={!!selectedPartner}
-        onClose={() => setSelectedPartner(null)}
-      />
     </div>
   );
 };
