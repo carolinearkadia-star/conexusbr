@@ -5,9 +5,11 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 const ContatoPage = () => {
   const { toast } = useToast();
+  const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({
     nome: "",
     empresa: "",
@@ -17,10 +19,20 @@ const ContatoPage = () => {
     descricao: ""
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({ title: "Mensagem enviada!", description: "Retornaremos em breve." });
-    setForm({ nome: "", empresa: "", email: "", telefone: "", tipoProjeto: "", descricao: "" });
+    setLoading(true);
+    try {
+      const { error } = await supabase.functions.invoke("send-contact-email", { body: form });
+      if (error) throw error;
+      toast({ title: "Mensagem enviada!", description: "Retornaremos em breve." });
+      setForm({ nome: "", empresa: "", email: "", telefone: "", tipoProjeto: "", descricao: "" });
+    } catch (err) {
+      console.error("Error:", err);
+      toast({ title: "Erro ao enviar", description: "Tente novamente mais tarde.", variant: "destructive" });
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -59,8 +71,8 @@ const ContatoPage = () => {
               <Input placeholder="Telefone" value={form.telefone} onChange={(e) => setForm({ ...form, telefone: e.target.value })} />
               <Input placeholder="Tipo de projeto" value={form.tipoProjeto} onChange={(e) => setForm({ ...form, tipoProjeto: e.target.value })} />
               <Textarea placeholder="Descrição da necessidade" rows={5} value={form.descricao} onChange={(e) => setForm({ ...form, descricao: e.target.value })} />
-              <Button variant="hero" size="lg" type="submit" className="w-full">
-                Enviar mensagem
+              <Button variant="hero" size="lg" type="submit" className="w-full" disabled={loading}>
+                {loading ? "Enviando..." : "Enviar mensagem"}
               </Button>
             </motion.form>
 

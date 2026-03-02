@@ -14,6 +14,39 @@ export type Database = {
   }
   public: {
     Tables: {
+      contact_submissions: {
+        Row: {
+          created_at: string
+          descricao: string | null
+          email: string
+          empresa: string | null
+          id: string
+          nome: string
+          telefone: string | null
+          tipo_projeto: string | null
+        }
+        Insert: {
+          created_at?: string
+          descricao?: string | null
+          email: string
+          empresa?: string | null
+          id?: string
+          nome: string
+          telefone?: string | null
+          tipo_projeto?: string | null
+        }
+        Update: {
+          created_at?: string
+          descricao?: string | null
+          email?: string
+          empresa?: string | null
+          id?: string
+          nome?: string
+          telefone?: string | null
+          tipo_projeto?: string | null
+        }
+        Relationships: []
+      }
       partner_submissions: {
         Row: {
           area_atuacao: string | null
