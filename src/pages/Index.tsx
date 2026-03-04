@@ -5,6 +5,12 @@ import { Button } from "@/components/ui/button";
 import NetworkBackground from "@/components/NetworkBackground";
 import ConnectionHub from "@/components/ConnectionHub";
 import PartnersCarousel from "@/components/PartnersCarousel";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 import globeConnections from "@/assets/globe-connections.png";
 import fotoCilene from "@/assets/foto-cilene.png";
@@ -241,6 +247,55 @@ const Index = () => {
 
       {/* Parceiros Carousel */}
       <PartnersCarousel />
+
+      {/* FAQ */}
+      <section className="section-padding bg-background">
+        <div className="container-narrow">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-10">
+            <span className="text-secondary text-sm font-semibold uppercase tracking-widest">FAQ</span>
+            <h2 className="mt-4 text-3xl md:text-4xl font-bold text-foreground">Perguntas Frequentes</h2>
+          </motion.div>
+          <Accordion type="single" collapsible className="max-w-2xl mx-auto">
+            <AccordionItem value="q1">
+              <AccordionTrigger className="text-sm text-foreground hover:no-underline">Vocês desenvolvem esquemático e layout de PCB?</AccordionTrigger>
+              <AccordionContent className="text-sm text-muted-foreground">Sim. Desenvolvemos esquemáticos eletrônicos e layout de PCB, com foco em desempenho, integridade de sinal e preparação para manufatura (DFM).</AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="q2">
+              <AccordionTrigger className="text-sm text-foreground hover:no-underline">Vocês apenas fazem o projeto ou acompanham até a produção?</AccordionTrigger>
+              <AccordionContent className="text-sm text-muted-foreground">A Conexus atua desde a análise técnica até a industrialização, conectando o cliente às empresas especialistas certas para cada etapa.</AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="q3">
+              <AccordionTrigger className="text-sm text-foreground hover:no-underline">Quem fabrica as placas?</AccordionTrigger>
+              <AccordionContent className="text-sm text-muted-foreground">
+                <p>Trabalhamos com parceiros especializados como:</p>
+                <ul className="mt-2 list-disc list-inside space-y-1">
+                  <li>CADService – Manufatura SMT e PTH</li>
+                  <li>ICAPE Group – Fabricação global de PCBs</li>
+                  <li>FITec – Engenharia e desenvolvimento</li>
+                  <li>JTCPCB – Prototipagem e fabricação de placas</li>
+                </ul>
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="q4">
+              <AccordionTrigger className="text-sm text-foreground hover:no-underline">Vocês fornecem componentes originais?</AccordionTrigger>
+              <AccordionContent className="text-sm text-muted-foreground">Sim. Podemos fornecer componentes e placas originais por meio de nossa rede de parceiros qualificados.</AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="q5">
+              <AccordionTrigger className="text-sm text-foreground hover:no-underline">Qual o diferencial da Conexus?</AccordionTrigger>
+              <AccordionContent className="text-sm text-muted-foreground">Nosso diferencial está na experiência técnica dos gestores, que avaliam projeto, layout e processo produtivo de forma integrada, reduzindo riscos e garantindo soluções viáveis.</AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="q6" className="border-b-0">
+              <AccordionTrigger className="text-sm text-foreground hover:no-underline">Como iniciar um projeto?</AccordionTrigger>
+              <AccordionContent className="text-sm text-muted-foreground">Envie as informações básicas do seu projeto e realizaremos uma avaliação técnica inicial.</AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </div>
+      </section>
 
       {/* CTA */}
       <section className="relative section-padding overflow-hidden">
