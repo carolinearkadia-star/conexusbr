@@ -39,7 +39,7 @@ const partners: CarouselPartner[] = [
       { type: "image", src: cadserviceSmt, alt: "Linha de montagem SMT CADService" },
       { type: "image", src: cadserviceFabrica, alt: "Fábrica CADService" },
     ],
-    logoClass: "scale-[5]",
+    logoClass: "scale-[3] sm:scale-[5]",
   },
   {
     name: "ICAPE",
@@ -67,7 +67,7 @@ const partners: CarouselPartner[] = [
       { type: "image", src: octeaGestao, alt: "Gestão de custos OCTEA" },
       { type: "image", src: octeaDigital, alt: "Transformação digital OCTEA" },
     ],
-    logoClass: "scale-[6.5]",
+    logoClass: "scale-[4] sm:scale-[6.5]",
   },
   {
     name: "FITec Labs",
