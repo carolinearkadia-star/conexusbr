@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, MessageCircle } from "lucide-react";
+import { Mail, Phone, MessageCircle, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -10,6 +10,7 @@ import { supabase } from "@/integrations/supabase/client";
 const ContatoPage = () => {
   const { toast } = useToast();
   const [loading, setLoading] = useState(false);
+  const [sent, setSent] = useState(false);
   const [form, setForm] = useState({
     nome: "",
     empresa: "",
@@ -21,11 +22,19 @@ const ContatoPage = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (!form.nome.trim() || !form.email.trim()) {
+      toast({ title: "Campos obrigatórios", description: "Preencha pelo menos nome e email.", variant: "destructive" });
+      return;
+    }
+
     setLoading(true);
     try {
-      const { error } = await supabase.functions.invoke("send-contact-email", { body: form });
+      const { data, error } = await supabase.functions.invoke("send-contact-email", { body: form });
       if (error) throw error;
-      toast({ title: "Mensagem enviada!", description: "Retornaremos em breve." });
+      if (data && !data.success) throw new Error(data.error || "Erro ao enviar");
+
+      setSent(true);
       setForm({ nome: "", empresa: "", email: "", telefone: "", tipoProjeto: "", descricao: "" });
     } catch (err) {
       console.error("Error:", err);
@@ -44,7 +53,6 @@ const ContatoPage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16">
-
             <span className="text-secondary text-sm font-semibold uppercase tracking-widest">
               Contato
             </span>
@@ -57,24 +65,35 @@ const ContatoPage = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-5xl mx-auto">
-            {/* Form */}
-            <motion.form
-              onSubmit={handleSubmit}
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="space-y-5">
-
-              <Input placeholder="Nome" value={form.nome} onChange={(e) => setForm({ ...form, nome: e.target.value })} required />
-              <Input placeholder="Empresa" value={form.empresa} onChange={(e) => setForm({ ...form, empresa: e.target.value })} />
-              <Input type="email" placeholder="Email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} required />
-              <Input placeholder="Telefone" value={form.telefone} onChange={(e) => setForm({ ...form, telefone: e.target.value })} />
-              <Input placeholder="Tipo de projeto" value={form.tipoProjeto} onChange={(e) => setForm({ ...form, tipoProjeto: e.target.value })} />
-              <Textarea placeholder="Descrição da necessidade" rows={5} value={form.descricao} onChange={(e) => setForm({ ...form, descricao: e.target.value })} />
-              <Button variant="hero" size="lg" type="submit" className="w-full" disabled={loading}>
-                {loading ? "Enviando..." : "Enviar mensagem"}
-              </Button>
-            </motion.form>
+            {sent ? (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                className="flex flex-col items-center justify-center text-center space-y-4 py-12"
+              >
+                <CheckCircle className="text-green-500 w-16 h-16" />
+                <h3 className="text-2xl font-bold text-foreground">Mensagem enviada com sucesso!</h3>
+                <p className="text-muted-foreground">Retornaremos em breve. Obrigado pelo contato!</p>
+                <Button variant="outline" onClick={() => setSent(false)}>Enviar outra mensagem</Button>
+              </motion.div>
+            ) : (
+              <motion.form
+                onSubmit={handleSubmit}
+                initial={{ opacity: 0, x: -30 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="space-y-5">
+                <Input placeholder="Nome *" value={form.nome} onChange={(e) => setForm({ ...form, nome: e.target.value })} required />
+                <Input placeholder="Empresa" value={form.empresa} onChange={(e) => setForm({ ...form, empresa: e.target.value })} />
+                <Input type="email" placeholder="Email *" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} required />
+                <Input placeholder="Telefone" value={form.telefone} onChange={(e) => setForm({ ...form, telefone: e.target.value })} />
+                <Input placeholder="Tipo de projeto" value={form.tipoProjeto} onChange={(e) => setForm({ ...form, tipoProjeto: e.target.value })} />
+                <Textarea placeholder="Descrição da necessidade" rows={5} value={form.descricao} onChange={(e) => setForm({ ...form, descricao: e.target.value })} />
+                <Button variant="hero" size="lg" type="submit" className="w-full" disabled={loading}>
+                  {loading ? "Enviando..." : "Enviar mensagem"}
+                </Button>
+              </motion.form>
+            )}
 
             {/* Contact info */}
             <motion.div
@@ -82,7 +101,6 @@ const ContatoPage = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               className="space-y-8">
-
               <div>
                 <h3 className="text-lg font-bold text-foreground mb-4">Informações de contato</h3>
                 <div className="space-y-4">
@@ -110,7 +128,6 @@ const ContatoPage = () => {
                   </div>
                 </div>
               </div>
-
               <Button variant="whatsapp" size="lg" className="w-full" asChild>
                 <a target="_blank" rel="noopener noreferrer" href="https://wa.me/5519992320961">
                   <MessageCircle size={18} />
@@ -121,8 +138,8 @@ const ContatoPage = () => {
           </div>
         </div>
       </section>
-    </div>);
-
+    </div>
+  );
 };
 
 export default ContatoPage;
