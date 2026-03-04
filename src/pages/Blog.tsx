@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import blogManufatura from "@/assets/blog-manufatura.png";
+import blogPcbDesign from "@/assets/blog-pcb-design.png";
 
 const posts = [
   {
@@ -16,6 +17,7 @@ const posts = [
     title: "PCB Design: boas práticas para industrialização",
     summary: "Como garantir que seu projeto de PCB esteja pronto para a produção em escala.",
     date: "Em breve",
+    image: blogPcbDesign,
   },
   {
     id: 3,
