@@ -34,6 +34,7 @@ const Footer = () => {
               <Link
                 key={item.path}
                 to={item.path}
+                onClick={() => window.scrollTo(0, 0)}
                 className="text-sm text-primary-foreground/50 hover:text-primary-foreground transition-colors">
 
                   {item.label}
