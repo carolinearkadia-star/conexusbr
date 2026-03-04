@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import blogManufatura from "@/assets/blog-manufatura.png";
 import blogPcbDesign from "@/assets/blog-pcb-design.png";
+import blogLean from "@/assets/blog-lean.png";
 
 const posts = [
   {
@@ -24,6 +25,7 @@ const posts = [
     title: "Lean Manufacturing aplicado à eletrônica",
     summary: "Estratégias de manufatura enxuta adaptadas para o setor de produtos eletrônicos.",
     date: "Em breve",
+    image: blogLean,
   },
 ];
 
