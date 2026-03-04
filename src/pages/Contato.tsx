@@ -108,7 +108,7 @@ const ContatoPage = () => {
                     <Phone size={18} className="text-secondary mt-1 shrink-0" />
                     <div>
                       <p className="font-medium text-foreground text-sm">Cilene Paleari Faria</p>
-                      <a href="tel:+5519992320961" className="text-muted-foreground text-sm hover:text-foreground transition-colors block">(19) 99232-0961</a>
+                      <a href="tel:+5519990147479" className="text-muted-foreground text-sm hover:text-foreground transition-colors block">(19) 99014-7479</a>
                       <a href="mailto:cilene@conexusbr.com" className="text-muted-foreground text-sm hover:text-foreground transition-colors block">cilene@conexusbr.com</a>
                     </div>
                   </div>
@@ -129,7 +129,7 @@ const ContatoPage = () => {
                 </div>
               </div>
               <Button variant="whatsapp" size="lg" className="w-full" asChild>
-                <a target="_blank" rel="noopener noreferrer" href="https://wa.me/5519992320961">
+                <a target="_blank" rel="noopener noreferrer" href="https://wa.me/5519990147479">
                   <MessageCircle size={18} />
                   Chamar no WhatsApp
                 </a>
