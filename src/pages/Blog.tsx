@@ -21,7 +21,7 @@ const posts = [
     summary: "Como garantir que seu projeto de PCB esteja pronto para a produção em escala.",
     date: "Em breve",
     image: blogPcbDesign,
-    link: undefined as string | undefined,
+    link: "/blog/pcb-design-boas-praticas-industrializacao",
   },
   {
     id: 3,
