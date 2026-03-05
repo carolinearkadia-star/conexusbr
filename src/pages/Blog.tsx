@@ -29,7 +29,7 @@ const posts = [
     summary: "Estratégias de manufatura enxuta adaptadas para o setor de produtos eletrônicos.",
     date: "Em breve",
     image: blogLean,
-    link: undefined as string | undefined,
+    link: "/blog/lean-manufacturing-eletronica",
   },
 ];
 
