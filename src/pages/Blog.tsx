@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import blogManufatura from "@/assets/blog-manufatura.png";
 import blogPcbDesign from "@/assets/blog-pcb-design.png";
@@ -12,6 +13,7 @@ const posts = [
     summary: "Análise das tendências e oportunidades para a indústria eletrônica brasileira nos próximos anos.",
     date: "Em breve",
     image: blogManufatura,
+    link: "/blog/futuro-manufatura-eletronica-brasil",
   },
   {
     id: 2,
@@ -19,6 +21,7 @@ const posts = [
     summary: "Como garantir que seu projeto de PCB esteja pronto para a produção em escala.",
     date: "Em breve",
     image: blogPcbDesign,
+    link: undefined as string | undefined,
   },
   {
     id: 3,
@@ -26,6 +29,7 @@ const posts = [
     summary: "Estratégias de manufatura enxuta adaptadas para o setor de produtos eletrônicos.",
     date: "Em breve",
     image: blogLean,
+    link: undefined as string | undefined,
   },
 ];
 
@@ -70,9 +74,17 @@ const BlogPage = () => {
                 <div className="p-6 flex flex-col flex-1">
                   <h3 className="text-lg font-bold text-foreground leading-snug">{post.title}</h3>
                   <p className="mt-3 text-muted-foreground text-sm flex-1">{post.summary}</p>
-                  <Button variant="link" size="sm" className="mt-4 w-fit p-0 text-secondary">
-                    Ler mais <ArrowRight size={14} />
-                  </Button>
+                  {post.link ? (
+                    <Link to={post.link}>
+                      <Button variant="link" size="sm" className="mt-4 w-fit p-0 text-secondary">
+                        Ler mais <ArrowRight size={14} />
+                      </Button>
+                    </Link>
+                  ) : (
+                    <Button variant="link" size="sm" className="mt-4 w-fit p-0 text-secondary opacity-50 cursor-default" disabled>
+                      Em breve <ArrowRight size={14} />
+                    </Button>
+                  )}
                 </div>
               </motion.article>
             ))}
