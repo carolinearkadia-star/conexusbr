@@ -59,7 +59,7 @@ const GestoresPage = () => {
                 <img
                 src={gestor.photo}
                 alt={gestor.name}
-                className="w-36 h-36 rounded-full mx-auto object-cover border-muted border-0" />
+                className="w-40 h-40 rounded-full mx-auto object-cover object-top border-muted border-0" />
 
                 <h3 className="mt-6 text-xl font-bold text-primary-foreground">{gestor.name}</h3>
                 <p className="mt-1 text-sm text-secondary font-semibold">{gestor.experience}</p>
