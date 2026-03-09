@@ -281,14 +281,14 @@ const Index = () => {
               <AccordionContent className="text-sm md:text-base text-muted-foreground leading-relaxed pb-5">A Conexus atua desde a análise técnica até a industrialização, conectando o cliente às empresas especialistas certas para cada etapa.</AccordionContent>
             </AccordionItem>
             <AccordionItem value="q3">
-              <AccordionTrigger className="text-sm md:text-base text-foreground hover:no-underline py-5">Quem fabrica as placas?</AccordionTrigger>
+              <AccordionTrigger className="text-sm md:text-base text-foreground hover:no-underline py-5">Quais os produtos e serviços oferecidos?</AccordionTrigger>
               <AccordionContent className="text-sm md:text-base text-muted-foreground leading-relaxed pb-5">
                 <p>Trabalhamos com parceiros especializados como:</p>
                 <ul className="mt-3 list-disc list-inside space-y-2">
                   <li>CADService – Manufatura SMT e PTH</li>
-                  <li>ICAPE Group – Fabricação global de PCBs</li>
+                  <li>ICAPE Group – Fabricação global de PCBs e customização de componentes</li>
                   <li>FITec – Engenharia e desenvolvimento</li>
-                  <li>JTCPCB – Prototipagem e fabricação de placas</li>
+                  <li>JTCPCB – Design e Layout de PCBs</li>
                 </ul>
               </AccordionContent>
             </AccordionItem>
