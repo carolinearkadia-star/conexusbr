@@ -51,7 +51,15 @@ const fadeUp = {
 
 
 const Index = () => {
+  const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
   return (
+    <>
+    <ImageLightbox
+      src={lightbox?.src || ""}
+      alt={lightbox?.alt || ""}
+      open={!!lightbox}
+      onOpenChange={(open) => !open && setLightbox(null)}
+    />
     <div>
       {/* Hero */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
