@@ -11,8 +11,8 @@ import {
   Accordion,
   AccordionContent,
   AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+  AccordionTrigger } from
+"@/components/ui/accordion";
 
 import globeConnections from "@/assets/globe-connections.png";
 import fotoCilene from "@/assets/foto-cilene.png";
@@ -51,26 +51,26 @@ const fadeUp = {
 
 
 const Index = () => {
-  const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
+  const [lightbox, setLightbox] = useState<{src: string;alt: string;} | null>(null);
   return (
     <>
     <ImageLightbox
-      src={lightbox?.src || ""}
-      alt={lightbox?.alt || ""}
-      open={!!lightbox}
-      onOpenChange={(open) => !open && setLightbox(null)}
-    />
+        src={lightbox?.src || ""}
+        alt={lightbox?.alt || ""}
+        open={!!lightbox}
+        onOpenChange={(open) => !open && setLightbox(null)} />
+      
     <div>
       {/* Hero */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         {/* Layer 1: Background video */}
         <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-          style={{ filter: "saturate(0.7) contrast(0.9)" }}>
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{ filter: "saturate(0.7) contrast(0.9)" }}>
 
           <source src="/videos/hero-bg.mp4" type="video/mp4" />
         </video>
@@ -81,22 +81,22 @@ const Index = () => {
         <NetworkBackground />
         <div className="container-narrow relative z-10 px-6 pt-24">
           <motion.div
-            className="max-w-3xl"
-            initial="hidden"
-            animate="visible">
+              className="max-w-3xl"
+              initial="hidden"
+              animate="visible">
 
             <motion.h1
-              custom={0}
-              variants={fadeUp}
-              className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight text-white">
+                custom={0}
+                variants={fadeUp}
+                className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight text-white">
 
               Conectando empresas.{" "}
               <span className="text-gradient text-primary">Entregando soluções técnicas.</span>
             </motion.h1>
             <motion.p
-              custom={1}
-              variants={fadeUp}
-              className="mt-6 text-lg md:text-xl text-white/70 max-w-xl leading-relaxed">Consultoria estratégica em produtos eletrônicos e tecnologia
+                custom={1}
+                variants={fadeUp}
+                className="mt-6 text-lg md:text-xl text-white/70 max-w-xl leading-relaxed">Consultoria estratégica em produtos eletrônicos e tecnologia
 
 
             </motion.p>
@@ -119,11 +119,11 @@ const Index = () => {
       <section className="section-padding bg-background">
         <div className="container-narrow">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6 }}
-            className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.6 }}
+              className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
 
             <div>
               <span className="text-secondary text-sm font-semibold uppercase tracking-widest">
@@ -133,14 +133,14 @@ const Index = () => {
 
               </h2>
               <p className="mt-6 text-muted-foreground leading-relaxed text-justify">
-                A Conexus atua como um hub técnico estratégico. Não vendemos soluções prontas — conectamos
-                empresas especialistas conforme a necessidade de cada projeto. Nossa análise técnica real e
-                viabilidade industrial garantem que cada conexão gere valor e resultado.
-              </p>
+                A Conexus atua como um hub técnico estratégico. Não vendemos soluções prontas, mas  conectamos empresas especialistas conforme a necessidade de cada projeto. Nossa análise técnica garante viabilidade industrial, onde cada conexão gera valor e resultado.
+              
+
+                </p>
               <p className="mt-4 text-muted-foreground leading-relaxed text-justify">
-                Atuamos na interseção entre engenharia, manufatura e mercado, oferecendo diagnóstico
-                preciso e acompanhamento contínuo para projetos eletrônicos de alta complexidade.
-              </p>
+                Fazemos a ponte entre engenharia, manufatura e mercado, oferecendo diagnóstico preciso e acompanhamento contínuo para projetos eletrônicos de alta complexidade.
+              
+                </p>
             </div>
             <div className="relative">
               {/* Abstract connection visual */}
@@ -152,32 +152,32 @@ const Index = () => {
 
       {/* Modelo de Consultoria */}
       <section
-        className="section-padding overflow-hidden relative"
-        style={{ background: "linear-gradient(180deg, hsl(216, 86%, 10%) 0%, hsl(216, 86%, 14%) 100%)" }}>
+          className="section-padding overflow-hidden relative"
+          style={{ background: "linear-gradient(180deg, hsl(216, 86%, 10%) 0%, hsl(216, 86%, 14%) 100%)" }}>
         {/* Video background */}
         <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-          style={{ zIndex: 0 }}>
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+            style={{ zIndex: 0 }}>
 
           <source src="/videos/hub-bg.mp4" type="video/mp4" />
         </video>
         {/* Overlay */}
         <div
-          className="absolute inset-0 pointer-events-none"
-          style={{ background: "hsla(216, 86%, 14%, 0.90)", zIndex: 1 }} />
+            className="absolute inset-0 pointer-events-none"
+            style={{ background: "hsla(216, 86%, 14%, 0.90)", zIndex: 1 }} />
 
 
         <div className="container-narrow relative z-[2]">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12">
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-12">
 
             <span className="text-sm font-semibold uppercase tracking-widest" style={{ color: "hsl(322, 76%, 55%)" }}>
               Modelo de Consultoria
@@ -198,11 +198,11 @@ const Index = () => {
       <section className="section-padding bg-background">
         <div className="container-narrow">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16">
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-16">
 
             <span className="text-secondary text-sm font-semibold uppercase tracking-widest">
               Liderança
@@ -217,19 +217,19 @@ const Index = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
             {gestores.map((gestor, i) =>
-            <motion.div
-              key={gestor.name}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.15, duration: 0.6 }}
-              className="rounded-2xl border border-border shadow-sm p-8 text-center bg-primary flex flex-col">
+              <motion.div
+                key={gestor.name}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.15, duration: 0.6 }}
+                className="rounded-2xl border border-border shadow-sm p-8 text-center bg-primary flex flex-col">
 
                 <img
-                src={gestor.photo}
-                alt={gestor.name}
-                onClick={() => setLightbox({ src: gestor.photo, alt: gestor.name })}
-                className="w-40 h-40 rounded-full mx-auto object-cover object-top border-muted border-0 cursor-pointer hover:ring-2 hover:ring-secondary transition-all" />
+                  src={gestor.photo}
+                  alt={gestor.name}
+                  onClick={() => setLightbox({ src: gestor.photo, alt: gestor.name })}
+                  className="w-40 h-40 rounded-full mx-auto object-cover object-top border-muted border-0 cursor-pointer hover:ring-2 hover:ring-secondary transition-all" />
 
                 <h3 className="mt-6 text-xl font-bold text-primary-foreground">{gestor.name}</h3>
                 <p className="mt-1 text-sm text-secondary font-semibold">{gestor.experience}</p>
@@ -251,7 +251,7 @@ const Index = () => {
                   </Button>
                 </div>
               </motion.div>
-            )}
+              )}
           </div>
         </div>
       </section>
@@ -263,46 +263,46 @@ const Index = () => {
       <section className="section-padding bg-background">
         <div className="container-narrow">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-10">
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-10">
             <span className="text-secondary text-sm font-semibold uppercase tracking-widest">FAQ</span>
             <h2 className="mt-4 text-3xl md:text-4xl font-bold text-foreground">Perguntas Frequentes</h2>
           </motion.div>
-          <Accordion type="single" collapsible className="max-w-2xl mx-auto px-2 md:px-0">
+          <Accordion type="single" collapsible className="max-w-2xl mx-auto">
             <AccordionItem value="q1">
-              <AccordionTrigger className="text-sm md:text-base text-foreground hover:no-underline py-5">Vocês desenvolvem esquemático e layout de PCB?</AccordionTrigger>
-              <AccordionContent className="text-sm md:text-base text-muted-foreground leading-relaxed pb-5">Sim. Desenvolvemos esquemáticos eletrônicos e layout de PCB, com foco em desempenho, integridade de sinal e preparação para manufatura (DFM).</AccordionContent>
+              <AccordionTrigger className="text-sm text-foreground hover:no-underline">Vocês desenvolvem esquemático e layout de PCB?</AccordionTrigger>
+              <AccordionContent className="text-sm text-muted-foreground">Sim. Desenvolvemos esquemáticos eletrônicos e layout de PCB, com foco em desempenho, integridade de sinal e preparação para manufatura (DFM).</AccordionContent>
             </AccordionItem>
             <AccordionItem value="q2">
-              <AccordionTrigger className="text-sm md:text-base text-foreground hover:no-underline py-5">Vocês apenas fazem o projeto ou acompanham até a produção?</AccordionTrigger>
-              <AccordionContent className="text-sm md:text-base text-muted-foreground leading-relaxed pb-5">A Conexus atua desde a análise técnica até a industrialização, conectando o cliente às empresas especialistas certas para cada etapa.</AccordionContent>
+              <AccordionTrigger className="text-sm text-foreground hover:no-underline">Vocês apenas fazem o projeto ou acompanham até a produção?</AccordionTrigger>
+              <AccordionContent className="text-sm text-muted-foreground">A Conexus atua desde a análise técnica até a industrialização, conectando o cliente às empresas especialistas certas para cada etapa.</AccordionContent>
             </AccordionItem>
             <AccordionItem value="q3">
-              <AccordionTrigger className="text-sm md:text-base text-foreground hover:no-underline py-5">Quais os produtos e serviços oferecidos?</AccordionTrigger>
-              <AccordionContent className="text-sm md:text-base text-muted-foreground leading-relaxed pb-5">
+              <AccordionTrigger className="text-sm text-foreground hover:no-underline">Quem fabrica as placas?</AccordionTrigger>
+              <AccordionContent className="text-sm text-muted-foreground">
                 <p>Trabalhamos com parceiros especializados como:</p>
-                <ul className="mt-3 list-disc list-inside space-y-2">
+                <ul className="mt-2 list-disc list-inside space-y-1">
                   <li>CADService – Manufatura SMT e PTH</li>
-                  <li>ICAPE Group – Fabricação global de PCBs e customização de componentes</li>
+                  <li>ICAPE Group – Fabricação global de PCBs</li>
                   <li>FITec – Engenharia e desenvolvimento</li>
-                  <li>JTCPCB – Design e Layout de PCBs</li>
+                  <li>JTCPCB – Prototipagem e fabricação de placas</li>
                 </ul>
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="q4">
-              <AccordionTrigger className="text-sm md:text-base text-foreground hover:no-underline py-5">Vocês fornecem componentes originais?</AccordionTrigger>
-              <AccordionContent className="text-sm md:text-base text-muted-foreground leading-relaxed pb-5">Sim. Podemos fornecer componentes e placas originais por meio de nossa rede de parceiros qualificados.</AccordionContent>
+              <AccordionTrigger className="text-sm text-foreground hover:no-underline">Vocês fornecem componentes originais?</AccordionTrigger>
+              <AccordionContent className="text-sm text-muted-foreground">Sim. Podemos fornecer componentes e placas originais por meio de nossa rede de parceiros qualificados.</AccordionContent>
             </AccordionItem>
             <AccordionItem value="q5">
-              <AccordionTrigger className="text-sm md:text-base text-foreground hover:no-underline py-5">Qual o diferencial da Conexus?</AccordionTrigger>
-              <AccordionContent className="text-sm md:text-base text-muted-foreground leading-relaxed pb-5">Nosso diferencial está na experiência técnica dos gestores, que avaliam projeto, layout e processo produtivo de forma integrada, reduzindo riscos e garantindo soluções viáveis.</AccordionContent>
+              <AccordionTrigger className="text-sm text-foreground hover:no-underline">Qual o diferencial da Conexus?</AccordionTrigger>
+              <AccordionContent className="text-sm text-muted-foreground">Nosso diferencial está na experiência técnica dos gestores, que avaliam projeto, layout e processo produtivo de forma integrada, reduzindo riscos e garantindo soluções viáveis.</AccordionContent>
             </AccordionItem>
             <AccordionItem value="q6" className="border-b-0">
-              <AccordionTrigger className="text-sm md:text-base text-foreground hover:no-underline py-5">Como iniciar um trabalho de análise técnica?</AccordionTrigger>
-              <AccordionContent className="text-sm md:text-base text-muted-foreground leading-relaxed pb-5">Envie as informações básicas e necessidades através da aba Fale Conosco, e realizaremos uma avaliação técnica inicial.</AccordionContent>
+              <AccordionTrigger className="text-sm text-foreground hover:no-underline">Como iniciar um projeto?</AccordionTrigger>
+              <AccordionContent className="text-sm text-muted-foreground">Envie as informações básicas do seu projeto e realizaremos uma avaliação técnica inicial.</AccordionContent>
             </AccordionItem>
           </Accordion>
         </div>
@@ -311,21 +311,21 @@ const Index = () => {
       {/* CTA */}
       <section className="relative section-padding overflow-hidden">
         <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-          style={{ filter: "saturate(0.7) contrast(0.9)" }}>
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{ filter: "saturate(0.7) contrast(0.9)" }}>
           <source src="/videos/hero-bg.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-[#051D40]/80" />
         <div className="container-narrow text-center relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}>
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}>
 
             <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground">Pronto para se conectar?
 
