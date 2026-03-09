@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import logo from "@/assets/logo-conexus.svg";
 
 const navItems = [
-  { label: "Home", path: "/" },
+  { label: "Página Inicial", path: "/" },
   { label: "Gestores Técnicos", path: "/gestores" },
   { label: "Parceiros", path: "/parceiros" },
   { label: "Blog", path: "/blog" },
