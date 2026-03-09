@@ -24,7 +24,7 @@ const nodes: OrbitalNode[] = [
   icon: BarChart3,
   title: "Análise de Viabilidade Técnica e Industrial",
   tooltip:
-  "Avaliamos a viabilidade real do projeto, garantindo decisões assertivas e evitando investimentos em soluções inviáveis."
+  "Avaliamos a viabilidade real do projeto, garantindo decisões eficazes e evitando investimentos em soluções inviáveis."
 },
 {
   id: 2,
