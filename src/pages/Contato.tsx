@@ -65,24 +65,24 @@ const ContatoPage = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-5xl mx-auto">
-            {sent ? (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                className="flex flex-col items-center justify-center text-center space-y-4 py-12"
-              >
+            {sent ?
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="flex flex-col items-center justify-center text-center space-y-4 py-12">
+              
                 <CheckCircle className="text-green-500 w-16 h-16" />
                 <h3 className="text-2xl font-bold text-foreground">Mensagem enviada com sucesso!</h3>
                 <p className="text-muted-foreground">Retornaremos em breve. Obrigado pelo contato!</p>
                 <Button variant="outline" onClick={() => setSent(false)}>Enviar outra mensagem</Button>
-              </motion.div>
-            ) : (
-              <motion.form
-                onSubmit={handleSubmit}
-                initial={{ opacity: 0, x: -30 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="space-y-5">
+              </motion.div> :
+
+            <motion.form
+              onSubmit={handleSubmit}
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="space-y-5">
                 <Input placeholder="Nome *" value={form.nome} onChange={(e) => setForm({ ...form, nome: e.target.value })} required />
                 <Input placeholder="Empresa" value={form.empresa} onChange={(e) => setForm({ ...form, empresa: e.target.value })} />
                 <Input type="email" placeholder="Email *" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} required />
@@ -93,7 +93,7 @@ const ContatoPage = () => {
                   {loading ? "Enviando..." : "Enviar mensagem"}
                 </Button>
               </motion.form>
-            )}
+            }
 
             {/* Contact info */}
             <motion.div
@@ -116,7 +116,7 @@ const ContatoPage = () => {
                     <Phone size={18} className="text-secondary mt-1 shrink-0" />
                     <div>
                       <p className="font-medium text-foreground text-sm">Hudson Benedicto</p>
-                      <a href="tel:+5519997942136" className="text-muted-foreground text-sm hover:text-foreground transition-colors block">(19) 99794-2136</a>
+                      <a className="text-muted-foreground text-sm hover:text-foreground transition-colors block" href="tel:+5519999531659">(19) 99953-1659</a>
                       <a href="mailto:hudson@conexusbr.com" className="text-muted-foreground text-sm hover:text-foreground transition-colors block">hudson@conexusbr.com</a>
                     </div>
                   </div>
@@ -138,8 +138,8 @@ const ContatoPage = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>);
+
 };
 
 export default ContatoPage;
