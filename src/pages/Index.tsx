@@ -303,7 +303,7 @@ const Index = () => {
               <AccordionContent className="text-sm text-muted-foreground">Nosso diferencial está na experiência técnica dos gestores, que avaliam projeto, layout e processo produtivo de forma integrada, reduzindo riscos e garantindo soluções viáveis.</AccordionContent>
             </AccordionItem>
             <AccordionItem value="q6" className="border-b-0">
-              <AccordionTrigger className="text-sm text-foreground hover:no-underline">Como iniciar um projeto?</AccordionTrigger>
+              <AccordionTrigger className="text-sm text-foreground hover:no-underline">Como iniciar um trabalho de análise técnica?</AccordionTrigger>
               <AccordionContent className="text-sm text-muted-foreground">Envie as informações básicas do seu projeto e realizaremos uma avaliação técnica inicial.</AccordionContent>
             </AccordionItem>
           </Accordion>
