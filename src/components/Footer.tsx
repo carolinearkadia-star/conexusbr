@@ -21,7 +21,7 @@ const Footer = () => {
             </h4>
             <div className="flex flex-col gap-2">
               {[
-              { label: "Home", path: "/" },
+              { label: "Página Inicial", path: "/" },
               { label: "Gestores Técnicos", path: "/gestores" },
               { label: "Parceiros", path: "/parceiros" },
               { label: "Blog", path: "/blog" },
