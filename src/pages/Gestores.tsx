@@ -96,7 +96,8 @@ const GestoresPage = () => {
           </div>
         </div>
       </section>
-    </div>);
+    </div>
+    </>);
 
 };
 
