@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, Phone, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import ImageLightbox from "@/components/ImageLightbox";
 import fotoCilene from "@/assets/foto-cilene.png";
 import fotoHudson from "@/assets/foto-hudson.png";
 
