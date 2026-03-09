@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Mail, MessageCircle } from "lucide-react";
+import ImageLightbox from "@/components/ImageLightbox";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import NetworkBackground from "@/components/NetworkBackground";
@@ -49,7 +51,15 @@ const fadeUp = {
 
 
 const Index = () => {
+  const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
   return (
+    <>
+    <ImageLightbox
+      src={lightbox?.src || ""}
+      alt={lightbox?.alt || ""}
+      open={!!lightbox}
+      onOpenChange={(open) => !open && setLightbox(null)}
+    />
     <div>
       {/* Hero */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
@@ -218,7 +228,8 @@ const Index = () => {
                 <img
                 src={gestor.photo}
                 alt={gestor.name}
-                className="w-40 h-40 rounded-full mx-auto object-cover object-top border-muted border-0" />
+                onClick={() => setLightbox({ src: gestor.photo, alt: gestor.name })}
+                className="w-40 h-40 rounded-full mx-auto object-cover object-top border-muted border-0 cursor-pointer hover:ring-2 hover:ring-secondary transition-all" />
 
                 <h3 className="mt-6 text-xl font-bold text-primary-foreground">{gestor.name}</h3>
                 <p className="mt-1 text-sm text-secondary font-semibold">{gestor.experience}</p>
@@ -331,7 +342,8 @@ const Index = () => {
           </motion.div>
         </div>
       </section>
-    </div>);
+    </div>
+    </>);
 
 };
 

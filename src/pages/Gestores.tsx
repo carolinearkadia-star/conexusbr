@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, Phone, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import ImageLightbox from "@/components/ImageLightbox";
 import fotoCilene from "@/assets/foto-cilene.png";
 import fotoHudson from "@/assets/foto-hudson.png";
 
@@ -26,7 +28,15 @@ const gestores = [
 
 
 const GestoresPage = () => {
+  const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
   return (
+    <>
+    <ImageLightbox
+      src={lightbox?.src || ""}
+      alt={lightbox?.alt || ""}
+      open={!!lightbox}
+      onOpenChange={(open) => !open && setLightbox(null)}
+    />
     <div className="pt-20">
       <section className="section-padding">
         <div className="container-narrow">
@@ -59,7 +69,8 @@ const GestoresPage = () => {
                 <img
                 src={gestor.photo}
                 alt={gestor.name}
-                className="w-40 h-40 rounded-full mx-auto object-cover object-top border-muted border-0" />
+                onClick={() => setLightbox({ src: gestor.photo, alt: gestor.name })}
+                className="w-40 h-40 rounded-full mx-auto object-cover object-top border-muted border-0 cursor-pointer hover:ring-2 hover:ring-secondary transition-all" />
 
                 <h3 className="mt-6 text-xl font-bold text-primary-foreground">{gestor.name}</h3>
                 <p className="mt-1 text-sm text-secondary font-semibold">{gestor.experience}</p>
@@ -85,7 +96,8 @@ const GestoresPage = () => {
           </div>
         </div>
       </section>
-    </div>);
+    </div>
+    </>);
 
 };
 
