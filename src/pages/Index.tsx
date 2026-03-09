@@ -138,7 +138,7 @@ const Index = () => {
 
                 </p>
               <p className="mt-4 text-muted-foreground leading-relaxed text-justify">
-                Fazemos a ponte entre engenharia, manufatura e mercado, oferecendo diagnóstico preciso e acompanhamento contínuo para projetos eletrônicos de alta complexidade.
+                Fazemos a ponte entre engenharia, manufatura e mercado, oferecendo diagnóstico preciso e acompanhamento contínuo para projetos eletrônicos simples e de alta complexidade.
               
                 </p>
             </div>
