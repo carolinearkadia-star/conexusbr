@@ -228,7 +228,8 @@ const Index = () => {
                 <img
                 src={gestor.photo}
                 alt={gestor.name}
-                className="w-40 h-40 rounded-full mx-auto object-cover object-top border-muted border-0" />
+                onClick={() => setLightbox({ src: gestor.photo, alt: gestor.name })}
+                className="w-40 h-40 rounded-full mx-auto object-cover object-top border-muted border-0 cursor-pointer hover:ring-2 hover:ring-secondary transition-all" />
 
                 <h3 className="mt-6 text-xl font-bold text-primary-foreground">{gestor.name}</h3>
                 <p className="mt-1 text-sm text-secondary font-semibold">{gestor.experience}</p>
