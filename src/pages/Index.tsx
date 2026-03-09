@@ -304,7 +304,7 @@ const Index = () => {
             </AccordionItem>
             <AccordionItem value="q6" className="border-b-0">
               <AccordionTrigger className="text-sm text-foreground hover:no-underline">Como iniciar um trabalho de análise técnica?</AccordionTrigger>
-              <AccordionContent className="text-sm text-muted-foreground">Envie as informações básicas e necessidades e realizaremos uma avaliação técnica inicial.</AccordionContent>
+              <AccordionContent className="text-sm text-muted-foreground">Envie as informações básicas e necessidades através da aba Fale Conosco e realizaremos uma avaliação técnica inicial.</AccordionContent>
             </AccordionItem>
           </Accordion>
         </div>
