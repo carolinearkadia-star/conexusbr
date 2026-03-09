@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Mail, MessageCircle } from "lucide-react";
+import ImageLightbox from "@/components/ImageLightbox";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import NetworkBackground from "@/components/NetworkBackground";
