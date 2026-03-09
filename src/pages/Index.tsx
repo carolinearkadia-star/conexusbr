@@ -271,20 +271,20 @@ const Index = () => {
             <span className="text-secondary text-sm font-semibold uppercase tracking-widest">FAQ</span>
             <h2 className="mt-4 text-3xl md:text-4xl font-bold text-foreground">Perguntas Frequentes</h2>
           </motion.div>
-          <Accordion type="single" collapsible className="max-w-2xl mx-auto">
+          <Accordion type="single" collapsible className="max-w-2xl mx-auto px-2 md:px-0">
             <AccordionItem value="q1">
-              <AccordionTrigger className="text-sm text-foreground hover:no-underline">Vocês desenvolvem esquemático e layout de PCB?</AccordionTrigger>
-              <AccordionContent className="text-sm text-muted-foreground">Sim. Desenvolvemos esquemáticos eletrônicos e layout de PCB, com foco em desempenho, integridade de sinal e preparação para manufatura (DFM).</AccordionContent>
+              <AccordionTrigger className="text-sm md:text-base text-foreground hover:no-underline py-5">Vocês desenvolvem esquemático e layout de PCB?</AccordionTrigger>
+              <AccordionContent className="text-sm md:text-base text-muted-foreground leading-relaxed pb-5">Sim. Desenvolvemos esquemáticos eletrônicos e layout de PCB, com foco em desempenho, integridade de sinal e preparação para manufatura (DFM).</AccordionContent>
             </AccordionItem>
             <AccordionItem value="q2">
-              <AccordionTrigger className="text-sm text-foreground hover:no-underline">Vocês apenas fazem o projeto ou acompanham até a produção?</AccordionTrigger>
-              <AccordionContent className="text-sm text-muted-foreground">A Conexus atua desde a análise técnica até a industrialização, conectando o cliente às empresas especialistas certas para cada etapa.</AccordionContent>
+              <AccordionTrigger className="text-sm md:text-base text-foreground hover:no-underline py-5">Vocês apenas fazem o projeto ou acompanham até a produção?</AccordionTrigger>
+              <AccordionContent className="text-sm md:text-base text-muted-foreground leading-relaxed pb-5">A Conexus atua desde a análise técnica até a industrialização, conectando o cliente às empresas especialistas certas para cada etapa.</AccordionContent>
             </AccordionItem>
             <AccordionItem value="q3">
-              <AccordionTrigger className="text-sm text-foreground hover:no-underline">Quem fabrica as placas?</AccordionTrigger>
-              <AccordionContent className="text-sm text-muted-foreground">
+              <AccordionTrigger className="text-sm md:text-base text-foreground hover:no-underline py-5">Quem fabrica as placas?</AccordionTrigger>
+              <AccordionContent className="text-sm md:text-base text-muted-foreground leading-relaxed pb-5">
                 <p>Trabalhamos com parceiros especializados como:</p>
-                <ul className="mt-2 list-disc list-inside space-y-1">
+                <ul className="mt-3 list-disc list-inside space-y-2">
                   <li>CADService – Manufatura SMT e PTH</li>
                   <li>ICAPE Group – Fabricação global de PCBs</li>
                   <li>FITec – Engenharia e desenvolvimento</li>
@@ -293,16 +293,16 @@ const Index = () => {
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="q4">
-              <AccordionTrigger className="text-sm text-foreground hover:no-underline">Vocês fornecem componentes originais?</AccordionTrigger>
-              <AccordionContent className="text-sm text-muted-foreground">Sim. Podemos fornecer componentes e placas originais por meio de nossa rede de parceiros qualificados.</AccordionContent>
+              <AccordionTrigger className="text-sm md:text-base text-foreground hover:no-underline py-5">Vocês fornecem componentes originais?</AccordionTrigger>
+              <AccordionContent className="text-sm md:text-base text-muted-foreground leading-relaxed pb-5">Sim. Podemos fornecer componentes e placas originais por meio de nossa rede de parceiros qualificados.</AccordionContent>
             </AccordionItem>
             <AccordionItem value="q5">
-              <AccordionTrigger className="text-sm text-foreground hover:no-underline">Qual o diferencial da Conexus?</AccordionTrigger>
-              <AccordionContent className="text-sm text-muted-foreground">Nosso diferencial está na experiência técnica dos gestores, que avaliam projeto, layout e processo produtivo de forma integrada, reduzindo riscos e garantindo soluções viáveis.</AccordionContent>
+              <AccordionTrigger className="text-sm md:text-base text-foreground hover:no-underline py-5">Qual o diferencial da Conexus?</AccordionTrigger>
+              <AccordionContent className="text-sm md:text-base text-muted-foreground leading-relaxed pb-5">Nosso diferencial está na experiência técnica dos gestores, que avaliam projeto, layout e processo produtivo de forma integrada, reduzindo riscos e garantindo soluções viáveis.</AccordionContent>
             </AccordionItem>
             <AccordionItem value="q6" className="border-b-0">
-              <AccordionTrigger className="text-sm text-foreground hover:no-underline">Como iniciar um projeto?</AccordionTrigger>
-              <AccordionContent className="text-sm text-muted-foreground">Envie as informações básicas do seu projeto e realizaremos uma avaliação técnica inicial.</AccordionContent>
+              <AccordionTrigger className="text-sm md:text-base text-foreground hover:no-underline py-5">Como iniciar um projeto?</AccordionTrigger>
+              <AccordionContent className="text-sm md:text-base text-muted-foreground leading-relaxed pb-5">Envie as informações básicas do seu projeto e realizaremos uma avaliação técnica inicial.</AccordionContent>
             </AccordionItem>
           </Accordion>
         </div>
