@@ -283,13 +283,15 @@ const Index = () => {
             <AccordionItem value="q3">
               <AccordionTrigger className="text-sm text-foreground hover:no-underline">Quais são os parceiros da Conexus no desenvolvimento e fabricação de placas eletrônicas e soluções tecnológicas?</AccordionTrigger>
               <AccordionContent className="text-sm text-muted-foreground">
-                <p>Trabalhamos com parceiros especializados como:</p>
+                <p>A Conexus trabalha com parceiros especializados para garantir qualidade em todas as etapas do desenvolvimento e produção eletrônica.</p>
                 <ul className="mt-2 list-disc list-inside space-y-1">
-                  <li>CADService – Manufatura SMT e PTH</li>
-                  <li>ICAPE Group – Fabricação global de PCBs</li>
-                  <li>FITec – Engenharia e desenvolvimento</li>
-                  <li>JTCPCB – Prototipagem e fabricação de placas</li>
+                  <li>CADService – Manufatura e montagem de placas eletrônicas (SMT e PTH).</li>
+                  <li>Grupo ICAPE – Fabricação global de PCBs.</li>
+                  <li>FITec – Desenvolvimento de projetos eletrônicos e engenharia.</li>
+                  <li>JTCPCB – Desenvolvimento de projeto e layout de placas.</li>
+                  <li>Octea – Gestão de custos, contratos e ativos de TI e Telecom.</li>
                 </ul>
+                <p className="mt-2">Assim, conseguimos oferecer soluções completas, desde o desenvolvimento até a produção das placas eletrônicas, contando também com parceiros especializados em gestão e eficiência tecnológica.</p>
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="q4">
