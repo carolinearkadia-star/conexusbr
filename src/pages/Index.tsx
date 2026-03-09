@@ -281,7 +281,7 @@ const Index = () => {
               <AccordionContent className="text-sm text-muted-foreground">A Conexus atua desde a análise técnica até a industrialização, conectando o cliente às empresas especialistas certas para cada etapa.</AccordionContent>
             </AccordionItem>
             <AccordionItem value="q3">
-              <AccordionTrigger className="text-sm text-foreground hover:no-underline">Quem fabrica as placas?</AccordionTrigger>
+              <AccordionTrigger className="text-sm text-foreground hover:no-underline">Quais são os parceiros da Conexus no desenvolvimento e fabricação de placas eletrônicas e soluções tecnológicas?</AccordionTrigger>
               <AccordionContent className="text-sm text-muted-foreground">
                 <p>Trabalhamos com parceiros especializados como:</p>
                 <ul className="mt-2 list-disc list-inside space-y-1">
