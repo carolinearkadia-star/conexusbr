@@ -28,7 +28,15 @@ const gestores = [
 
 
 const GestoresPage = () => {
+  const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
   return (
+    <>
+    <ImageLightbox
+      src={lightbox?.src || ""}
+      alt={lightbox?.alt || ""}
+      open={!!lightbox}
+      onOpenChange={(open) => !open && setLightbox(null)}
+    />
     <div className="pt-20">
       <section className="section-padding">
         <div className="container-narrow">
