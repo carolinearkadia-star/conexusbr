@@ -17,7 +17,7 @@ const nodes: OrbitalNode[] = [
   icon: Search,
   title: "Diagnóstico Técnico e Produtivo",
   tooltip:
-  "Identificamos riscos técnicos e gargalos produtivos antes que se tornem problemas, reduzindo retrabalhos e custos."
+  "Identificamos riscos técnicos e gargalos produtivos antes que se tornem problemas, eliminando retrabalhos e custos."
 },
 {
   id: 1,
