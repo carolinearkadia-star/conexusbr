@@ -76,7 +76,7 @@ const partners: CarouselPartner[] = [
     description: "ICT para desenvolvimento de projetos com incentivos governamentais.",
     fullDescription:
       "A FITec – Fundação para Inovações Tecnológicas – atua no desenvolvimento de soluções inovadoras em parceria com a indústria e a academia.\n\nCom foco em pesquisa aplicada e transferência de tecnologia, a fundação contribui para o avanço tecnológico do setor produtivo brasileiro.",
-    url: "https://www.fitec.org.br",
+    url: "https://www.fiteclabs.org.br",
     media: [
       { type: "image", src: fitecSolar, alt: "Projeto de energia solar FITec" },
       { type: "image", src: fitecLab, alt: "Laboratório de pesquisa FITec" },
