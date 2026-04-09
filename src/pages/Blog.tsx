@@ -6,8 +6,17 @@ import blogManufatura from "@/assets/blog-manufatura.png";
 import blogPcbDesign from "@/assets/blog-pcb-design.png";
 import blogLean from "@/assets/blog-lean.png";
 import blogSemicondutores from "@/assets/blog-semicondutores.png";
+import blogRohsReach from "@/assets/blog-rohs-reach.png";
 
 const posts = [
+  {
+    id: 5,
+    title: "ROHS, REACH e o Acordo Mercosul–União Europeia",
+    summary: "O acordo Mercosul–UE abre portas, mas exige conformidade regulatória. Entenda o impacto de RoHS e REACH para a indústria eletrônica brasileira.",
+    date: "Abril 2026",
+    image: blogRohsReach,
+    link: "/blog/rohs-reach-acordo-mercosul-ue",
+  },
   {
     id: 4,
     title: "O que se sabe sobre a Crise Global de Semicondutores?",
