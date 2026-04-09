@@ -6,7 +6,7 @@ import blogManufatura from "@/assets/blog-manufatura.png";
 import blogPcbDesign from "@/assets/blog-pcb-design.png";
 import blogLean from "@/assets/blog-lean.png";
 import blogSemicondutores from "@/assets/blog-semicondutores.png";
-import blogRohsReach from "@/assets/blog-rohs-reach.png";
+import blogRohsReach from "@/assets/blog-rohs-reach.webp";
 
 const posts = [
   {

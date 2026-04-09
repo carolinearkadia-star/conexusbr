@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import blogRohsReach from "@/assets/blog-rohs-reach.png";
+import blogRohsReach from "@/assets/blog-rohs-reach.webp";
 
 const BlogArticle5 = () => {
   return (
