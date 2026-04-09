@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import blogManufatura from "@/assets/blog-manufatura.png";
 import blogPcbDesign from "@/assets/blog-pcb-design.png";
 import blogLean from "@/assets/blog-lean.png";
-import blogSemicondutores from "@/assets/blog-semicondutores.jpg";
+import blogSemicondutores from "@/assets/blog-semicondutores.png";
 
 const posts = [
   {
