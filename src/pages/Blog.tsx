@@ -5,8 +5,17 @@ import { Button } from "@/components/ui/button";
 import blogManufatura from "@/assets/blog-manufatura.png";
 import blogPcbDesign from "@/assets/blog-pcb-design.png";
 import blogLean from "@/assets/blog-lean.png";
+import blogSemicondutores from "@/assets/blog-semicondutores.jpg";
 
 const posts = [
+  {
+    id: 4,
+    title: "O que se sabe sobre a Crise Global de Semicondutores?",
+    summary: "Um panorama das crises simultâneas que afetam a cadeia global de eletrônicos e o que fazer para se proteger.",
+    date: "Abril 2026",
+    image: blogSemicondutores,
+    link: "/blog/crise-global-semicondutores",
+  },
   {
     id: 1,
     title: "O futuro da manufatura eletrônica no Brasil",
