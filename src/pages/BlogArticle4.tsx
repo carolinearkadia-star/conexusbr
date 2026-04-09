@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import blogSemicondutores from "@/assets/blog-semicondutores.jpg";
+import blogSemicondutores from "@/assets/blog-semicondutores.png";
 
 const BlogArticle4 = () => {
   return (
