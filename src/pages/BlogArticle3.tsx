@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import SEOHead from "@/components/SEOHead";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -6,6 +7,8 @@ import blogLean from "@/assets/blog-lean.png";
 
 const BlogArticle3 = () => {
   return (
+    <>
+    <SEOHead title="Lean Manufacturing aplicado à eletrônica | Blog Conexus" description="Lean Manufacturing na eletrônica é a aplicação dos princípios de manufatura enxuta para reduzir desperdícios, aumentar a produtividade e melhorar a qualidade." />
     <div className="pt-20">
       <section className="section-padding">
         <div className="container-narrow max-w-3xl mx-auto">
@@ -133,6 +136,7 @@ const BlogArticle3 = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

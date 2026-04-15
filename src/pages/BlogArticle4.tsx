@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import SEOHead from "@/components/SEOHead";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -6,6 +7,8 @@ import blogSemicondutores from "@/assets/blog-semicondutores.png";
 
 const BlogArticle4 = () => {
   return (
+    <>
+    <SEOHead title="Crise Global de Semicondutores | Blog Conexus" description="A cadeia global de eletrônicos nunca esteve sob tanta pressão ao mesmo tempo. Não é uma crise. É um acúmulo de crises simultâneas que afeta componentes." />
     <div className="pt-20">
       <section className="section-padding">
         <div className="container-narrow max-w-3xl mx-auto">
@@ -100,6 +103,7 @@ const BlogArticle4 = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

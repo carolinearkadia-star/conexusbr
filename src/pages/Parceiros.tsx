@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SEOHead from "@/components/SEOHead";
 import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -48,6 +49,8 @@ const ParceirosPage = () => {
   };
 
   return (
+    <>
+    <SEOHead title="Parceiros Estratégicos | Conexus" description="Nossa rede de parceiros estratégicos inclui líderes em manufatura de placas, design de PCB e gestão de custos. Conexões de elite para o seu projeto técnico." />
     <div className="pt-20">
       <PartnersCarousel />
 
@@ -98,6 +101,7 @@ const ParceirosPage = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

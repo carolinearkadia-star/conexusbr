@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SEOHead from "@/components/SEOHead";
 import { motion } from "framer-motion";
 import { Mail, Phone, MessageCircle, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -45,6 +46,8 @@ const ContatoPage = () => {
   };
 
   return (
+    <>
+    <SEOHead title="Fale Conosco | Conexus" description="Pronto para impulsionar seu produto eletrônico? Entre em contato com os especialistas da Conexus e descubra como nosso hub técnico pode gerar valor ao seu projeto." />
     <div className="pt-20">
       <section className="section-padding">
         <div className="container-narrow">
@@ -138,7 +141,8 @@ const ContatoPage = () => {
           </div>
         </div>
       </section>
-    </div>);
+    </div>
+    </>);
 
 };
 

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SEOHead from "@/components/SEOHead";
 import { motion } from "framer-motion";
 import { ArrowRight, Mail, MessageCircle } from "lucide-react";
 import ImageLightbox from "@/components/ImageLightbox";
@@ -54,6 +55,7 @@ const Index = () => {
   const [lightbox, setLightbox] = useState<{src: string;alt: string;} | null>(null);
   return (
     <>
+    <SEOHead title="Consultoria Técnica em Produtos Eletrônicos | Conexus" description="Conexus: Hub técnico estratégico especializado em produtos eletrônicos. Conectamos sua empresa aos melhores parceiros de engenharia e manufatura. Confira!" />
     <ImageLightbox
         src={lightbox?.src || ""}
         alt={lightbox?.alt || ""}

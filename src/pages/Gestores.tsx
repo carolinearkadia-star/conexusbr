@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SEOHead from "@/components/SEOHead";
 import { motion } from "framer-motion";
 import { Mail, Phone, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -31,6 +32,7 @@ const GestoresPage = () => {
   const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
   return (
     <>
+    <SEOHead title="Gestores Técnicos | Conexus" description="Conheça os gestores da Conexus. Especialistas com décadas de experiência em engenharia de processos, PCB e gestão industrial para o mercado de eletrônicos." />
     <ImageLightbox
       src={lightbox?.src || ""}
       alt={lightbox?.alt || ""}
