@@ -129,18 +129,19 @@ const Index = () => {
               <span className="text-secondary text-sm font-semibold uppercase tracking-widest">
                 Quem Somos
               </span>
-              <h2 className="mt-4 text-3xl md:text-4xl font-bold text-foreground leading-tight">Um hub técnico que conecta o mercado eletrônico 
-
-              </h2>
+              <h2 className="mt-4 text-3xl md:text-4xl font-bold text-foreground leading-tight">Um hub técnico estratégico que conecta o mercado eletrônico e a indústria</h2>
               <p className="mt-6 text-muted-foreground leading-relaxed text-justify">
-                A Conexus atua como um hub técnico estratégico. Não vendemos soluções prontas, mas  conectamos empresas especialistas conforme a necessidade de cada projeto. Nossa análise técnica garante viabilidade industrial, onde cada conexão gera valor e resultado.
-              
-
-                </p>
+                A Conexus nasceu para preencher a lacuna entre o conceito e a entrega final no mercado de tecnologia. Atuamos como um hub técnico estratégico, operando em um modelo onde não entregamos apenas soluções genéricas, mas conectamos empresas especialistas e parceiros de elite conforme a necessidade técnica de cada projeto.
+              </p>
               <p className="mt-4 text-muted-foreground leading-relaxed text-justify">
-                Fazemos a ponte entre engenharia, manufatura e mercado, oferecendo diagnóstico preciso e acompanhamento contínuo para projetos eletrônicos simples e de alta complexidade.
-              
-                </p>
+                Nossa expertise reside na análise de viabilidade técnica e industrial. Acreditamos que uma conexão estratégica só tem valor quando gera resultados mensuráveis e segurança produtiva. Por isso, fazemos a ponte entre a engenharia, a manufatura e o mercado, oferecendo um diagnóstico preciso que antecipa desafios e otimiza investimentos.
+              </p>
+              <p className="mt-4 text-muted-foreground leading-relaxed text-justify">
+                Seja para projetos eletrônicos simples ou de alta complexidade, a Conexus oferece um acompanhamento contínuo em todas as etapas - do design do PCB à escolha dos melhores parceiros de montagem, até a redução de custos.
+              </p>
+              <p className="mt-4 text-muted-foreground leading-relaxed text-justify">
+                Nosso compromisso é garantir que a inovação tecnológica seja acompanhada de eficiência operacional e viabilidade industrial para os nossos clientes.
+              </p>
             </div>
             <div className="relative">
               {/* Abstract connection visual */}
