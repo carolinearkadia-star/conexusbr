@@ -116,7 +116,7 @@ const Index = () => {
       </section>
 
       {/* Quem Somos */}
-      <section className="section-padding bg-background">
+      <section className="py-12 md:py-16 px-6 md:px-8 bg-background">
         <div className="container-narrow">
           <motion.div
               initial={{ opacity: 0, y: 30 }}
