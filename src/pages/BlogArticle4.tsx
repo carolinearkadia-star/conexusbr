@@ -103,6 +103,7 @@ const BlogArticle4 = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

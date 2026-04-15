@@ -141,7 +141,8 @@ const ContatoPage = () => {
           </div>
         </div>
       </section>
-    </div>);
+    </div>
+    </>);
 
 };
 

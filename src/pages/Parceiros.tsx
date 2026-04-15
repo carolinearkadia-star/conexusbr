@@ -101,6 +101,7 @@ const ParceirosPage = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

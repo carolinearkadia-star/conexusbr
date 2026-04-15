@@ -136,6 +136,7 @@ const BlogArticle3 = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

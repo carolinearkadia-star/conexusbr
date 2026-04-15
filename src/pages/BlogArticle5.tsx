@@ -115,6 +115,7 @@ const BlogArticle5 = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 
