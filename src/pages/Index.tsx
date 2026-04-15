@@ -153,7 +153,7 @@ const Index = () => {
 
       {/* Modelo de Consultoria */}
       <section
-          className="section-padding overflow-hidden relative"
+          className="py-12 md:py-16 px-6 md:px-8 overflow-hidden relative"
           style={{ background: "linear-gradient(180deg, hsl(216, 86%, 10%) 0%, hsl(216, 86%, 14%) 100%)" }}>
         {/* Video background */}
         <video
@@ -196,7 +196,7 @@ const Index = () => {
       </section>
 
       {/* Gestores Técnicos */}
-      <section className="section-padding bg-background">
+      <section className="py-12 md:py-16 px-6 md:px-8 bg-background">
         <div className="container-narrow">
           <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -261,7 +261,7 @@ const Index = () => {
       <PartnersCarousel />
 
       {/* FAQ */}
-      <section className="section-padding bg-background">
+      <section className="py-12 md:py-16 px-6 md:px-8 bg-background">
         <div className="container-narrow">
           <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -312,7 +312,7 @@ const Index = () => {
       </section>
 
       {/* CTA */}
-      <section className="relative section-padding overflow-hidden">
+      <section className="relative py-12 md:py-16 px-6 md:px-8 overflow-hidden">
         <video
             autoPlay
             loop
