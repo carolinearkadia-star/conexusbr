@@ -130,7 +130,7 @@ const PartnersCarousel = () => {
   return (
     <>
       <section
-        className="section-padding relative overflow-hidden"
+        className="py-12 md:py-16 px-6 md:px-8 relative overflow-hidden"
         style={{ background: "linear-gradient(180deg, hsl(216, 86%, 10%) 0%, hsl(216, 86%, 14%) 100%)" }}
       >
         <div className="container-narrow relative z-10">
