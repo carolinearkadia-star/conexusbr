@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SEOHead from "@/components/SEOHead";
 import { motion } from "framer-motion";
 import { ArrowRight, Mail, MessageCircle } from "lucide-react";
 import ImageLightbox from "@/components/ImageLightbox";
