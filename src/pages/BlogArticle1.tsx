@@ -7,6 +7,8 @@ import blogManufatura from "@/assets/blog-manufatura.png";
 
 const BlogArticle1 = () => {
   return (
+    <>
+    <SEOHead title="O futuro da manufatura eletrônica no Brasil | Blog Conexus" description="Quando você olha para um celular, um carro moderno ou um medidor de energia inteligente, tudo isso passa, em algum momento, por uma fábrica de eletrônicos." />
     <div className="pt-20">
       <section className="section-padding">
         <div className="container-narrow max-w-3xl mx-auto">

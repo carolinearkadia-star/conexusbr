@@ -7,6 +7,8 @@ import blogSemicondutores from "@/assets/blog-semicondutores.png";
 
 const BlogArticle4 = () => {
   return (
+    <>
+    <SEOHead title="Crise Global de Semicondutores | Blog Conexus" description="A cadeia global de eletrônicos nunca esteve sob tanta pressão ao mesmo tempo. Não é uma crise. É um acúmulo de crises simultâneas que afeta componentes." />
     <div className="pt-20">
       <section className="section-padding">
         <div className="container-narrow max-w-3xl mx-auto">

@@ -54,6 +54,8 @@ const posts = [
 
 const BlogPage = () => {
   return (
+    <>
+    <SEOHead title="Blog | Conexus" description="Acompanhe as últimas tendências, inovações e insights sobre o mercado eletrônico e industrial no blog da Conexus. Informação técnica de qualidade." />
     <div className="pt-20">
       <section className="section-padding">
         <div className="container-narrow">

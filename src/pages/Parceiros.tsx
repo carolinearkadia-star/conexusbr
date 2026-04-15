@@ -49,6 +49,8 @@ const ParceirosPage = () => {
   };
 
   return (
+    <>
+    <SEOHead title="Parceiros Estratégicos | Conexus" description="Nossa rede de parceiros estratégicos inclui líderes em manufatura de placas, design de PCB e gestão de custos. Conexões de elite para o seu projeto técnico." />
     <div className="pt-20">
       <PartnersCarousel />
 

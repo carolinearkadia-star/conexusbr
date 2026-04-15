@@ -7,6 +7,8 @@ import blogRohsReach from "@/assets/blog-rohs-reach.webp";
 
 const BlogArticle5 = () => {
   return (
+    <>
+    <SEOHead title="ROHS, REACH e o Acordo Mercosul–União Europeia | Blog Conexus" description="O mercado europeu está mais acessível. Mas sua empresa está pronta para isso? O acordo Mercosul–UE abre portas, mas exige conformidade regulatória." />
     <div className="pt-20">
       <section className="section-padding">
         <div className="container-narrow max-w-3xl mx-auto">

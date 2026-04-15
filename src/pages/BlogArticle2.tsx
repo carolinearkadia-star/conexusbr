@@ -7,6 +7,8 @@ import blogPcbDesign from "@/assets/blog-pcb-design.png";
 
 const BlogArticle2 = () => {
   return (
+    <>
+    <SEOHead title="PCB Design: boas práticas para industrialização | Blog Conexus" description="Em protótipo, muita coisa funciona; em volume, qualquer detalhe vira custo, retrabalho ou sucata. DFM é a disciplina de projetar pensando nas capacidades reais." />
     <div className="pt-20">
       <section className="section-padding">
         <div className="container-narrow max-w-3xl mx-auto">
