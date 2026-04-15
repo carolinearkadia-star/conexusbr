@@ -145,7 +145,7 @@ const Index = () => {
             </div>
             <div className="relative">
               {/* Abstract connection visual */}
-              <img src={globeConnections} alt="Rede global de conexões" className="w-full max-w-md mx-auto" />
+              <img src={globeConnections} alt="Rede global de conexões" className="w-full max-w-xl mx-auto" />
             </div>
           </motion.div>
         </div>
