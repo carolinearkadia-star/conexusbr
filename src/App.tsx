@@ -15,6 +15,7 @@ import BlogArticle2 from "./pages/BlogArticle2";
 import BlogArticle3 from "./pages/BlogArticle3";
 import BlogArticle4 from "./pages/BlogArticle4";
 import BlogArticle5 from "./pages/BlogArticle5";
+import BlogArticle6 from "./pages/BlogArticle6";
 import Contato from "./pages/Contato";
 import NotFound from "./pages/NotFound";
 
@@ -39,6 +40,7 @@ const App = () => (
             <Route path="/blog/lean-manufacturing-eletronica" element={<BlogArticle3 />} />
             <Route path="/blog/crise-global-semicondutores" element={<BlogArticle4 />} />
             <Route path="/blog/rohs-reach-acordo-mercosul-ue" element={<BlogArticle5 />} />
+            <Route path="/blog/escolha-parceiros-estrategicos" element={<BlogArticle6 />} />
             <Route path="/contato" element={<Contato />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

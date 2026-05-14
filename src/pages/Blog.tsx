@@ -8,8 +8,17 @@ import blogPcbDesign from "@/assets/blog-pcb-design.png";
 import blogLean from "@/assets/blog-lean.png";
 import blogSemicondutores from "@/assets/blog-semicondutores.png";
 import blogRohsReach from "@/assets/blog-rohs-reach.webp";
+import blogParceiros from "@/assets/blog-parceiros-estrategicos.jpg";
 
 const posts = [
+  {
+    id: 6,
+    title: "Escolha de parceiros estratégicos: como a decisão certa impacta nos resultados",
+    summary: "Em projetos industriais, nem sempre o maior desafio está na execução. Muitas vezes, está na escolha de quem vai caminhar junto.",
+    date: "Maio 2026",
+    image: blogParceiros,
+    link: "/blog/escolha-parceiros-estrategicos",
+  },
   {
     id: 5,
     title: "ROHS, REACH e o Acordo Mercosul–União Europeia",
