@@ -15,6 +15,7 @@ import BlogArticle2 from "./pages/BlogArticle2";
 import BlogArticle3 from "./pages/BlogArticle3";
 import BlogArticle4 from "./pages/BlogArticle4";
 import BlogArticle5 from "./pages/BlogArticle5";
+import BlogArticle6 from "./pages/BlogArticle6";
 import Contato from "./pages/Contato";
 import NotFound from "./pages/NotFound";
 
