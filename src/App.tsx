@@ -40,6 +40,7 @@ const App = () => (
             <Route path="/blog/lean-manufacturing-eletronica" element={<BlogArticle3 />} />
             <Route path="/blog/crise-global-semicondutores" element={<BlogArticle4 />} />
             <Route path="/blog/rohs-reach-acordo-mercosul-ue" element={<BlogArticle5 />} />
+            <Route path="/blog/escolha-parceiros-estrategicos" element={<BlogArticle6 />} />
             <Route path="/contato" element={<Contato />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
