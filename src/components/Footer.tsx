@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "@/assets/logo-conexus.png";
+import logoWhite from "@/assets/logo-conexus-white.png";
 import {
   Accordion,
   AccordionContent,
@@ -12,7 +12,8 @@ const Footer = () => {
     <footer className="bg-primary text-primary-foreground">
       <div className="container-narrow px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          <div>
+          <div className="flex items-start">
+            <img src={logoWhite} alt="Conexus" className="h-16 w-auto object-contain" />
           </div>
 
           <div>
