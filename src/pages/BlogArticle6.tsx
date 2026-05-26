@@ -30,6 +30,9 @@ const BlogArticle6 = () => {
             <h1 className="mt-4 text-3xl md:text-5xl font-bold text-foreground leading-tight">
               Escolha de parceiros estratégicos: como a decisão certa impacta diretamente nos resultados
             </h1>
+            <p className="mt-3 text-sm text-muted-foreground">
+              Publicado em: Maio de 2026
+            </p>
 
             <img
               src={blogParceiros}

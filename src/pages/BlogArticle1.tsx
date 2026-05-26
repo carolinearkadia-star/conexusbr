@@ -30,6 +30,9 @@ const BlogArticle1 = () => {
             <h1 className="mt-4 text-3xl md:text-5xl font-bold text-foreground leading-tight">
               O futuro da manufatura eletrônica no Brasil
             </h1>
+            <p className="mt-3 text-sm text-muted-foreground">
+              Publicado em: Maio de 2026
+            </p>
 
             <img
               src={blogManufatura}

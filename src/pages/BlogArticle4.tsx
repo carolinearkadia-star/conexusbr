@@ -30,6 +30,9 @@ const BlogArticle4 = () => {
             <h1 className="mt-4 text-3xl md:text-5xl font-bold text-foreground leading-tight">
               O que se sabe sobre a Crise Global de Semicondutores?
             </h1>
+            <p className="mt-3 text-sm text-muted-foreground">
+              Publicado em: Abril de 2026
+            </p>
 
             <img
               src={blogSemicondutores}
