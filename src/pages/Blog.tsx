@@ -9,8 +9,17 @@ import blogLean from "@/assets/blog-lean.png";
 import blogSemicondutores from "@/assets/blog-semicondutores.png";
 import blogRohsReach from "@/assets/blog-rohs-reach.webp";
 import blogParceiros from "@/assets/blog-parceiros-estrategicos.jpg";
+import blogDesafios from "@/assets/blog-desafios-industrializacao.png";
 
 const posts = [
+  {
+    id: 7,
+    title: "Desafios da industrialização: porquê bons projetos falham na execução",
+    summary: "Nem todo projeto que parece promissor no papel se sustenta na prática. Na indústria, é comum ver boas ideias perderem força na execução.",
+    date: "Maio 2026",
+    image: blogDesafios,
+    link: "/blog/desafios-industrializacao-execucao",
+  },
   {
     id: 6,
     title: "Escolha de parceiros estratégicos: como a decisão certa impacta nos resultados",
