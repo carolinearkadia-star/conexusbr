@@ -81,7 +81,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-[#051D40]/80" />
         {/* Layer 3: Canvas animation */}
         <NetworkBackground />
-        <div className="container-narrow relative z-10 px-6 pt-28 md:pt-32">
+        <div className="container-narrow relative z-10 px-6 pt-52 md:pt-60">
           <motion.div
               className="max-w-3xl"
               initial="hidden"
