@@ -30,6 +30,9 @@ const BlogArticle3 = () => {
             <h1 className="mt-4 text-3xl md:text-5xl font-bold text-foreground leading-tight">
               Lean Manufacturing aplicado à eletrônica
             </h1>
+            <p className="mt-3 text-sm text-muted-foreground">
+              Publicado em: Maio de 2026
+            </p>
 
             <img
               src={blogLean}
