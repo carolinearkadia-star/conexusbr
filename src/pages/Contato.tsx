@@ -48,7 +48,7 @@ const ContatoPage = () => {
   return (
     <>
     <SEOHead title="Fale Conosco | Conexus" description="Pronto para impulsionar seu produto eletrônico? Entre em contato com os especialistas da Conexus e descubra como nosso hub técnico pode gerar valor ao seu projeto." />
-    <div className="pt-52 md:pt-60">
+    <div className="pt-28 md:pt-32">
       <section className="section-padding">
         <div className="container-narrow">
           <motion.div

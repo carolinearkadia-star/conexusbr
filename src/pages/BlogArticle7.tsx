@@ -9,7 +9,7 @@ const BlogArticle7 = () => {
   return (
     <>
     <SEOHead title="Desafios da industrialização: porquê bons projetos falham na execução | Blog Conexus" description="Nem todo projeto que parece promissor no papel se sustenta na prática. Na indústria, é comum ver boas ideias perderem força justamente na fase mais crítica." />
-    <div className="pt-52 md:pt-60">
+    <div className="pt-28 md:pt-32">
       <section className="section-padding">
         <div className="container-narrow max-w-3xl mx-auto">
           <motion.div
