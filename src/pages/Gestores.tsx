@@ -39,7 +39,7 @@ const GestoresPage = () => {
       open={!!lightbox}
       onOpenChange={(open) => !open && setLightbox(null)}
     />
-    <div className="pt-28 md:pt-44">
+    <div className="pt-20">
       <section className="section-padding">
         <div className="container-narrow">
           <motion.div
