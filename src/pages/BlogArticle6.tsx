@@ -9,7 +9,7 @@ const BlogArticle6 = () => {
   return (
     <>
     <SEOHead title="Escolha de parceiros estratégicos: como a decisão certa impacta nos resultados | Blog Conexus" description="Em projetos industriais, nem sempre o maior desafio está na execução, muitas vezes, está na escolha de quem vai caminhar junto. Selecionar parceiros estratégicos." />
-    <div className="pt-20">
+    <div className="pt-28 md:pt-44">
       <section className="section-padding">
         <div className="container-narrow max-w-3xl mx-auto">
           <motion.div
