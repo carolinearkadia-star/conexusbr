@@ -18,12 +18,12 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
-      <div className="container-narrow flex items-center justify-between h-56 md:h-80 px-6">
-        <Link to="/" className="flex items-center ml-4 md:ml-8">
+      <div className="container-narrow flex items-center justify-between h-20 px-6">
+        <Link to="/" className="flex items-center">
           <motion.img
             src={logo}
             alt="Conexus"
-            className="h-48 md:h-72 w-auto max-w-[520px] md:max-w-[800px]"
+            className="h-12 md:h-14 w-auto"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
