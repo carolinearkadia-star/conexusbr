@@ -13,7 +13,7 @@ const Footer = () => {
       <div className="container-narrow px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div className="flex items-start">
-            <img src={logoWhite} alt="Conexus" className="h-32 w-auto object-contain" />
+            <img src={logoWhite} alt="Conexus" className="h-64 w-auto object-contain" />
           </div>
 
           <div>
