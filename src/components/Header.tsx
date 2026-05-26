@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import logo from "@/assets/logo-conexus.svg";
+import logo from "@/assets/logo-conexus.png";
 
 const navItems = [
   { label: "Página Inicial", path: "/" },
