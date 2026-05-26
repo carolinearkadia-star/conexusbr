@@ -23,7 +23,7 @@ const Header = () => {
           <motion.img
             src={logo}
             alt="Conexus"
-            className="h-[12rem] md:h-[18rem] w-auto max-w-[600px] md:max-w-[900px]"
+            className="h-[24rem] md:h-[36rem] w-auto max-w-[600px] md:max-w-[900px]"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
