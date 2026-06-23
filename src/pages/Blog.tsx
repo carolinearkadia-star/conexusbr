@@ -10,8 +10,17 @@ import blogSemicondutores from "@/assets/blog-semicondutores.png";
 import blogRohsReach from "@/assets/blog-rohs-reach.webp";
 import blogParceiros from "@/assets/blog-parceiros-estrategicos.jpg";
 import blogDesafios from "@/assets/blog-desafios-industrializacao.png";
+import blogRohsBr from "@/assets/blog-rohs-brasileira.jpg";
 
 const posts = [
+  {
+    id: 8,
+    title: "RoHS Brasileira é aprovada pelo CONAMA: o que muda para a indústria de equipamentos eletroeletrônicos?",
+    summary: "O CONAMA aprovou a Resolução que estabelece a RoHS Brasileira, um marco regulatório para a indústria de equipamentos eletroeletrônicos no país.",
+    date: "Junho 2026",
+    image: blogRohsBr,
+    link: "/blog/rohs-brasileira-aprovada-conama",
+  },
   {
     id: 7,
     title: "Desafios da industrialização: porquê bons projetos falham na execução",
