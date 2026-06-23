@@ -10,7 +10,7 @@ import blogSemicondutores from "@/assets/blog-semicondutores.png";
 import blogRohsReach from "@/assets/blog-rohs-reach.webp";
 import blogParceiros from "@/assets/blog-parceiros-estrategicos.jpg";
 import blogDesafios from "@/assets/blog-desafios-industrializacao.png";
-import blogRohsBr from "@/assets/blog-rohs-brasileira.jpg";
+import blogRohsBr from "@/assets/blog-rohs-brasileira.png";
 
 const posts = [
   {

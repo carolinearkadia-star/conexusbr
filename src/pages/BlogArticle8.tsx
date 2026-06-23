@@ -3,7 +3,7 @@ import SEOHead from "@/components/SEOHead";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import blogRohsBr from "@/assets/blog-rohs-brasileira.jpg";
+import blogRohsBr from "@/assets/blog-rohs-brasileira.png";
 
 const BlogArticle8 = () => {
   return (
