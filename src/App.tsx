@@ -17,6 +17,7 @@ import BlogArticle4 from "./pages/BlogArticle4";
 import BlogArticle5 from "./pages/BlogArticle5";
 import BlogArticle6 from "./pages/BlogArticle6";
 import BlogArticle7 from "./pages/BlogArticle7";
+import BlogArticle8 from "./pages/BlogArticle8";
 import Contato from "./pages/Contato";
 import NotFound from "./pages/NotFound";
 
@@ -43,6 +44,7 @@ const App = () => (
             <Route path="/blog/rohs-reach-acordo-mercosul-ue" element={<BlogArticle5 />} />
             <Route path="/blog/escolha-parceiros-estrategicos" element={<BlogArticle6 />} />
             <Route path="/blog/desafios-industrializacao-execucao" element={<BlogArticle7 />} />
+            <Route path="/blog/rohs-brasileira-aprovada-conama" element={<BlogArticle8 />} />
             <Route path="/contato" element={<Contato />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
