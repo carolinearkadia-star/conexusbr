@@ -11,8 +11,17 @@ import blogRohsReach from "@/assets/blog-rohs-reach.webp";
 import blogParceiros from "@/assets/blog-parceiros-estrategicos.jpg";
 import blogDesafios from "@/assets/blog-desafios-industrializacao.png";
 import blogRohsBr from "@/assets/blog-rohs-brasileira.png";
+import blogObsolescencia from "@/assets/blog-obsolescencia-componentes.png";
 
 const posts = [
+  {
+    id: 9,
+    title: "Obsolescência de Componentes Eletrônicos: um risco silencioso que pode parar sua produção",
+    summary: "Como identificar riscos, minimizar impactos e garantir a continuidade dos seus produtos diante da descontinuação de componentes eletrônicos.",
+    date: "Julho 2026",
+    image: blogObsolescencia,
+    link: "/blog/obsolescencia-componentes-eletronicos",
+  },
   {
     id: 8,
     title: "RoHS Brasileira é aprovada pelo CONAMA: o que muda para a indústria de equipamentos eletroeletrônicos?",
