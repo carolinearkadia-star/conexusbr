@@ -2,7 +2,7 @@ import { MessageCircle } from "lucide-react";
 
 const WhatsAppFloat = () => (
   <a
-    href="https://api.whatsapp.com/send/?phone=5519990147479&text&type=phone_number&app_absent=0"
+    href="https://wa.me/5519990147479"
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Fale conosco no WhatsApp"
