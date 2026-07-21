@@ -12,7 +12,7 @@ const BlogArticle8 = () => {
         title="RoHS Brasileira é aprovada pelo CONAMA: o que muda para a indústria | Blog Conexus"
         description="O CONAMA aprovou a Resolução que estabelece a RoHS Brasileira. Entenda o que muda para a indústria de equipamentos eletroeletrônicos e como se preparar."
       />
-      <div className="pt-28 md:pt-32">
+      <div className="pt-[6.3rem] md:pt-[7.2rem]">
         <section className="section-padding">
           <div className="container-narrow max-w-3xl mx-auto">
             <motion.div

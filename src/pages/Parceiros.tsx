@@ -51,7 +51,7 @@ const ParceirosPage = () => {
   return (
     <>
     <SEOHead title="Parceiros Estratégicos | Conexus" description="Nossa rede de parceiros estratégicos inclui líderes em manufatura de placas, design de PCB e gestão de custos. Conexões de elite para o seu projeto técnico." />
-    <div className="pt-28 md:pt-32">
+    <div className="pt-[6.3rem] md:pt-[7.2rem]">
       <PartnersCarousel />
 
       <section className="section-padding bg-muted/30">

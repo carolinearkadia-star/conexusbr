@@ -12,7 +12,7 @@ const BlogArticle9 = () => {
         title="Obsolescência de Componentes Eletrônicos: um risco silencioso | Blog Conexus"
         description="Como identificar riscos de obsolescência de componentes eletrônicos, minimizar impactos e garantir a continuidade dos seus produtos na indústria."
       />
-      <div className="pt-28 md:pt-32">
+      <div className="pt-[6.3rem] md:pt-[7.2rem]">
         <section className="section-padding">
           <div className="container-narrow max-w-3xl mx-auto">
             <motion.div
